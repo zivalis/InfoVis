@@ -63,12 +63,88 @@
 
 
     <!-- Suchleiste mit Dropdown -->
+    <div class="Suchleiste">
+        <div class="Dropdown">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" style="height:50px; width:100px">
+                <span id="search_concept">All</span> <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu scrollable-dropdown" role="menu">
+                <li><a href="#">Baden-Württemberg</a></li>
+                <li><a href="#">Bayern</a></li>
+                <li><a href="#">Berlin</a></li>
+                <li><a href="#">Brandenburg</a></li>
+                <li><a href="#">Bremen</a></li>
+                <li><a href="#">Hamburg</a></li>
+                <li><a href="#">Hessen</a></li>
+                <li><a href="#">Mecklenburg-Vorpommern</a></li>
+                <li><a href="#">Niedersachsen</a></li>
+                <li><a href="#">Nordrhein Westfalen</a></li>
+                <li><a href="#">Rheinland-Pfalz</a></li>
+                <li><a href="#">Saarland</a></li>
+                <li><a href="#">Sachsen</a></li>
+                <li><a href="#">Sachsen-Anhalt</a></li>
+                <li><a href="#">Schleswig-Holstein</a></li>
+                <li><a href="#">Thüringen</a></li>
+        </div>
+        <div>
+            <input type="text" id="myInput" class="Suchfeld" data-toggle="dropdown" onkeyup="myFunction()" placeholder="Suche nach Regionen" title="Type in a name" style="height:50px">
+                <ul id="myUL" class="dropdown-menu scrollable-dropdown" role="menu" style="top: 80px; left: 130px">
+                    <li><a href="#">Berlin</a></li>
+                    <li><a href="#">München</a></li>
+                    <li><a href="#">Benediktbeuern</a></li>
+                    <li><a href="#">Homburg</a></li>
+                    <li><a href="#">Dachau</a></li>
+                    <li><a href="#">Nürnberg</a></li>
+                </ul>
+        </div>
+    </div>
+
+    <script>
+        function myFunction(){
+            var input, filter, ul, li, a, i, txtValue;
+            input= document.getElementById("myInput");
+            filter= input.value.toUpperCase();
+            ul = document.getElementById("myUL");
+            li= ul.getElementsByTagName("li");
+            for(i = 0; i<li.length; i++){
+                a = li[i].getElementsByTagName("a")[0];
+                txtValue = a.textContent || a.innerText;
+                if(txtValue.toUpperCase().indexOf(filter) > -1){
+                    li[i].style.display = "";
+                }else{
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+    <script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+    <script src="bootstrap.min.js" ></script>
+    <script type="text/javascript">
+        $(document).ready(function(e){
+            $('.search-panel .dropdown-menu').find('a').click(function(e) {
+                e.preventDefault();
+                var param = $(this).attr("href").replace("#","");
+                var concept = $(this).text();
+                $('.search-panel span#search_concept').text(concept);
+                $('.input-group #search_param').val(param);
+            });
+        });
+    </script>
+
 
 
     <!-- Deutschlandkarte -->
     <dic class = "D_Karte" id="map">
         <img src="Karte.jpg">
     </dic>
+
+
+
+
+
+
+
+
 
 
 

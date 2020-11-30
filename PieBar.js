@@ -49,7 +49,7 @@ function createPieBar(pie_id, pie_daten, Ort_ID){
 
         // X scale
         var x = d3.scaleBand()
-            .range([0.2*Math.PI, 1.9 * Math.PI])    // X axis goes from 0 to 2pi = all around the circle. If I stop at 1Pi, it will be around a half circle
+            .range([1.2*Math.PI, 2.9 * Math.PI])    // X axis goes from 0 to 2pi = all around the circle. If I stop at 1Pi, it will be around a half circle
             .align(0)                  // This does nothing ?
             .domain( data.map(function(d) { return d.Age; }) ); // The domain of the X axis is the list of states.
 
@@ -140,7 +140,7 @@ function createPieBar(pie_id, pie_daten, Ort_ID){
             .attr("d", d3.arc()     // imagine your doing a part of a donut plot
                 .innerRadius(innerRadius-1)
                 .outerRadius(innerRadius)
-                .startAngle(0.2*Math.PI)
+                .startAngle(1.2*Math.PI)
                 .endAngle(function(d) { return x(d.Age) + 2*x.bandwidth()/3; })
                 .padAngle(0.05)
                 .padRadius(innerRadius))
@@ -196,7 +196,7 @@ function createPieBar(pie_id, pie_daten, Ort_ID){
         //Text LKName
         svg.append("text")
             .attr("x",2)
-            .attr("y",-10)
+            .attr("y",0)
             .attr("font-size","18px")
             .attr("font-family","sans-serif")
             .attr("text-anchor","middle")
@@ -206,7 +206,7 @@ function createPieBar(pie_id, pie_daten, Ort_ID){
         //Text Altersdruchschnitt
         svg.append("text")
             .attr("x",2)
-            .attr("y",15)
+            .attr("y",25)
             .attr("font-size","13px")
             .attr("font-family","sans-serif")
             .attr("text-anchor","middle")
@@ -228,19 +228,19 @@ function createPieBar(pie_id, pie_daten, Ort_ID){
 
 //line
         svg.append("line")
-            .attr("x1", -30)
-            .attr("y1", -innerRadius+10)
-            .attr("x2", -12)
-            .attr("y2", -innerRadius+10)
+            .attr("x1", -32)
+            .attr("y1", innerRadius)
+            .attr("x2", -14)
+            .attr("y2", innerRadius)
             .attr("stroke-width", 1)
             .attr("stroke", "#770000")
             .attr("marker-end", "url(#triangle)")
-            .attr("transform", "rotate(-22,-24,-80)")
+            .attr("transform", "rotate(0,-32,100)")
 
 //Text R-Wert
         svg.append("text")
             .attr("x",0)
-            .attr("y",-innerRadius+15)
+            .attr("y",innerRadius+5)
             .attr("font-size","13px")
             .attr("font-family","sans-serif")
             .attr("fill","#770000")
@@ -248,8 +248,8 @@ function createPieBar(pie_id, pie_daten, Ort_ID){
 
 //Text R-Text
         svg.append("text")
-            .attr("x",5)
-            .attr("y",-innerRadius+30)
+            .attr("x",20)
+            .attr("y",innerRadius+20)
             .attr("font-size","10px")
             .attr("font-family","sans-serif")
             .attr("text-anchor","middle")

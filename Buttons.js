@@ -6,6 +6,10 @@ var TrashButton = document.getElementsByClassName("Trashcan")
 var BackButtonL = document.getElementsByClassName("EbeneZurückL")
 var BackButtonR = document.getElementsByClassName("EbeneZurückR")
 
+function test(){
+    console.log("Success");
+}
+
 initialize();
 function initialize(){
     RightPie[0].style.display = "none";

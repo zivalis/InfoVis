@@ -76,15 +76,11 @@
     z-index:  -1;
 }
 
-.Suchleiste, .Suchfeld, .Dropdown{
+.Suchleiste{
     position: absolute;
-    transform: scale(0.9);
     left: 50px;
-    top: 30px;
+    top: 50px;
+    transform: scale(0.8);
     z-index: 1;
 }
-.Suchfeld{
-    left: 122px;
-}
-
 
