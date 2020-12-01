@@ -99,51 +99,25 @@
         </div>
     </div>
 
-    <script>
-        function myFunction(){
-            var input, filter, ul, li, a, i, txtValue;
-            input= document.getElementById("myInput");
-            filter= input.value.toUpperCase();
-            ul = document.getElementById("myUL");
-            li= ul.getElementsByTagName("li");
-            for(i = 0; i<li.length; i++){
-                a = li[i].getElementsByTagName("a")[0];
-                txtValue = a.textContent || a.innerText;
-                if(txtValue.toUpperCase().indexOf(filter) > -1){
-                    li[i].style.display = "";
-                }else{
-                    li[i].style.display = "none";
-                }
-            }
-        }
-    </script>
-    <script type="text/javascript" src="jquery-2.1.4.min.js"></script>
-    <script src="bootstrap.min.js" ></script>
-    <script type="text/javascript">
-        $(document).ready(function(e){
-            $('.search-panel .dropdown-menu').find('a').click(function(e) {
-                e.preventDefault();
-                var param = $(this).attr("href").replace("#","");
-                var concept = $(this).text();
-                $('.search-panel span#search_concept').text(concept);
-                $('.input-group #search_param').val(param);
-            });
-        });
-    </script>
+
 
 
 
     <!-- Deutschlandkarte -->
     <dic class = "D_Karte" id="map">
-        <img src="Karte.jpg">
+        <div id="map"></div>
+        <div id="region_name" class="RegionTitel">Deutschland</div>
     </dic>
 
 
 
 
+    <!-- Timeslider -->
 
 
-
+    <div id="timeslider" class="Timeslider">
+        <button id="play-button">Play</button>
+    </div>
 
 
 
@@ -151,5 +125,14 @@
     <!-- Skripte -->
     <script src="PieBar.js"></script>
     <script src="Buttons.js"></script>
+    <script src="timeslider.js"></script>
+    <script src="search2.js"></script>
+    <script src="jquery-2.1.4.min.js"></script>
+    <script src="bootstrap.min.js" ></script>
+    <script src="search1.js"></script>
+    <script src="./raphael.min.js"></script>
+    <script src="./jquery-3.5.1.js"></script>
+    <script src="DMap1.js"></script>
+
 </body>
 </html>

@@ -20,12 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eefec1d3-7ef5-4008-aaaa-e42929bd1aa4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/DMap1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search2.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Basic_Layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/Basic_Layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Buttons.js" beforeDir="false" afterPath="$PROJECT_DIR$/Buttons.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layout-2020-11-30_20-22-01-198.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layout-2020-11-30_20-29-00-179.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Layout.css" beforeDir="false" afterPath="$PROJECT_DIR$/Layout.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PieBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/PieBar.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,12 +61,12 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Schepi\Desktop\WS 20.21\IV\Gruppenprojekt\InfoVisProject\data" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Schepi\Desktop\WS 20.21\IV\Gruppenprojekt\InfoVisProject\data" />
       <recent name="C:\Users\Schepi\Desktop\WS 20.21\IV\Gruppenprojekt\InfoVisProject" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Schepi\Desktop\WS 20.21\IV\Gruppenprojekt\InfoVisProject\data" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -85,7 +87,10 @@
       <workItem from="1606408920267" duration="972000" />
       <workItem from="1606414761264" duration="106000" />
       <workItem from="1606421347882" duration="234000" />
-      <workItem from="1606763857183" duration="977000" />
+      <workItem from="1606763857183" duration="1256000" />
+      <workItem from="1606765139161" duration="1564000" />
+      <workItem from="1606766812989" duration="63000" />
+      <workItem from="1606766894926" duration="12000" />
     </task>
     <servers />
   </component>
