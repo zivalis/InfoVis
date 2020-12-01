@@ -3,7 +3,7 @@ var formatDateMonthDay = d3.timeFormat("%d %b %Y");
 
 
 var startDate = new Date("2020-02-04"),
-    endDate = new Date("2020-11-23");
+    endDate = new Date("2020-12-31");
 
 var margin = {top:50, right:50, bottom:0, left:50},
     width = 960 - margin.left - margin.right,
