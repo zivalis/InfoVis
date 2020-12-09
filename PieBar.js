@@ -1,7 +1,9 @@
-createPieBar("#pie_1", "Data.csv",0);
-createPieBar("#pie_2", "Data.csv",0);
-UpdateEbeneR(20);
-UpdateEbeneL(100);
+pie_daten = getRelevantData();
+
+createPieBar("#pie_1");
+createPieBar("#pie_2");
+UpdateEbeneR(0);
+UpdateEbeneL(0);
 
 function UpdateEbeneR(Ort_ID){
     if(Ort_ID == 0){
@@ -28,7 +30,7 @@ function UpdateEbeneL(Ort_ID){
     }
 }
 
-function createPieBar(pie_id, pie_daten, Ort_ID){
+function createPieBar(pie_id){
 
 
     var margin = {top: 100, right: 0, bottom: 0, left: 0},
@@ -36,7 +38,6 @@ function createPieBar(pie_id, pie_daten, Ort_ID){
         height = 450 - margin.top - margin.bottom,
         innerRadius = 90,
         outerRadius = Math.min(width, height) / 2;   // the outerRadius goes from the middle of the SVG area to the border
-
 // append the svg object to the body of the page
     var svg = d3.select(pie_id)
         .append("svg")
@@ -113,6 +114,7 @@ function createPieBar(pie_id, pie_daten, Ort_ID){
                 .endAngle(function(d) { return x(d.Age) + x.bandwidth()/3; })
                 .padAngle(0.05)
                 .padRadius(innerRadius))
+
 
 
         //Add second Bars
@@ -258,4 +260,73 @@ function createPieBar(pie_id, pie_daten, Ort_ID){
 
 
     });
+}
+
+function PieBarTimeUpdate(){
+
+
+}
+
+function PieBarPlaceUpdate(){
+
+    var LockIcon = document.getElementsByClassName("Abgeschlossen");
+    pie_daten = getRelevantData();
+    //links
+    if(LockIcon[0].style.display == "none"){
+        var angezeigt = document.getElementsByClassName("right_chart");
+        //Rechts wird gerade  gelöscht löschen
+        if(angezeigt[0].style.display == "inline"){
+            d3.select("#keinGraphText").transition().duration(0).ease(d3.easeLinear).style("opacity", 0);
+            var InfoText = document.getElementsByClassName("Ersatztext")[0].style.display = "inline";
+            d3.select("#pie_2").transition().duration(500).ease(d3.easeLinear).style("opacity", 0);
+            setTimeout(function(){
+                angezeigt[0].style.display = "none";
+                d3.select("#pie_2").transition().duration(500).ease(d3.easeLinear).style("opacity", 0);
+                d3.select("#keinGraphText").transition().duration(2000).ease(d3.easeLinear).style("opacity", 1);
+            },500);
+
+        }
+        //Rechts nicht angezeigt
+        else{
+            d3.select("#pie_1").transition().duration(500).ease(d3.easeLinear).style("opacity", 0);
+            setTimeout(function(){
+                d3.select("#pie_1 *").remove();
+                createPieBar("#pie_1");
+                d3.select("#pie_1").transition().duration(500).ease(d3.easeLinear).style("opacity", 1);
+                d3.select("#pie_2 *").remove();
+                createPieBar("#pie_2");
+            },500);
+        }
+
+        UpdateEbeneL(0);
+    }
+    //rechts
+    else{
+
+        var angezeigt = document.getElementsByClassName("right_chart");
+        //Rechts wird gerade ausgeklappt
+        if(angezeigt[0].style.display == "none"){
+
+                d3.select("#pie_2").transition().duration(0).ease(d3.easeLinear).style("opacity", 0);
+                angezeigt[0].style.display = "inline";
+                d3.select("#pie_2 *").remove();
+                createPieBar("#pie_2");
+                d3.select("#pie_2").transition().duration(1500).ease(d3.easeLinear).style("opacity", 1);
+                var InfoText = document.getElementsByClassName("Ersatztext")[0].style.display = "none";
+
+
+        }
+        //Rechts wird bereits angezeigt
+        else{
+            console.log("hi");
+            d3.select("#pie_2").transition().duration(500).ease(d3.easeLinear).style("opacity", 0);
+            setTimeout(function(){
+                d3.select("#pie_2 *").remove();
+                createPieBar("#pie_2");
+                d3.select("#pie_2").transition().duration(500).ease(d3.easeLinear).style("opacity", 1);
+            },500);
+        }
+        UpdateEbeneR(0);
+    }
+
 }

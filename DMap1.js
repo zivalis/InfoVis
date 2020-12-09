@@ -54,6 +54,6 @@ for(var regionName in regions) {
             //console.log(event.target.id);
             $("#region_name").html(event.target.id);
         };
-        console.log(regionName);
+        //console.log(regionName);
     })(regions[regionName]);
 }

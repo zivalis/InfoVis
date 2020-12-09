@@ -20,14 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eefec1d3-7ef5-4008-aaaa-e42929bd1aa4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/DMap1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/search1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/search2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controler.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Basic_Layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/Basic_Layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Layout-2020-11-30_20-22-01-198.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Layout-2020-11-30_20-29-00-179.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Buttons.js" beforeDir="false" afterPath="$PROJECT_DIR$/Buttons.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DMap1.js" beforeDir="false" afterPath="$PROJECT_DIR$/DMap1.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Layout.css" beforeDir="false" afterPath="$PROJECT_DIR$/Layout.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PieBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/PieBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/timeslider.js" beforeDir="false" afterPath="$PROJECT_DIR$/timeslider.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,17 +56,18 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/data" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Schepi\Desktop\WS 20.21\IV\Gruppenprojekt\InfoVisProject\data" />
       <recent name="C:\Users\Schepi\Desktop\WS 20.21\IV\Gruppenprojekt\InfoVisProject" />
+      <recent name="C:\Users\Schepi\Desktop\WS 20.21\IV\Gruppenprojekt\InfoVisProject\data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Schepi\Desktop\WS 20.21\IV\Gruppenprojekt\InfoVisProject\data" />
+      <recent name="C:\Users\Schepi\Desktop\WS 20.21\IV\Gruppenprojekt\InfoVisProject" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -91,6 +92,37 @@
       <workItem from="1606765139161" duration="1564000" />
       <workItem from="1606766812989" duration="63000" />
       <workItem from="1606766894926" duration="12000" />
+      <workItem from="1606814829905" duration="132000" />
+      <workItem from="1606815498849" duration="177000" />
+      <workItem from="1606817878924" duration="1706000" />
+      <workItem from="1606829051141" duration="261000" />
+      <workItem from="1606831306240" duration="1506000" />
+      <workItem from="1606833931567" duration="25000" />
+      <workItem from="1606834866977" duration="30000" />
+      <workItem from="1606836647484" duration="92000" />
+      <workItem from="1606841460968" duration="645000" />
+      <workItem from="1606854103771" duration="27000" />
+      <workItem from="1606855336484" duration="595000" />
+      <workItem from="1606903881163" duration="2000" />
+      <workItem from="1606903909662" duration="351000" />
+      <workItem from="1606924879870" duration="31000" />
+      <workItem from="1606924920370" duration="4000" />
+      <workItem from="1606926940063" duration="265000" />
+      <workItem from="1606995644395" duration="605000" />
+      <workItem from="1606996339698" duration="1625000" />
+      <workItem from="1607025228072" duration="21000" />
+      <workItem from="1607342545406" duration="3027000" />
+      <workItem from="1607345664085" duration="4327000" />
+      <workItem from="1607350907368" duration="420000" />
+      <workItem from="1607352880980" duration="102000" />
+      <workItem from="1607352997056" duration="265000" />
+      <workItem from="1607353276696" duration="14000" />
+      <workItem from="1607353304541" duration="17000" />
+      <workItem from="1607353397083" duration="68000" />
+      <workItem from="1607362761513" duration="4286000" />
+      <workItem from="1607383081297" duration="313000" />
+      <workItem from="1607433420998" duration="15000" />
+      <workItem from="1607507288041" duration="134000" />
     </task>
     <servers />
   </component>
@@ -110,9 +142,28 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="280" key="FileChooserDialogImpl" timestamp="1606306510894">
+    <state x="690" y="272" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1607353464246">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
+    <state x="690" y="272" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050/-1920.7.1920.1050@0.0.1920.1050" timestamp="1607353464246" />
+    <state x="740" y="280" key="FileChooserDialogImpl" timestamp="1607025242467">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="740" y="280" key="FileChooserDialogImpl/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1607025242467" />
     <state x="740" y="280" key="FileChooserDialogImpl/0.0.1920.1050/-1920.7.1920.1050@0.0.1920.1050" timestamp="1606306510894" />
+    <state x="647" y="135" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1607344816718">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="647" y="135" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1607344816718" />
+    <state x="777" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607364245257">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="777" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1607349365309" />
+    <state x="777" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1050/-1920.7.1920.1050@0.0.1920.1050" timestamp="1607364245257" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1607364965318">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1607344457911" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/-1920.7.1920.1050@0.0.1920.1050" timestamp="1607364965318" />
   </component>
 </project>

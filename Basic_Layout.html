@@ -11,7 +11,6 @@
 
     <link rel="stylesheet" href="Layout.css">
 
-
 </head>
 <body>
     <!-- Create a div where the first graph will take place -->
@@ -58,7 +57,7 @@
     <div class = "right_chart" id="pie_2"></div>
 
     <!-- Text rechts falls kein Graph -->
-    <p class = "Ersatztext">Klicke auf das Schloss-Symbol um die linke Grafik anzuheften und ein zweite Grafik zum Vergleichen aufzurufen.</p>
+    <p class = "Ersatztext" id="keinGraphText">Klicke auf das Schloss-Symbol um die linke Grafik anzuheften und ein zweite Grafik zum Vergleichen aufzurufen.</p>
 
 
 
@@ -69,6 +68,8 @@
                 <span id="search_concept">All</span> <span class="caret"></span>
             </button>
             <ul class="dropdown-menu scrollable-dropdown" role="menu">
+                <li><a href="#">Deutschland</a></li>
+                <li><a> </a></li>
                 <li><a href="#">Baden-Württemberg</a></li>
                 <li><a href="#">Bayern</a></li>
                 <li><a href="#">Berlin</a></li>
@@ -85,6 +86,7 @@
                 <li><a href="#">Sachsen-Anhalt</a></li>
                 <li><a href="#">Schleswig-Holstein</a></li>
                 <li><a href="#">Thüringen</a></li>
+            </ul>
         </div>
         <div>
             <input type="text" id="myInput" class="Suchfeld" data-toggle="dropdown" onkeyup="myFunction()" placeholder="Suche nach Regionen" title="Type in a name" style="height:50px">
@@ -103,7 +105,7 @@
 
 
 
-    <!-- Deutschlandkarte -->
+    <!-- Deutschlandkarte-->
     <dic class = "D_Karte" id="map">
         <div id="map"></div>
         <div id="region_name" class="RegionTitel">Deutschland</div>
@@ -123,6 +125,7 @@
 
 
     <!-- Skripte -->
+    <script src="Controler.js"></script>
     <script src="PieBar.js"></script>
     <script src="Buttons.js"></script>
     <script src="timeslider.js"></script>

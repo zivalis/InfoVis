@@ -1,10 +1,10 @@
 var RightPie = document.getElementsByClassName("right_chart")
-var InfoText = document.getElementsByClassName("Ersatztext")
 var LockButton = document.getElementsByClassName("Schloss")
 var LockIcon = document.getElementsByClassName("Abgeschlossen")
 var TrashButton = document.getElementsByClassName("Trashcan")
 var BackButtonL = document.getElementsByClassName("EbeneZurückL")
 var BackButtonR = document.getElementsByClassName("EbeneZurückR")
+var savedRegionIDLeft = 12;
 
 function test(){
     console.log("Success");
@@ -23,10 +23,6 @@ function initialize(){
 
 function trashcan(){
 
-    RightPie[0].style.display = "none";
-
-    InfoText[0].style.display = "inline";
-
     LockButton[0].style.display = "inline";
 
     LockIcon[0].style.display = "none";
@@ -37,14 +33,11 @@ function trashcan(){
 
     BackButtonR[0].style.display = "none";
 
-    UpdateEbeneL(100);
+    RegionChange(savedRegionIDLeft);
+
 }
 
 function padlock (){
-
-    RightPie[0].style.display = "inline";
-
-    InfoText[0].style.display = "none";
 
     LockButton[0].style.display = "none";
 
@@ -56,7 +49,9 @@ function padlock (){
 
     BackButtonL[0].style.display = "none";
 
-    UpdateEbeneR(20);
+    savedRegionIDLeft = getRegionID();
+
+    RegionChange(0);
 }
 
 

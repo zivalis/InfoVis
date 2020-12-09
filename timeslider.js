@@ -1,9 +1,9 @@
-var formatDateMonth = d3.timeFormat("%b %Y");
+var formatDateMonth = d3.timeFormat("%b");
 var formatDateMonthDay = d3.timeFormat("%d %b %Y");
 
 
-var startDate = new Date("2020-02-04"),
-    endDate = new Date("2020-11-23");
+var startDate = new Date("2020-01-01"),
+    endDate = new Date("2020-12-31");
 
 var margin = {top:50, right:50, bottom:0, left:50},
     width = 960 - margin.left - margin.right,
@@ -68,7 +68,7 @@ slider.insert("g", ".track-overlay")
     .enter()
     .append("text")
     .attr("x", x)
-    .attr("y", 10)
+    .attr("y", 12)
     .attr("text-anchor", "middle")
     .text(function(d) { return formatDateMonth(d); });
 
@@ -89,7 +89,6 @@ function step() {
         moving = false;
         currentValue = 0;
         clearInterval(timer);
-        // timer = 0;
         playButton.text("Play");
         console.log("Slider moving: " + moving);
     }
