@@ -100,4 +100,5 @@ function update(h) {
     label
         .attr("x", x(h))
         .text(formatDateMonthDay(h));
+    DateChange(h);
 }
