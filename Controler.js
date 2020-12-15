@@ -5,7 +5,7 @@ var RelevantData = Daten; //Hier nochFiltern nach 1. Januar und Deutschland zur 
 
 //forward declerations
 //Time-Slider
-var moving;
+var moving = false;
 
 function getDate(){
     return Datum;
