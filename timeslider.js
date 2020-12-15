@@ -92,6 +92,8 @@ function step() {
         playButton.text("Play");
         console.log("Slider moving: " + moving);
     }
+    if(currentValue < 0)
+        currentValue = 0;
 }
 
 function update(h) {
