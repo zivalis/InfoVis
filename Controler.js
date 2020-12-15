@@ -3,6 +3,9 @@ var Datum;
 var Daten = "Data.csv";
 var RelevantData = Daten; //Hier nochFiltern nach 1. Januar und Deutschland zur Initialisierung
 
+//forward declerations
+//Time-Slider
+var moving;
 
 function getDate(){
     return Datum;
@@ -20,7 +23,8 @@ function DateChange(newDate){
 }
 //Stoppt die Automatische Wiedergabe der Zeitleiste
 function stopTimePlay(){
-
+    if (moving)
+        d3.select("#play-button").on("click")();
 }
 
 function RegionChange(newRegionID){

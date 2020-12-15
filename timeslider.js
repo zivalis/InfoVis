@@ -21,7 +21,7 @@ var targetValue = width;
 
 var playButton = d3.select("#play-button")
     .on("click", function() {
-        var button = d3.select(this);
+        var button = d3.select("#play-button");
         if (button.text() == "Pause") {
             moving = false;
             clearInterval(timer);
