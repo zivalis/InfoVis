@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>InfoVis</title>
+    <!-- Load d3.js -->
+    <script src="https://d3js.org/d3.v4.js"></script>
+
+    <!-- Function for radial charts -->
+    <script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3-scale-radial.js"></script>
+
+    <link rel="stylesheet" href="Layout.css">
+
+</head>
+<body>
+    <!-- Create a div where the first graph will take place -->
+    <div class = "left_chart" id="pie_1"></div>
+
+    <!-- Lock Button -->
+    <div class = "Schloss">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <button type="button" class="btn btn-default btn-sm" onclick="padlock()" >
+            <span class="glyphicon glyphicon-lock"></span> lock
+        </button>
+    </div>
+    <!-- Locked Symbol -->
+    <div class = "Abgeschlossen">
+        <span class="glyphicon glyphicon-lock"></span>
+    </div>
+
+    <!-- Trennlinie -->
+        <svg class = "Trennlinie" width="10" height="500">
+        </svg>
+
+    <!-- Lösch Button -->
+    <div class = "Trashcan">
+        <button type="button" class="btn btn-default btn-sm" onclick="trashcan()">
+            <span class="glyphicon glyphicon-trash"></span> delete
+        </button>
+    </div>
+
+    <!-- Zurück Links zur höhreren Ebene Button -->
+    <div class = "EbeneZurückL">
+        <button type="button" class="btn btn-default btn-sm" id="BZL"  onclick="">
+            <span class="glyphicon glyphicon-share-alt"></span>
+        </button>
+    </div>
+
+    <!-- Zurück Rechts zur höhreren Ebene Button -->
+    <div class = "EbeneZurückR">
+        <button type="button" class="btn btn-default btn-sm" id="BZR" onclick="">
+            <span class="glyphicon glyphicon-share-alt"></span>
+        </button>
+    </div>
+
+    <!-- Create a div where the second graph will take place -->
+    <div class = "right_chart" id="pie_2"></div>
+
+    <!-- Text rechts falls kein Graph -->
+    <p class = "Ersatztext" id="keinGraphText">Klicke auf das Schloss-Symbol um die linke Grafik anzuheften und ein zweite Grafik zum Vergleichen aufzurufen.</p>
+
+
+
+    <!-- Suchleiste mit Dropdown -->
+    <div class="Suchleiste">
+        <div class="Dropdown">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" style="height:50px; width:100px">
+                <span id="search_concept">All</span> <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu scrollable-dropdown" role="menu">
+                <li><a href="#">Deutschland</a></li>
+                <li><a> </a></li>
+                <li><a href="#">Baden-Württemberg</a></li>
+                <li><a href="#">Bayern</a></li>
+                <li><a href="#">Berlin</a></li>
+                <li><a href="#">Brandenburg</a></li>
+                <li><a href="#">Bremen</a></li>
+                <li><a href="#">Hamburg</a></li>
+                <li><a href="#">Hessen</a></li>
+                <li><a href="#">Mecklenburg-Vorpommern</a></li>
+                <li><a href="#">Niedersachsen</a></li>
+                <li><a href="#">Nordrhein Westfalen</a></li>
+                <li><a href="#">Rheinland-Pfalz</a></li>
+                <li><a href="#">Saarland</a></li>
+                <li><a href="#">Sachsen</a></li>
+                <li><a href="#">Sachsen-Anhalt</a></li>
+                <li><a href="#">Schleswig-Holstein</a></li>
+                <li><a href="#">Thüringen</a></li>
+            </ul>
+        </div>
+        <div>
+            <input type="text" id="myInput" class="Suchfeld" data-toggle="dropdown" onkeyup="myFunction()" placeholder="Suche nach Regionen" title="Type in a name" style="height:50px">
+                <ul id="myUL" class="dropdown-menu scrollable-dropdown" role="menu" style="top: 80px; left: 130px">
+                    <li><a href="#">Berlin</a></li>
+                    <li><a href="#">München</a></li>
+                    <li><a href="#">Benediktbeuern</a></li>
+                    <li><a href="#">Homburg</a></li>
+                    <li><a href="#">Dachau</a></li>
+                    <li><a href="#">Nürnberg</a></li>
+                </ul>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Deutschlandkarte-->
+    <dic class = "D_Karte" id="map">
+        <div id="map"></div>
+        <div id="region_name" class="RegionTitel">Deutschland</div>
+    </dic>
+
+
+
+
+    <!-- Timeslider -->
+
+
+    <div id="timeslider" class="Timeslider">
+        <button id="play-button">Play</button>
+    </div>
+
+
+
+
+    <!-- Skripte -->
+    <script src="Controler.js"></script>
+    <script src="PieBar.js"></script>
+    <script src="Buttons.js"></script>
+    <script src="timeslider.js"></script>
+    <script src="search2.js"></script>
+    <script src="jquery-2.1.4.min.js"></script>
+    <script src="bootstrap.min.js" ></script>
+    <script src="search1.js"></script>
+    <script src="./raphael.min.js"></script>
+    <script src="./jquery-3.5.1.js"></script>
+    <script src="DMap1.js"></script>
+
+</body>
+</html>
