@@ -2,8 +2,8 @@ pie_daten = getRelevantData();
 
 createPieBar("#pie_1");
 createPieBar("#pie_2");
-UpdateEbeneR(0);
-UpdateEbeneL(0);
+UpdateEbeneR(10);
+UpdateEbeneL(10);
 
 function UpdateEbeneR(Ort_ID){
     if(Ort_ID == 0){
@@ -263,7 +263,26 @@ function createPieBar(pie_id){
 }
 
 function PieBarTimeUpdate(){
+    var LockIcon = document.getElementsByClassName("Abgeschlossen");
+    pie_daten = getRelevantData();
+    //links
+    if(LockIcon[0].style.display == "none"){
 
+            d3.select("#pie_1 *").remove();
+            createPieBar("#pie_1");
+            d3.select("#pie_2 *").remove();
+            createPieBar("#pie_2");
+
+        UpdateEbeneL(10);
+    }
+    //rechts
+    else{
+
+            d3.select("#pie_2 *").remove();
+            createPieBar("#pie_2");
+
+        UpdateEbeneR(10);
+    }
 
 }
 
@@ -298,7 +317,7 @@ function PieBarPlaceUpdate(){
             },500);
         }
 
-        UpdateEbeneL(0);
+        UpdateEbeneL(10);
     }
     //rechts
     else{
@@ -326,7 +345,7 @@ function PieBarPlaceUpdate(){
                 d3.select("#pie_2").transition().duration(500).ease(d3.easeLinear).style("opacity", 1);
             },500);
         }
-        UpdateEbeneR(0);
+        UpdateEbeneR(10);
     }
 
 }
