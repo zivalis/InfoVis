@@ -12,15 +12,15 @@ function getRegionID(){
 }
 
 function DateChange(newDate){
-    //console.log("Changing to Date "+newDate);
     updateTimeSlider(newDate);
+    $( "#input-datepicker" ).datepicker("setDate", newDate);
     Datum = newDate;
     pushUpdateTime();
 }
+
 //Stoppt die Automatische Wiedergabe der Zeitleiste
 function stopTimePlay(){
     if (moving) {
-        console.log("stop");
         d3.select("#play-button").on("click")();
     }
 }
