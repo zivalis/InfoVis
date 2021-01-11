@@ -25,6 +25,7 @@ function initMap(){
         "fill": "#A8BED5"
     };
 
+    
 
 
     //#region Deutschland
@@ -847,8 +848,60 @@ function initMap(){
     setUpDistricts(bw, ids_bw)
 
     //#endregion
+
+
+    drawCircles(map, regions);
 }
 
+// generate random integer // DEBUG
+function getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
+}
+
+// varibale for incidence circles
+let circles = [];
+
+// function deletes all currently drawn incidence circles
+function deleteCircles(){
+    for(var i = 0; i < circles.length; i++){
+        circles[i][0].remove();
+    }
+    circles = [];
+}
+
+// function draws new incidence circles with the correct data
+function drawCircles(paper, region){
+    //console.log(r.attr('path').toString()); // DEBUG
+
+    // make sure all old circles are deleted to avoid doble drawing
+    deleteCircles();
+
+    // draw one circle for each region
+    for(var regionID in region) {
+        let r = region[regionID];
+
+        // get region center point
+        let dims = Raphael.pathBBox(r.attr('path').toString());
+        let getw = dims.width;
+        let geth = dims.height;
+        let getx = dims.x;
+        let gety = dims.y;
+        let centerx = getx + getw / 2;
+        let centery = gety + geth / 2;
+
+        // draw circle
+        let circle = paper.circle(centerx, centery, 30);
+        let circle_style = {
+            "stroke": "#000000",
+            "fill": "rgba(255, 0, 0, 0.3)" // + (1 - value / max_value) + ")" // TODO
+        };
+        circle.attr(circle_style);
+        
+        // make sure the mouse events can be passed through
+        circle.node.setAttribute("pointer-events", "none");
+        circles.push(circle);
+    }
+}
 
 
 
