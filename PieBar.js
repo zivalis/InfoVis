@@ -5,9 +5,9 @@ createPieBar("#pie_2");
 UpdateEbeneR(10);
 UpdateEbeneL(10);
 
-var LKName = "TestLand"
-var AltersDurchschnitt = "50,0"
-var Inzidenz ="112"
+var LKName = "TestLand";
+var AltersDurchschnitt = "50,0";
+var Inzidenz ="112";
 
 function UpdateEbeneR(Ort_ID){
     if(Ort_ID == 0){
