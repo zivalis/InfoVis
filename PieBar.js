@@ -5,6 +5,10 @@ createPieBar("#pie_2");
 UpdateEbeneR(10);
 UpdateEbeneL(10);
 
+var LKName = "TestLand"
+var AltersDurchschnitt = "50,0"
+var Inzidenz ="112"
+
 function UpdateEbeneR(Ort_ID){
     if(Ort_ID == 0){
         document.getElementsByClassName("EbeneZurückR")[0].style.display = "none";
@@ -203,7 +207,7 @@ function createPieBar(pie_id){
             .attr("font-family","sans-serif")
             .attr("text-anchor","middle")
             .attr("fill","black")
-            .text("Saarland")
+            .text(LKName)
 
         //Text Altersdruchschnitt
         svg.append("text")
@@ -213,7 +217,7 @@ function createPieBar(pie_id){
             .attr("font-family","sans-serif")
             .attr("text-anchor","middle")
             .attr("fill","darkblue")
-            .text("Ø49,3"+" J")
+            .text(AltersDurchschnitt+" J")
 
         //arrow-head
         svg.append("svg:defs")
@@ -239,14 +243,14 @@ function createPieBar(pie_id){
             .attr("marker-end", "url(#triangle)")
             .attr("transform", "rotate(0,-32,100)")
 
-//Text R-Wert
+//Text Inzidenz
         svg.append("text")
             .attr("x",0)
             .attr("y",innerRadius+5)
             .attr("font-size","13px")
             .attr("font-family","sans-serif")
             .attr("fill","#770000")
-            .text("+1,27")
+            .text(Inzidenz)
 
 //Text R-Text
         svg.append("text")
@@ -256,7 +260,7 @@ function createPieBar(pie_id){
             .attr("font-family","sans-serif")
             .attr("text-anchor","middle")
             .attr("fill","#000000")
-            .text("R-Faktor")
+            .text("7-Tage-Inzidenz")
 
 
     });
