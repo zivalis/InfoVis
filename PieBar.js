@@ -2,8 +2,8 @@ pie_daten = getRelevantData();
 
 createPieBar("#pie_1");
 createPieBar("#pie_2");
-UpdateEbeneR(10);
-UpdateEbeneL(10);
+UpdateEbeneR(09182);
+UpdateEbeneL(09182);
 
 var LKName = "TestLand";
 var AltersDurchschnitt = "50,0";
@@ -17,7 +17,14 @@ function UpdateEbeneR(Ort_ID){
         document.getElementById("BZR").innerHTML = "<span class=\"glyphicon glyphicon-share-alt\"></span> Deutschland";
     }
     else{
-        document.getElementById("BZR").innerHTML = "<span class=\"glyphicon glyphicon-share-alt\"></span> Bayern";
+        var ÜberID=0;
+        if(Ort_ID <10000){
+            ÜberID = Ort_ID.toString().substring(0,1);
+        }
+        else{
+            ÜberID = Ort_ID.toString().substring(0,2);
+        }
+        document.getElementById("BZR").innerHTML = "<span class=\"glyphicon glyphicon-share-alt\"></span>"+ÜberID;
     }
 }
 
@@ -30,7 +37,14 @@ function UpdateEbeneL(Ort_ID){
     }
 
     else{
-        document.getElementById("BZL").innerHTML = "<span class=\"glyphicon glyphicon-share-alt\"></span> Bayern";
+        var ÜberID=0;
+        if(Ort_ID <10000){
+            ÜberID = Ort_ID.toString().substring(0,1);
+        }
+        else{
+            ÜberID = Ort_ID.toString().substring(0,2);
+        }
+        document.getElementById("BZL").innerHTML = "<span class=\"glyphicon glyphicon-share-alt\"></span>"+ÜberID;
     }
 }
 
@@ -271,21 +285,20 @@ function PieBarTimeUpdate(){
     pie_daten = getRelevantData();
     //links
     if(LockIcon[0].style.display == "none"){
-
+        createPieBar("#pie_1");
+        createPieBar("#pie_2");
+        setTimeout(()=>{
             d3.select("#pie_1 *").remove();
-            createPieBar("#pie_1");
             d3.select("#pie_2 *").remove();
-            createPieBar("#pie_2");
+        },1);
 
-        UpdateEbeneL(10);
     }
     //rechts
     else{
-
+        createPieBar("#pie_2");
+        setTimeout(()=>{
             d3.select("#pie_2 *").remove();
-            createPieBar("#pie_2");
-
-        UpdateEbeneR(10);
+        },1);
     }
 
 }

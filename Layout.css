@@ -4,12 +4,19 @@
     position: absolute;
     left: 550px;
     top: 80px;
+    max-width:480px;
+    max-height:480px;
+    overflow: hidden;
 
 }
+
 .right_chart{
     position: absolute;
     left: 1000px;
     top: 80px;
+    max-width:480px;
+    max-height:480px;
+    overflow: hidden;
 
 }
 .D_Karte{
