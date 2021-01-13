@@ -3,8 +3,6 @@ var Datum;
 var Daten = "Data.csv";
 var RelevantData = Daten; //Hier nochFiltern nach 1. Januar und Deutschland zur Initialisierung
 
-var formatToDay = d3.timeFormat("%j");
-
 function getDate(){
     return Datum;
 }
@@ -29,6 +27,7 @@ function stopTimePlay(){
 
 function RegionChange(newRegionID){
     RegionID = newRegionID;
+    console.log("HierHatSichWasGeändert"+RegionID);
     stopTimePlay();
     pushUpdateOrt();
 }
@@ -38,9 +37,9 @@ function getRelevantData(){
 }
 
 function pushUpdateTime(){
-     RelevantData = Daten; // Hier noch Filtern entsprechend den upgedateten Kathegorien;
-     //Mapcolour();
-     PieBarTimeUpdate();
+    RelevantData = Daten; // Hier noch Filtern entsprechend den upgedateten Kathegorien;
+    //Mapcolour();
+    PieBarTimeUpdate();
 }
 function pushUpdateOrt(){
     RelevantData = Daten; // Hier noch Filtern entsprechend den upgedateten Kathegorien;

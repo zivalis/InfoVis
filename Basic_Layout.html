@@ -16,13 +16,11 @@
 
     <!-- LTR: doppelganger! change this! PLZZ! :-( -->
     <link rel="stylesheet" href="./map.css">
-        <script src="./raphael.min.js"></script>
-        <script src="./jquery-3.5.1.js"></script>
-        <script src="./d3.min.js"></script>
+
 
 </head>
 <body>
-    <!-- Create a div where the first graph will take place -->
+ <!-- Create a div where the first graph will take place -->
     <div class = "left_chart" id="pie_1"></div>
 
     <!-- Lock Button -->
@@ -50,14 +48,14 @@
 
     <!-- Zurück Links zur höhreren Ebene Button -->
     <div class = "EbeneZurückL">
-        <button type="button" class="btn btn-default btn-sm" id="BZL" onclick="goBack()">
+        <button type="button" class="btn btn-default btn-sm" id="BZL" onclick="BZLPress()">
             <span class="glyphicon glyphicon-share-alt"></span>
         </button>
     </div>
 
     <!-- Zurück Rechts zur höhreren Ebene Button -->
     <div class = "EbeneZurückR">
-        <button type="button" class="btn btn-default btn-sm" id="BZR" onclick="">
+        <button type="button" class="btn btn-default btn-sm" id="BZR" onclick="BZRPress()">
             <span class="glyphicon glyphicon-share-alt"></span>
         </button>
     </div>
@@ -133,7 +131,7 @@
         <div class="map" id="map-DE-BW" style="display: none;"></div>
     </div>
 
-    <script src="./map.js"></script>
+
 
 
     <!-- Timeslider -->
@@ -165,6 +163,8 @@
     <script src="search1.js"></script>
     <script src="jquery-ui/jquery-ui.min.js"></script>
     <script src="datepicker.js"></script>
+     <script src="./raphael.min.js"></script>
+ <script src="./map.js"></script>
 
 </body>
 </html>

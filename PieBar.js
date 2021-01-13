@@ -2,9 +2,11 @@ pie_daten = getRelevantData();
 
 createPieBar("#pie_1");
 createPieBar("#pie_2");
-UpdateEbeneR(09182);
-UpdateEbeneL(09182);
+UpdateEbeneR(9182);
+UpdateEbeneL(9182);
 
+var LKIdL = 0;
+var LKIdR =0;
 var LKName = "TestLand";
 var AltersDurchschnitt = "50,0";
 var Inzidenz ="112";
@@ -25,6 +27,36 @@ function UpdateEbeneR(Ort_ID){
             ÜberID = Ort_ID.toString().substring(0,2);
         }
         document.getElementById("BZR").innerHTML = "<span class=\"glyphicon glyphicon-share-alt\"></span>"+ÜberID;
+    }
+}
+
+function BZRPress(){
+    goBack();
+    if(LKIdR <100){
+        RegionChange(0);
+    }
+    else{
+        if(LKIdR <10000){
+            RegionChange(LKIdR.toString().substring(0,1));
+        }
+        else{
+            RegionChange(LKIdR.toString().substring(0,2));
+        }
+    }
+}
+
+function BZLPress(){
+    goBack();
+    if(LKIdL <100){
+        RegionChange(0);
+    }
+    else{
+        if(LKIdL <10000){
+            RegionChange(LKIdL.toString().substring(0,1));
+        }
+        else{
+            RegionChange(LKIdL.toString().substring(0,2));
+        }
     }
 }
 
@@ -65,7 +97,7 @@ function createPieBar(pie_id){
         .attr("transform", "translate(" + width / 2 + "," + ( height/2+100 )+ ")"); // Add 100 on Y translation, cause upper bars are longer
 
     d3.csv(pie_daten, function(data) {
-
+        console.log(data);
         // X scale
         var x = d3.scaleBand()
             .range([1.2*Math.PI, 2.9 * Math.PI])    // X axis goes from 0 to 2pi = all around the circle. If I stop at 1Pi, it will be around a half circle
@@ -343,12 +375,12 @@ function PieBarPlaceUpdate(){
         //Rechts wird gerade ausgeklappt
         if(angezeigt[0].style.display == "none"){
 
-                d3.select("#pie_2").transition().duration(0).ease(d3.easeLinear).style("opacity", 0);
-                angezeigt[0].style.display = "inline";
-                d3.select("#pie_2 *").remove();
-                createPieBar("#pie_2");
-                d3.select("#pie_2").transition().duration(1500).ease(d3.easeLinear).style("opacity", 1);
-                var InfoText = document.getElementsByClassName("Ersatztext")[0].style.display = "none";
+            d3.select("#pie_2").transition().duration(0).ease(d3.easeLinear).style("opacity", 0);
+            angezeigt[0].style.display = "inline";
+            d3.select("#pie_2 *").remove();
+            createPieBar("#pie_2");
+            d3.select("#pie_2").transition().duration(1500).ease(d3.easeLinear).style("opacity", 1);
+            var InfoText = document.getElementsByClassName("Ersatztext")[0].style.display = "none";
 
 
         }
