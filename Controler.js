@@ -3,10 +3,6 @@ var Datum;
 var Daten = "Data.csv";
 var RelevantData = Daten; //Hier nochFiltern nach 1. Januar und Deutschland zur Initialisierung
 
-//forward declerations
-//Time-Slider
-var moving = false;
-
 function getDate(){
     return Datum;
 }
@@ -16,15 +12,17 @@ function getRegionID(){
 }
 
 function DateChange(newDate){
-    //console.log("Changing to Date "+newDate);
+    updateTimeSlider(newDate);
+    $( "#input-datepicker" ).datepicker("setDate", newDate);
     Datum = newDate;
     pushUpdateTime();
-
 }
+
 //Stoppt die Automatische Wiedergabe der Zeitleiste
 function stopTimePlay(){
-    if (moving)
+    if (moving) {
         d3.select("#play-button").on("click")();
+    }
 }
 
 function RegionChange(newRegionID){

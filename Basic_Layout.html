@@ -10,6 +10,8 @@
     <script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3-scale-radial.js"></script>
 
     <link rel="stylesheet" href="Layout.css">
+    <!-- jquery ui for calendar -->
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.min.css">
 
 </head>
 <body>
@@ -115,10 +117,18 @@
 
 
     <!-- Timeslider -->
-
-
     <div id="timeslider" class="Timeslider">
         <button id="play-button">Play</button>
+    </div>
+
+
+
+    <!-- Datepicker -->
+    <div id="datepicker" class="Datepicker">
+        <input type="hidden" id="input-datepicker">
+        <button type="button" class="btn btn-default btn-sm" id="calendar_button">
+            <span class="glyphicon glyphicon-calendar"></span>
+        </button>
     </div>
 
 
@@ -136,6 +146,8 @@
     <script src="./raphael.min.js"></script>
     <script src="./jquery-3.5.1.js"></script>
     <script src="DMap1.js"></script>
+    <script src="jquery-ui/jquery-ui.min.js"></script>
+    <script src="datepicker.js"></script>
 
 </body>
 </html>

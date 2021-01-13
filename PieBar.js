@@ -2,8 +2,12 @@ pie_daten = getRelevantData();
 
 createPieBar("#pie_1");
 createPieBar("#pie_2");
-UpdateEbeneR(0);
-UpdateEbeneL(0);
+UpdateEbeneR(09182);
+UpdateEbeneL(09182);
+
+var LKName = "TestLand";
+var AltersDurchschnitt = "50,0";
+var Inzidenz ="112";
 
 function UpdateEbeneR(Ort_ID){
     if(Ort_ID == 0){
@@ -13,7 +17,14 @@ function UpdateEbeneR(Ort_ID){
         document.getElementById("BZR").innerHTML = "<span class=\"glyphicon glyphicon-share-alt\"></span> Deutschland";
     }
     else{
-        document.getElementById("BZR").innerHTML = "<span class=\"glyphicon glyphicon-share-alt\"></span> Bayern";
+        var ÜberID=0;
+        if(Ort_ID <10000){
+            ÜberID = Ort_ID.toString().substring(0,1);
+        }
+        else{
+            ÜberID = Ort_ID.toString().substring(0,2);
+        }
+        document.getElementById("BZR").innerHTML = "<span class=\"glyphicon glyphicon-share-alt\"></span>"+ÜberID;
     }
 }
 
@@ -26,7 +37,14 @@ function UpdateEbeneL(Ort_ID){
     }
 
     else{
-        document.getElementById("BZL").innerHTML = "<span class=\"glyphicon glyphicon-share-alt\"></span> Bayern";
+        var ÜberID=0;
+        if(Ort_ID <10000){
+            ÜberID = Ort_ID.toString().substring(0,1);
+        }
+        else{
+            ÜberID = Ort_ID.toString().substring(0,2);
+        }
+        document.getElementById("BZL").innerHTML = "<span class=\"glyphicon glyphicon-share-alt\"></span>"+ÜberID;
     }
 }
 
@@ -203,7 +221,7 @@ function createPieBar(pie_id){
             .attr("font-family","sans-serif")
             .attr("text-anchor","middle")
             .attr("fill","black")
-            .text("Saarland")
+            .text(LKName)
 
         //Text Altersdruchschnitt
         svg.append("text")
@@ -213,7 +231,7 @@ function createPieBar(pie_id){
             .attr("font-family","sans-serif")
             .attr("text-anchor","middle")
             .attr("fill","darkblue")
-            .text("Ø49,3"+" J")
+            .text(AltersDurchschnitt+" J")
 
         //arrow-head
         svg.append("svg:defs")
@@ -239,14 +257,14 @@ function createPieBar(pie_id){
             .attr("marker-end", "url(#triangle)")
             .attr("transform", "rotate(0,-32,100)")
 
-//Text R-Wert
+//Text Inzidenz
         svg.append("text")
             .attr("x",0)
             .attr("y",innerRadius+5)
             .attr("font-size","13px")
             .attr("font-family","sans-serif")
             .attr("fill","#770000")
-            .text("+1,27")
+            .text(Inzidenz)
 
 //Text R-Text
         svg.append("text")
@@ -256,14 +274,32 @@ function createPieBar(pie_id){
             .attr("font-family","sans-serif")
             .attr("text-anchor","middle")
             .attr("fill","#000000")
-            .text("R-Faktor")
+            .text("7-Tage-Inzidenz")
 
 
     });
 }
 
 function PieBarTimeUpdate(){
+    var LockIcon = document.getElementsByClassName("Abgeschlossen");
+    pie_daten = getRelevantData();
+    //links
+    if(LockIcon[0].style.display == "none"){
+        createPieBar("#pie_1");
+        createPieBar("#pie_2");
+        setTimeout(()=>{
+            d3.select("#pie_1 *").remove();
+            d3.select("#pie_2 *").remove();
+        },1);
 
+    }
+    //rechts
+    else{
+        createPieBar("#pie_2");
+        setTimeout(()=>{
+            d3.select("#pie_2 *").remove();
+        },1);
+    }
 
 }
 
@@ -298,7 +334,7 @@ function PieBarPlaceUpdate(){
             },500);
         }
 
-        UpdateEbeneL(0);
+        UpdateEbeneL(10);
     }
     //rechts
     else{
@@ -326,7 +362,7 @@ function PieBarPlaceUpdate(){
                 d3.select("#pie_2").transition().duration(500).ease(d3.easeLinear).style("opacity", 1);
             },500);
         }
-        UpdateEbeneR(0);
+        UpdateEbeneR(10);
     }
 
 }
