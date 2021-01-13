@@ -10,15 +10,18 @@ Wer sich unsicher ist, wo sich ein Landkreis befindet, kann durch eine Suchleist
 
 Soweit zu unserem Ziel.
 
-Was wir bisher haben:
-Ein Basic Layout ohne Daten. (Die Dummy-Daten werden innerhalb der nächsten 1-2 Tage bereit sein. Unsere Tatsächlichen Daten können wir erst ab Januar verwenden, da wir bis Einschließlich Ende Dezember unsere Daten anzeigen wollen).
-Eine anklickbare Deutschlandkarte, die durch Klick auf Bundesländer die Landkreise anzeigt und durch einen Klick auf diese, ihren Namen ausschreibt. Noch ist diese Funktion separat vom Basic Layout, wird aber demnächst eingearbeitet.
-Einen Slider, der Mithilfe einer Button automatisch den gesamten Zeitstrahl durchläuft und selbsttändig pausiert, sobald eine Pie-Bar-Chart gelockt oder gelöscht wird. Dieser ist ebenfalls noch nicht mit Daten verbunden, steht aber auf dem zeitnahen Plan.
-Eine Suchleiste, die noch einmal vollkommen überarbeitet wird. 
+Unsere Features: 
+- Zoomen auf Landkreisebene
+- Zurück-Button um wieder auf Länderebene zu kommen
+- Darstellung der Altersstruktur (Je dunkler/"blauer" der Kreis je größer ist der Anteil der über 60 Jährigen)
+- Darstellung der Inzidenz (Je größer der Kreis, desto größer die Inzidenz)
+- Pie-Chart zur genaueren Aufschlüsselung der Information
+- Lock-Funktion um einzelne Landkreise miteinander zu vergleichen
+- Zeitleiste zur Untersuchung des zeitlichen Verlaufs plus zusätzlicher Abspielfunktion und zusätzlichem Kalender
+- Dropdown-Menü mit Search für das leichtere Finden eines Landkreises
+
 
 Das haben wir noch vor:
-Die echten Daten in unser Format bringen.
-Die einzelnen Komponenten vereinen.
-Hover und Farbkodierung auf der Karte ergänzen.
-Suchleiste ergänzen.
-Basic-Layout optisch ansprechender machen.
+- Die einzelnen Komponenten vereinen
+- Basic-Layout optisch ansprechender machen
+- Bug-Fixing
