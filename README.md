@@ -18,10 +18,11 @@ Unsere Features:
 - Pie-Chart zur genaueren Aufschlüsselung der Information
 - Lock-Funktion um einzelne Landkreise miteinander zu vergleichen
 - Zeitleiste zur Untersuchung des zeitlichen Verlaufs plus zusätzlicher Abspielfunktion und zusätzlichem Kalender
-- Dropdown-Menü mit Search für das leichtere Finden eines Landkreises
 
 
 Das haben wir noch vor:
 - Die einzelnen Komponenten vereinen
 - Basic-Layout optisch ansprechender machen
+- Pie-Chart automatisch an Daten anpassen
+- Dropdown-Menü mit Search für das leichtere Finden eines Landkreises
 - Bug-Fixing
