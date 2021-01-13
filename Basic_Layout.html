@@ -13,6 +13,13 @@
     <!-- jquery ui for calendar -->
     <link rel="stylesheet" href="jquery-ui/jquery-ui.min.css">
 
+
+    <!-- LTR: doppelganger! change this! PLZZ! :-( -->
+    <link rel="stylesheet" href="./map.css">
+        <script src="./raphael.min.js"></script>
+        <script src="./jquery-3.5.1.js"></script>
+        <script src="./d3.min.js"></script>
+
 </head>
 <body>
     <!-- Create a div where the first graph will take place -->
@@ -43,7 +50,7 @@
 
     <!-- Zurück Links zur höhreren Ebene Button -->
     <div class = "EbeneZurückL">
-        <button type="button" class="btn btn-default btn-sm" id="BZL"  onclick="">
+        <button type="button" class="btn btn-default btn-sm" id="BZL" onclick="goBack()">
             <span class="glyphicon glyphicon-share-alt"></span>
         </button>
     </div>
@@ -104,16 +111,29 @@
     </div>
 
 
-
-
-
     <!-- Deutschlandkarte-->
-    <dic class = "D_Karte" id="map">
-        <div id="map"></div>
+    <div class = "D_Karte" id="map">
         <div id="region_name" class="RegionTitel">Deutschland</div>
-    </dic>
+        <div class="map" id="map-DE"></div>
+        <div class="map" id="map-DE-TH" style="display: none;"></div>
+        <div class="map" id="map-DE-SH" style="display: none;"></div>
+        <div class="map" id="map-DE-ST" style="display: none;"></div>
+        <div class="map" id="map-DE-SN" style="display: none;"></div>
+        <div class="map" id="map-DE-SL" style="display: none;"></div>
+        <div class="map" id="map-DE-RP" style="display: none;"></div>
+        <div class="map" id="map-DE-NW" style="display: none;"></div>
+        <div class="map" id="map-DE-NI" style="display: none;"></div>
+        <div class="map" id="map-DE-MV" style="display: none;"></div>
+        <div class="map" id="map-DE-HE" style="display: none;"></div>
+        <div class="map" id="map-DE-HB" style="display: none;"></div>     
+        <div class="map" id="map-DE-HH" style="display: none;"></div>
+        <div class="map" id="map-DE-BE" style="display: none;"></div>
+        <div class="map" id="map-DE-BR" style="display: none;"></div>
+        <div class="map" id="map-DE-BY" style="display: none;"></div>
+        <div class="map" id="map-DE-BW" style="display: none;"></div>
+    </div>
 
-
+    <script src="./map.js"></script>
 
 
     <!-- Timeslider -->
@@ -143,9 +163,6 @@
     <script src="jquery-2.1.4.min.js"></script>
     <script src="bootstrap.min.js" ></script>
     <script src="search1.js"></script>
-    <script src="./raphael.min.js"></script>
-    <script src="./jquery-3.5.1.js"></script>
-    <script src="DMap1.js"></script>
     <script src="jquery-ui/jquery-ui.min.js"></script>
     <script src="datepicker.js"></script>
 
