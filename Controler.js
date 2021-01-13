@@ -3,6 +3,8 @@ var Datum;
 var Daten = "Data.csv";
 var RelevantData = Daten; //Hier nochFiltern nach 1. Januar und Deutschland zur Initialisierung
 
+var formatToDay = d3.timeFormat("%j");
+
 function getDate(){
     return Datum;
 }
