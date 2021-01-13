@@ -38,7 +38,10 @@ function getRelevantData(){
 
 function pushUpdateTime(){
     RelevantData = Daten; // Hier noch Filtern entsprechend den upgedateten Kathegorien;
-    //Mapcolour();
+    
+    // Ludwig
+    updateCircles(4, getDate()); // 4 => 60+
+
     PieBarTimeUpdate();
 }
 function pushUpdateOrt(){
