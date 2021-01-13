@@ -97,7 +97,7 @@ function createPieBar(pie_id){
         .attr("transform", "translate(" + width / 2 + "," + ( height/2+100 )+ ")"); // Add 100 on Y translation, cause upper bars are longer
 
     d3.csv(pie_daten, function(data) {
-        console.log(data);
+        //console.log(data);
         // X scale
         var x = d3.scaleBand()
             .range([1.2*Math.PI, 2.9 * Math.PI])    // X axis goes from 0 to 2pi = all around the circle. If I stop at 1Pi, it will be around a half circle

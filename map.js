@@ -1106,9 +1106,14 @@ function updateCircles(group, day){
 
 let incidence_data = {};
 async function getIncidenceData(){
-    var data = await d3.json("./data/inzidenzen.json", {});
-    //console.log(data); // DEBUG
-    incidence_data = data;
+    await d3.json("./data/inzidenzen.json", (data) =>{
+         // DEBUG
+        incidence_data = data;
+
+    });
+
+
+
 };
 
 // krstable is deprecated. Will be removed after "map" does not depend on it anymore. // TODO
@@ -1119,8 +1124,12 @@ async function getData(){
     });  
     //console.log(krstable); // DEBUG
     await getIncidenceData();
+    setTimeout(()=>{
+        console.log(incidence_data[0][0]);
+        initMap();
+    },2000);
     //console.log(incidence_data[0][1]) // DEBUG
-    initMap();
+
 };            
 getData();
 
