@@ -1052,7 +1052,7 @@ function drawCircles(paper, regions, circles, ids, group, day, transform, transl
             //"fill": "rgba(0, 0," + remapped_value + ", 0.6)" // black (young) to blue (old)
             "stroke": "#000000", // black
             //"stroke": "rgba(" + (255 - remapped_value) +  ", " + (255 - remapped_value) + ", 255, 0.8)",  // white (young) to blue (old) => black circles are errors in data
-            "fill": "rgba(" + (255 - remapped_value) +  ", " + (255 - remapped_value) + ", 255, 0.66*)" // white (young) to blue (old) => black circles are errors in data
+            "fill": "rgba(" + (255 - remapped_value) +  ", " + (255 - remapped_value) + ", 255, 0.66)" // white (young) to blue (old) => black circles are errors in data
         };
         circle.attr(circle_style);
         circle.transform(transform);
