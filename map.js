@@ -29,7 +29,6 @@ function initMap(){
     let group = 4; // pepole 60+
     let day = 0; // 01.01.2020
 
-
     //#region Deutschland
 
     let mapContainer = document.getElementById("map-DE");
