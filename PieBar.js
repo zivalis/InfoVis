@@ -1,15 +1,19 @@
-pie_daten = getRelevantData();
-
-createPieBar("#pie_1");
-createPieBar("#pie_2");
-UpdateEbeneR(9182);
-UpdateEbeneL(9182);
-
+pie_daten = 0;
 var LKIdL = 0;
 var LKIdR =0;
 var LKName = "TestLand";
 var AltersDurchschnitt = "50,0";
 var Inzidenz ="112";
+
+setTimeout(()=>{
+    pie_daten = getRelevantData();
+    createPieBar("#pie_1");
+    createPieBar("#pie_2");
+    UpdateEbeneR(pie_daten[0]);
+    UpdateEbeneL(pie_daten[0]);
+},600);
+
+
 
 function UpdateEbeneR(Ort_ID){
     if(Ort_ID == 0){
@@ -96,9 +100,10 @@ function createPieBar(pie_id){
         .append("g")
         .attr("transform", "translate(" + width / 2 + "," + ( height/2+100 )+ ")"); // Add 100 on Y translation, cause upper bars are longer
 
-    d3.csv(pie_daten, function(data) {
-        //console.log(data);
-        // X scale
+    var test = "./Data.csv";
+    console.log(test);
+    d3.csv(test, (data) => {
+        console.log(data);
         var x = d3.scaleBand()
             .range([1.2*Math.PI, 2.9 * Math.PI])    // X axis goes from 0 to 2pi = all around the circle. If I stop at 1Pi, it will be around a half circle
             .align(0)                  // This does nothing ?

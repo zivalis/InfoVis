@@ -1,7 +1,66 @@
-var RegionID;
-var Datum;
-var Daten = "Data.csv";
-var RelevantData = Daten; //Hier nochFiltern nach 1. Januar und Deutschland zur Initialisierung
+var RegionID = 9172;
+var Datum = 0;
+var Daten;
+var Navigator;
+
+var RelevantData=[];
+
+async function getIncidenceData(){
+    await d3.json("./data/inzidenzen.json", (data) =>{
+        Daten = data;
+    });
+};
+
+firstIni()
+function firstIni(){
+    getIncidenceData();
+    SetNavigator();
+    setTimeout(()=>{
+        UpdateRelevant(RegionID,Datum);
+
+    },500)
+}
+function SetNavigator(){
+    d3.csv("./data/Navigation.csv", (data)=>{
+        Navigator =  data;
+
+    })
+}
+
+function UpdateRelevant(Ort,Tag){
+    var tmp = Daten[IDtoArrayPos(Ort)];
+    RelevantData[0] = tmp[0];
+    RelevantData[1] = tmp[1];
+    RelevantData[2] = tmp[2];
+    RelevantData[3] = tmp[3][Tag];
+    console.log(RelevantData);
+}
+
+function IDtoArrayPos(RegionID){
+    for(var i = 0; i < Navigator.length;i++){
+        if(Navigator[i].ID==RegionID){
+            console.log(Navigator[i].Pos);
+            return  Navigator[i].Pos;
+        }
+    }
+}
+function IDtoName(RegionID){
+    for(var i = 0; i < Navigator.length;i++){
+        if(Navigator[i].ID==RegionID){
+            console.log(Navigator[i].Name);
+            return  Navigator[i].Name;
+        }
+    }
+}
+function NametoID(RegionName){
+    for(var i = 0; i < Navigator.length;i++){
+        if(Navigator[i].Name==RegionID){
+            console.log(Navigator[i].ID);
+            return  Navigator[i].ID;
+        }
+    }
+}
+
 
 function getDate(){
     return Datum;
@@ -12,6 +71,7 @@ function getRegionID(){
 }
 
 function DateChange(newDate){
+
     updateTimeSlider(newDate);
     $( "#input-datepicker" ).datepicker("setDate", newDate);
     Datum = newDate;
@@ -27,7 +87,6 @@ function stopTimePlay(){
 
 function RegionChange(newRegionID){
     RegionID = newRegionID;
-    console.log("HierHatSichWasGeändert"+RegionID);
     stopTimePlay();
     pushUpdateOrt();
 }
