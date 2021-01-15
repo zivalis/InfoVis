@@ -2,8 +2,8 @@ pie_daten = 0;
 var LKIdL = 0;
 var LKIdR =0;
 var LKName = "TestLand";
-var AltersDurchschnitt = "50,0";
-var Inzidenz ="112";
+var Einwohner = "0";
+var Inzidenz ="0";
 
 setTimeout(()=>{
     pie_daten = getRelevantData();
@@ -100,10 +100,18 @@ function createPieBar(pie_id){
         .append("g")
         .attr("transform", "translate(" + width / 2 + "," + ( height/2+100 )+ ")"); // Add 100 on Y translation, cause upper bars are longer
 
-    var test = "./Data.csv";
-    console.log(test);
-    d3.csv(test, (data) => {
-        console.log(data);
+    LKName=pie_daten[1];
+    Einwohner =pie_daten[2][0];
+    Inzidenz =pie_daten[3][0]
+    var rows =[
+        ["Age","Value","Corona"],
+        ["<15",Math.round(pie_daten[2][1]/pie_daten[2][0]*100),Math.round(pie_daten[3][1]/pie_daten[3][0]*100)],
+        ["15-35",Math.round(pie_daten[2][2]/pie_daten[2][0]*100),Math.round(pie_daten[3][2]/pie_daten[3][0]*100)],
+        ["35-60",Math.round(pie_daten[2][3]/pie_daten[2][0]*100),Math.round(pie_daten[3][3]/pie_daten[3][0]*100)],
+        [">60",Math.round(pie_daten[2][4]/pie_daten[2][0]*100),Math.round(pie_daten[3][4]/pie_daten[3][0]*100)]];
+    let csvContent = "data:text/csv;charset=utf-8,"
+        + rows.map(e => e.join(",")).join("\n");
+    d3.csv(csvContent, (data) => {
         var x = d3.scaleBand()
             .range([1.2*Math.PI, 2.9 * Math.PI])    // X axis goes from 0 to 2pi = all around the circle. If I stop at 1Pi, it will be around a half circle
             .align(0)                  // This does nothing ?
@@ -268,7 +276,7 @@ function createPieBar(pie_id){
             .attr("font-family","sans-serif")
             .attr("text-anchor","middle")
             .attr("fill","darkblue")
-            .text(AltersDurchschnitt+" J")
+            .text(Einwohner+" Einwohner")
 
         //arrow-head
         svg.append("svg:defs")
@@ -301,7 +309,7 @@ function createPieBar(pie_id){
             .attr("font-size","13px")
             .attr("font-family","sans-serif")
             .attr("fill","#770000")
-            .text(Inzidenz)
+            .text(Math.floor(Inzidenz*10)/10)
 
 //Text R-Text
         svg.append("text")
@@ -319,87 +327,95 @@ function createPieBar(pie_id){
 
 function PieBarTimeUpdate(){
     var LockIcon = document.getElementsByClassName("Abgeschlossen");
-    pie_daten = getRelevantData();
-    //links
-    if(LockIcon[0].style.display == "none"){
-        createPieBar("#pie_1");
-        createPieBar("#pie_2");
-        setTimeout(()=>{
-            d3.select("#pie_1 *").remove();
-            d3.select("#pie_2 *").remove();
-        },1);
 
-    }
-    //rechts
-    else{
-        createPieBar("#pie_2");
-        setTimeout(()=>{
-            d3.select("#pie_2 *").remove();
-        },1);
-    }
+        pie_daten = getRelevantData();
+        //links
+        if(LockIcon[0].style.display == "none"){
+            createPieBar("#pie_1");
+            createPieBar("#pie_2");
+            setTimeout(()=>{
+                d3.select("#pie_1 *").remove();
+                d3.select("#pie_2 *").remove();
+            },1);
+
+        }
+        //rechts
+        else{
+            createPieBar("#pie_2");
+            setTimeout(()=>{
+                d3.select("#pie_2 *").remove();
+            },1);
+        }
+
+
 
 }
 
 function PieBarPlaceUpdate(){
 
     var LockIcon = document.getElementsByClassName("Abgeschlossen");
-    pie_daten = getRelevantData();
-    //links
-    if(LockIcon[0].style.display == "none"){
-        var angezeigt = document.getElementsByClassName("right_chart");
-        //Rechts wird gerade  gelöscht löschen
-        if(angezeigt[0].style.display == "inline"){
-            d3.select("#keinGraphText").transition().duration(0).ease(d3.easeLinear).style("opacity", 0);
-            var InfoText = document.getElementsByClassName("Ersatztext")[0].style.display = "inline";
-            d3.select("#pie_2").transition().duration(500).ease(d3.easeLinear).style("opacity", 0);
-            setTimeout(function(){
-                angezeigt[0].style.display = "none";
+;
+        pie_daten = getRelevantData();
+
+
+        if(LockIcon[0].style.display == "none"){
+            var angezeigt = document.getElementsByClassName("right_chart");
+            //Rechts wird gerade  gelöscht löschen
+            if(angezeigt[0].style.display == "inline"){
+                d3.select("#keinGraphText").transition().duration(0).ease(d3.easeLinear).style("opacity", 0);
+                var InfoText = document.getElementsByClassName("Ersatztext")[0].style.display = "inline";
                 d3.select("#pie_2").transition().duration(500).ease(d3.easeLinear).style("opacity", 0);
-                d3.select("#keinGraphText").transition().duration(2000).ease(d3.easeLinear).style("opacity", 1);
-            },500);
+                setTimeout(function(){
+                    angezeigt[0].style.display = "none";
+                    d3.select("#pie_2").transition().duration(500).ease(d3.easeLinear).style("opacity", 0);
+                    d3.select("#keinGraphText").transition().duration(2000).ease(d3.easeLinear).style("opacity", 1);
+                },500);
 
+            }
+            //Rechts nicht angezeigt
+            else{
+                d3.select("#pie_1").transition().duration(500).ease(d3.easeLinear).style("opacity", 0);
+                setTimeout(function(){
+                    d3.select("#pie_1 *").remove();
+                    createPieBar("#pie_1");
+                    d3.select("#pie_1").transition().duration(500).ease(d3.easeLinear).style("opacity", 1);
+                    d3.select("#pie_2 *").remove();
+                    createPieBar("#pie_2");
+                },500);
+            }
+
+            UpdateEbeneL(10);
         }
-        //Rechts nicht angezeigt
+        //rechts
         else{
-            d3.select("#pie_1").transition().duration(500).ease(d3.easeLinear).style("opacity", 0);
-            setTimeout(function(){
-                d3.select("#pie_1 *").remove();
-                createPieBar("#pie_1");
-                d3.select("#pie_1").transition().duration(500).ease(d3.easeLinear).style("opacity", 1);
+
+            var angezeigt = document.getElementsByClassName("right_chart");
+            //Rechts wird gerade ausgeklappt
+            if(angezeigt[0].style.display == "none"){
+
+                d3.select("#pie_2").transition().duration(0).ease(d3.easeLinear).style("opacity", 0);
+                angezeigt[0].style.display = "inline";
                 d3.select("#pie_2 *").remove();
                 createPieBar("#pie_2");
-            },500);
+                d3.select("#pie_2").transition().duration(1500).ease(d3.easeLinear).style("opacity", 1);
+                var InfoText = document.getElementsByClassName("Ersatztext")[0].style.display = "none";
+
+
+            }
+            //Rechts wird bereits angezeigt
+            else{
+                d3.select("#pie_2").transition().duration(500).ease(d3.easeLinear).style("opacity", 0);
+                setTimeout(function(){
+                    d3.select("#pie_2 *").remove();
+                    createPieBar("#pie_2");
+                    d3.select("#pie_2").transition().duration(500).ease(d3.easeLinear).style("opacity", 1);
+                },500);
+            }
+            UpdateEbeneR(10);
         }
 
-        UpdateEbeneL(10);
-    }
-    //rechts
-    else{
 
-        var angezeigt = document.getElementsByClassName("right_chart");
-        //Rechts wird gerade ausgeklappt
-        if(angezeigt[0].style.display == "none"){
+    //links
 
-            d3.select("#pie_2").transition().duration(0).ease(d3.easeLinear).style("opacity", 0);
-            angezeigt[0].style.display = "inline";
-            d3.select("#pie_2 *").remove();
-            createPieBar("#pie_2");
-            d3.select("#pie_2").transition().duration(1500).ease(d3.easeLinear).style("opacity", 1);
-            var InfoText = document.getElementsByClassName("Ersatztext")[0].style.display = "none";
-
-
-        }
-        //Rechts wird bereits angezeigt
-        else{
-            console.log("hi");
-            d3.select("#pie_2").transition().duration(500).ease(d3.easeLinear).style("opacity", 0);
-            setTimeout(function(){
-                d3.select("#pie_2 *").remove();
-                createPieBar("#pie_2");
-                d3.select("#pie_2").transition().duration(500).ease(d3.easeLinear).style("opacity", 1);
-            },500);
-        }
-        UpdateEbeneR(10);
-    }
 
 }

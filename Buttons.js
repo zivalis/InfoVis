@@ -42,6 +42,7 @@ function padlock (){
     LockButton[0].style.display = "none";
 
     LockIcon[0].style.display = "inline";
+    LockIcon[0].style.display = "inline";
 
     TrashButton[0].style.display = "inline";
 
@@ -51,7 +52,7 @@ function padlock (){
 
     savedRegionIDLeft = getRegionID();
 
-    RegionChange(0);
+    RegionChange(14612);
 }
 
 

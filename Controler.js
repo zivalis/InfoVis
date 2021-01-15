@@ -10,7 +10,9 @@ async function getIncidenceData(){
         Daten = data;
     });
 };
-
+setTimeout(()=>{
+    RegionChange(1001);
+},10000)
 firstIni()
 function firstIni(){
     getIncidenceData();
@@ -27,19 +29,25 @@ function SetNavigator(){
     })
 }
 
-function UpdateRelevant(Ort,Tag){
-    var tmp = Daten[IDtoArrayPos(Ort)];
+function UpdateRelevant(Ort,Datum){
+
+    var formatDay = d3.timeFormat("%j");
+    Tag = Math.round(formatDay(Datum));
+    var tmp =[]
+     tmp= Daten[IDtoArrayPos(Ort)];
+    RelevantData =[];
     RelevantData[0] = tmp[0];
     RelevantData[1] = tmp[1];
     RelevantData[2] = tmp[2];
     RelevantData[3] = tmp[3][Tag];
-    console.log(RelevantData);
+
+
+
 }
 
 function IDtoArrayPos(RegionID){
     for(var i = 0; i < Navigator.length;i++){
         if(Navigator[i].ID==RegionID){
-            console.log(Navigator[i].Pos);
             return  Navigator[i].Pos;
         }
     }
@@ -47,7 +55,6 @@ function IDtoArrayPos(RegionID){
 function IDtoName(RegionID){
     for(var i = 0; i < Navigator.length;i++){
         if(Navigator[i].ID==RegionID){
-            console.log(Navigator[i].Name);
             return  Navigator[i].Name;
         }
     }
@@ -55,7 +62,6 @@ function IDtoName(RegionID){
 function NametoID(RegionName){
     for(var i = 0; i < Navigator.length;i++){
         if(Navigator[i].Name==RegionID){
-            console.log(Navigator[i].ID);
             return  Navigator[i].ID;
         }
     }
@@ -71,10 +77,12 @@ function getRegionID(){
 }
 
 function DateChange(newDate){
-
     updateTimeSlider(newDate);
     $( "#input-datepicker" ).datepicker("setDate", newDate);
     Datum = newDate;
+
+    UpdateRelevant(RegionID, Datum);
+
     pushUpdateTime();
 }
 
@@ -88,6 +96,7 @@ function stopTimePlay(){
 function RegionChange(newRegionID){
     RegionID = newRegionID;
     stopTimePlay();
+    UpdateRelevant(RegionID, Datum);
     pushUpdateOrt();
 }
 
@@ -96,7 +105,6 @@ function getRelevantData(){
 }
 
 function pushUpdateTime(){
-    RelevantData = Daten; // Hier noch Filtern entsprechend den upgedateten Kathegorien;
     
     // Ludwig
     updateCircles(4, getDate()); // 4 => 60+
@@ -104,7 +112,6 @@ function pushUpdateTime(){
     PieBarTimeUpdate();
 }
 function pushUpdateOrt(){
-    RelevantData = Daten; // Hier noch Filtern entsprechend den upgedateten Kathegorien;
     //Mapzoom();
     PieBarPlaceUpdate();
 }
