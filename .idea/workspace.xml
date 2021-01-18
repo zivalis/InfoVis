@@ -24,6 +24,8 @@
       <change beforePath="$PROJECT_DIR$/Buttons.js" beforeDir="false" afterPath="$PROJECT_DIR$/Buttons.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controler.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controler.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PieBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/PieBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/Navigation.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/Navigation.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/inzidenzen.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/inzidenzen.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,10 +44,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../InfoVisProject - Kopie" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Schepi\Desktop\WS 20.21\IV\Gruppenprojekt\InfoVisProject" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Schepi\Desktop\WS 20.21\IV\Gruppenprojekt\InfoVisProject\data" />
     </key>
@@ -62,6 +67,10 @@
       <workItem from="1610713907027" duration="6120000" />
       <workItem from="1610738455027" duration="3192000" />
       <workItem from="1610741686122" duration="219000" />
+      <workItem from="1610749395155" duration="599000" />
+      <workItem from="1610961701108" duration="862000" />
+      <workItem from="1610962689348" duration="4351000" />
+      <workItem from="1610967349691" duration="262000" />
     </task>
     <servers />
   </component>
@@ -93,6 +102,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="777" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1610740932951" />
+    <state x="667" y="258" width="585" height="534" key="find.popup" timestamp="1610962718567">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="667" y="258" width="585" height="534" key="find.popup/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1610962718567" />
     <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1610718835904">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

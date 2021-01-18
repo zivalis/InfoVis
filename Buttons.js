@@ -52,7 +52,7 @@ function padlock (){
 
     savedRegionIDLeft = getRegionID();
 
-    RegionChange(14612);
+    RegionChange(0);
 }
 
 

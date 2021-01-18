@@ -1,18 +1,20 @@
-var RegionID = 9172;
+var RegionID = 1001;
 var Datum = 0;
 var Daten;
 var Navigator;
 
 var RelevantData=[];
 
+
+
 async function getIncidenceData(){
     await d3.json("./data/inzidenzen.json", (data) =>{
         Daten = data;
+
     });
 };
-setTimeout(()=>{
-    RegionChange(1001);
-},10000)
+
+
 firstIni()
 function firstIni(){
     getIncidenceData();
@@ -22,6 +24,9 @@ function firstIni(){
 
     },500)
 }
+
+
+
 function SetNavigator(){
     d3.csv("./data/Navigation.csv", (data)=>{
         Navigator =  data;

@@ -1,490 +1,507 @@
-ID,Name,Zusatz,Pos
-1001,Flensburg, Kreisfreie Stadt,0
-1002,Kiel, Landeshauptstadt, Kreisfreie Stadt,1
-1003,Lübeck, Hansestadt, Kreisfreie Stadt,2
-1004,Neumünster, Kreisfreie Stadt,3
-1051,Dithmarschen, Landkreis,4
-1053,Herzogtum Lauenburg, Landkreis,5
-1054,Nordfriesland, Landkreis,6
-1055,Ostholstein, Landkreis,7
-1056,Pinneberg, Landkreis,8
-1057,Plön, Landkreis,9
-1058,Rendsburg-Eckernförde, Landkreis,10
-1059,Schleswig-Flensburg, Landkreis,11
-1060,Segeberg, Landkreis,12
-1061,Steinburg, Landkreis,13
-1062,Stormarn, Landkreis,14
-2000,Hamburg,15
-3101,Braunschweig, Kreisfreie Stadt,16
-3102,Salzgitter, Kreisfreie Stadt,17
-3103,Wolfsburg, Kreisfreie Stadt,18
-3151,Gifhorn, Landkreis,19
-3152,Göttingen, Landkreis,20
-3153,Goslar, Landkreis,21
-3154,Helmstedt, Landkreis,22
-3155,Northeim, Landkreis,23
-3156,Osterode am Harz, Landkreis,24
-3157,Peine, Landkreis,25
-3158,Wolfenbüttel, Landkreis,26
-3159,Göttingen, Landkreis,27
-3241,Region Hannover, Landkreis,28
-3241001,Hannover, Landeshauptstadt,29
-3251,Diepholz, Landkreis,30
-3252,Hameln-Pyrmont, Landkreis,31
-3254,Hildesheim, Landkreis,32
-3255,Holzminden, Landkreis,33
-3256,Nienburg (Weser), Landkreis,34
-3257,Schaumburg, Landkreis,35
-3351,Celle, Landkreis,36
-3352,Cuxhaven, Landkreis,37
-3353,Harburg, Landkreis,38
-3354,Lüchow-Dannenberg, Landkreis,39
-3355,Lüneburg, Landkreis,40
-3356,Osterholz, Landkreis,41
-3357,Rotenburg (Wümme), Landkreis,42
-3358,Heidekreis, Landkreis,43
-3359,Stade, Landkreis,44
-3360,Uelzen, Landkreis,45
-3361,Verden, Landkreis,46
-3401,Delmenhorst, Kreisfreie Stadt,47
-3402,Emden, Kreisfreie Stadt,48
-3403,Oldenburg (Oldenburg), Kreisfreie Stadt,49
-3404,Osnabrück, Kreisfreie Stadt,50
-3405,Wilhelmshaven, Kreisfreie Stadt,51
-3451,Ammerland, Landkreis,52
-3452,Aurich, Landkreis,53
-3453,Cloppenburg, Landkreis,54
-3454,Emsland, Landkreis,55
-3455,Friesland, Landkreis,56
-3456,Grafschaft Bentheim, Landkreis,57
-3457,Leer, Landkreis,58
-3458,Oldenburg, Landkreis,59
-3459,Osnabrück, Landkreis,60
-3460,Vechta, Landkreis,61
-3461,Wesermarsch, Landkreis,62
-3462,Wittmund, Landkreis,63
-4011,Bremen, Kreisfreie Stadt,64
-4012,Bremerhaven, Kreisfreie Stadt,65
-5111,Düsseldorf, Kreisfreie Stadt,66
-5112,Duisburg, Kreisfreie Stadt,67
-5113,Essen, Kreisfreie Stadt,68
-5114,Krefeld, Kreisfreie Stadt,69
-5116,Mönchengladbach, Kreisfreie Stadt,70
-5117,Mülheim an der Ruhr, Kreisfreie Stadt,71
-5119,Oberhausen, Kreisfreie Stadt,72
-5120,Remscheid, Kreisfreie Stadt,73
-5122,Solingen, Kreisfreie Stadt,74
-5124,Wuppertal, Kreisfreie Stadt,75
-5154,Kleve, Kreis,76
-5158,Mettmann, Kreis,77
-5162,Rhein-Kreis Neuss,78
-5166,Viersen, Kreis,79
-5170,Wesel, Kreis,80
-5313,Aachen, Stadt (alt),81
-5314,Bonn, Kreisfreie Stadt,82
-5315,Köln, Kreisfreie Stadt,83
-5316,Leverkusen, Kreisfreie Stadt,84
-5334,Städteregion Aachen (einschl. Stadt Aachen),85
-5334002,Aachen, krfr. Stadt,86
-5354,Aachen, Kreis,87
-5358,Düren, Kreis,88
-5362,Rhein-Erft-Kreis,89
-5366,Euskirchen, Kreis,90
-5370,Heinsberg, Kreis,91
-5374,Oberbergischer Kreis,92
-5378,Rheinisch-Bergischer Kreis,93
-5382,Rhein-Sieg-Kreis,94
-5512,Bottrop, Kreisfreie Stadt,95
-5513,Gelsenkirchen, Kreisfreie Stadt,96
-5515,Münster, Kreisfreie Stadt,97
-5554,Borken, Kreis,98
-5558,Coesfeld, Kreis,99
-5562,Recklinghausen, Kreis,100
-5566,Steinfurt, Kreis,101
-5570,Warendorf, Kreis,102
-5711,Bielefeld, Kreisfreie Stadt,103
-5754,Gütersloh, Kreis,104
-5758,Herford, Kreis,105
-5762,Höxter, Kreis,106
-5766,Lippe, Kreis,107
-5770,Minden-Lübbecke, Kreis,108
-5774,Paderborn, Kreis,109
-5911,Bochum, Kreisfreie Stadt,110
-5913,Dortmund, Kreisfreie Stadt,111
-5914,Hagen, Kreisfreie Stadt,112
-5915,Hamm, Kreisfreie Stadt,113
-5916,Herne, Kreisfreie Stadt,114
-5954,Ennepe-Ruhr-Kreis,115
-5958,Hochsauerlandkreis,116
-5962,Märkischer Kreis,117
-5966,Olpe, Kreis,118
-5970,Siegen-Wittgenstein, Kreis,119
-5974,Soest, Kreis,120
-5978,Unna, Kreis,121
-6411,Darmstadt, Kreisfreie Stadt,122
-6412,Frankfurt am Main, Kreisfreie Stadt,123
-6413,Offenbach am Main, Kreisfreie Stadt,124
-6414,Wiesbaden, Landeshauptstadt, Kreisfreie Stadt,125
-6431,Bergstraße, Landkreis,126
-6432,Darmstadt-Dieburg, Landkreis,127
-6433,Groß-Gerau, Landkreis,128
-6434,Hochtaunuskreis,129
-6435,Main-Kinzig-Kreis,130
-6436,Main-Taunus-Kreis,131
-6437,Odenwaldkreis,132
-6438,Offenbach, Landkreis,133
-6439,Rheingau-Taunus-Kreis,134
-6440,Wetteraukreis,135
-6531,Gießen, Landkreis,136
-6532,Lahn-Dill-Kreis,137
-6533,Limburg-Weilburg, Landkreis,138
-6534,Marburg-Biedenkopf, Landkreis,139
-6535,Vogelsbergkreis,140
-6611,Kassel, Kreisfreie Stadt,141
-6631,Fulda, Landkreis,142
-6632,Hersfeld-Rotenburg, Landkreis,143
-6633,Kassel, Landkreis,144
-6634,Schwalm-Eder-Kreis,145
-6635,Waldeck-Frankenberg, Landkreis,146
-6636,Werra-Meißner-Kreis,147
-7111,Koblenz, Kreisfreie Stadt,148
-7131,Ahrweiler, Landkreis,149
-7132,Altenkirchen (Westerwald), Landkreis,150
-7133,Bad Kreuznach, Landkreis,151
-7134,Birkenfeld, Landkreis,152
-7135,Cochem-Zell, Landkreis,153
-7137,Mayen-Koblenz, Landkreis,154
-7138,Neuwied, Landkreis,155
-7140,Rhein-Hunsrück-Kreis,156
-7141,Rhein-Lahn-Kreis,157
-7143,Westerwaldkreis,158
-7211,Trier, Kreisfreie Stadt,159
-7231,Bernkastel-Wittlich, Landkreis,160
-7232,Eifelkreis Bitburg-Prüm,161
-7233,Vulkaneifel, Landkreis,162
-7235,Trier-Saarburg, Landkreis,163
-7311,Frankenthal (Pfalz), Kreisfreie Stadt,164
-7312,Kaiserslautern, Kreisfreie Stadt,165
-7313,Landau in der Pfalz, Kreisfreie Stadt,166
-7314,Ludwigshafen am Rhein, Kreisfreie Stadt,167
-7315,Mainz, Kreisfreie Stadt,168
-7316,Neustadt an der Weinstraße, Kreisfreie Stadt,169
-7317,Pirmasens, Kreisfreie Stadt,170
-7318,Speyer, Kreisfreie Stadt,171
-7319,Worms, Kreisfreie Stadt,172
-7320,Zweibrücken, Kreisfreie Stadt,173
-7331,Alzey-Worms, Landkreis,174
-7332,Bad Dürkheim, Landkreis,175
-7333,Donnersbergkreis,176
-7334,Germersheim, Landkreis,177
-7335,Kaiserslautern, Landkreis,178
-7336,Kusel, Landkreis,179
-7337,Südliche Weinstraße, Landkreis,180
-7338,Rhein-Pfalz-Kreis,181
-7339,Mainz-Bingen, Landkreis,182
-7340,Südwestpfalz, Landkreis,183
-8111,Stuttgart, Landeshauptstadt, Stadtkreis,184
-8115,Böblingen, Landkreis,185
-8116,Esslingen, Landkreis,186
-8117,Göppingen, Landkreis,187
-8118,Ludwigsburg, Landkreis,188
-8119,Rems-Murr-Kreis, Landkreis,189
-8121,Heilbronn, Stadtkreis,190
-8125,Heilbronn, Landkreis,191
-8126,Hohenlohekreis, Landkreis,192
-8127,Schwäbisch Hall, Landkreis,193
-8128,Main-Tauber-Kreis, Landkreis,194
-8135,Heidenheim, Landkreis,195
-8136,Ostalbkreis, Landkreis,196
-8211,Baden-Baden, Stadtkreis,197
-8212,Karlsruhe, Stadtkreis,198
-8215,Karlsruhe, Landkreis,199
-8216,Rastatt, Landkreis,200
-8221,Heidelberg, Stadtkreis,201
-8222,Mannheim, Stadtkreis,202
-8225,Neckar-Odenwald-Kreis, Landkreis,203
-8226,Rhein-Neckar-Kreis, Landkreis,204
-8231,Pforzheim, Stadtkreis,205
-8235,Calw, Landkreis,206
-8236,Enzkreis, Landkreis,207
-8237,Freudenstadt, Landkreis,208
-8311,Freiburg im Breisgau, Stadtkreis,209
-8315,Breisgau-Hochschwarzwald, Landkreis,210
-8316,Emmendingen, Landkreis,211
-8317,Ortenaukreis, Landkreis,212
-8325,Rottweil, Landkreis,213
-8326,Schwarzwald-Baar-Kreis, Landkreis,214
-8327,Tuttlingen, Landkreis,215
-8335,Konstanz, Landkreis,216
-8336,Lörrach, Landkreis,217
-8337,Waldshut, Landkreis,218
-8415,Reutlingen, Landkreis,219
-8416,Tübingen, Landkreis,220
-8417,Zollernalbkreis, Landkreis,221
-8421,Ulm, Stadtkreis,222
-8425,Alb-Donau-Kreis, Landkreis,223
-8426,Biberach, Landkreis,224
-8435,Bodenseekreis, Landkreis,225
-8436,Ravensburg, Landkreis,226
-8437,Sigmaringen, Landkreis,227
-9161,Ingolstadt,228
-9162,München, Landeshauptstadt,229
-9163,Rosenheim,230
-9171,Altötting, Landkreis,231
-9172,Berchtesgadener Land, Landkreis,232
-9173,Bad Tölz-Wolfratshausen, Landkreis,233
-9174,Dachau, Landkreis,234
-9175,Ebersberg, Landkreis,235
-9176,Eichstätt, Landkreis,236
-9177,Erding, Landkreis,237
-9178,Freising, Landkreis,238
-9179,Fürstenfeldbruck, Landkreis,239
-9180,Garmisch-Partenkirchen, Landkreis,240
-9181,Landsberg am Lech, Landkreis,241
-9182,Miesbach, Landkreis,242
-9183,Mühldorf a.Inn, Landkreis,243
-9184,München, Landkreis,244
-9185,Neuburg-Schrobenhausen, Landkreis,245
-9186,Pfaffenhofen a.d.Ilm, Landkreis,246
-9187,Rosenheim, Landkreis,247
-9188,Starnberg, Landkreis,248
-9189,Traunstein, Landkreis,249
-9190,Weilheim-Schongau, Landkreis,250
-9261,Landshut,251
-9262,Passau,252
-9263,Straubing,253
-9271,Deggendorf, Landkreis,254
-9272,Freyung-Grafenau, Landkreis,255
-9273,Kelheim, Landkreis,256
-9274,Landshut, Landkreis,257
-9275,Passau, Landkreis,258
-9276,Regen, Landkreis,259
-9277,Rottal-Inn, Landkreis,260
-9278,Straubing-Bogen, Landkreis,261
-9279,Dingolfing-Landau, Landkreis,262
-9361,Amberg,263
-9362,Regensburg,264
-9363,Weiden i.d.OPf.,265
-9371,Amberg-Sulzbach, Landkreis,266
-9372,Cham, Landkreis,267
-9373,Neumarkt i.d.OPf., Landkreis,268
-9374,Neustadt a.d.Waldnaab, Landkreis,269
-9375,Regensburg, Landkreis,270
-9376,Schwandorf, Landkreis,271
-9377,Tirschenreuth, Landkreis,272
-9461,Bamberg,273
-9462,Bayreuth,274
-9463,Coburg,275
-9464,Hof,276
-9471,Bamberg, Landkreis,277
-9472,Bayreuth, Landkreis,278
-9473,Coburg, Landkreis,279
-9474,Forchheim, Landkreis,280
-9475,Hof, Landkreis,281
-9476,Kronach, Landkreis,282
-9477,Kulmbach, Landkreis,283
-9478,Lichtenfels, Landkreis,284
-9479,Wunsiedel i.Fichtelgebirge, Landkreis,285
-9561,Ansbach,286
-9562,Erlangen,287
-9563,Fürth,288
-9564,Nürnberg,289
-9565,Schwabach,290
-9571,Ansbach, Landkreis,291
-9572,Erlangen-Höchstadt, Landkreis,292
-9573,Fürth, Landkreis,293
-9574,Nürnberger Land, Landkreis,294
-9575,Neustadt a.d.Aisch-Bad Windsheim, Landkreis,295
-9576,Roth, Landkreis,296
-9577,Weißenburg-Gunzenhausen, Landkreis,297
-9661,Aschaffenburg,298
-9662,Schweinfurt,299
-9663,Würzburg,300
-9671,Aschaffenburg, Landkreis,301
-9672,Bad Kissingen, Landkreis,302
-9673,Rhön-Grabfeld, Landkreis,303
-9674,Haßberge, Landkreis,304
-9675,Kitzingen, Landkreis,305
-9676,Miltenberg, Landkreis,306
-9677,Main-Spessart, Landkreis,307
-9678,Schweinfurt, Landkreis,308
-9679,Würzburg, Landkreis,309
-9761,Augsburg,310
-9762,Kaufbeuren,311
-9763,Kempten (Allgäu),312
-9764,Memmingen,313
-9771,Aichach-Friedberg, Landkreis,314
-9772,Augsburg, Landkreis,315
-9773,Dillingen a.d.Donau, Landkreis,316
-9774,Günzburg, Landkreis,317
-9775,Neu-Ulm, Landkreis,318
-9776,Lindau (Bodensee), Landkreis,319
-9777,Ostallgäu, Landkreis,320
-9778,Unterallgäu, Landkreis,321
-9779,Donau-Ries, Landkreis,322
-9780,Oberallgäu, Landkreis,323
-10041,Saarbrücken, Regionalverband,324
-10041100,Saarbrücken, Landeshauptstadt,325
-10042,Merzig-Wadern, Landkreis,326
-10043,Neunkirchen, Landkreis,327
-10044,Saarlouis, Landkreis,328
-10045,Saarpfalz-Kreis,329
-10046,St. Wendel, Landkreis,330
-11000,Berlin,331
-11001001,Berlin-Mitte,332
-11002002,Berlin-Friedrichshain-Kreuzberg,333
-11003003,Berlin-Pankow,334
-11004004,Berlin-Charlottenburg-Wilmersdorf,335
-11005005,Berlin-Spandau,336
-11006006,Berlin-Steglitz-Zehlendorf,337
-11007007,Berlin-Tempelhof-Schöneberg,338
-11008008,Berlin-Neukölln,339
-11009009,Berlin-Treptow-Köpenick,340
-11010010,Berlin-Marzahn-Hellersdorf,341
-11011011,Berlin-Lichtenberg,342
-11012012,Berlin-Reinickendorf,343
-12051,Brandenburg an der Havel, Kreisfreie Stadt,344
-12052,Cottbus, Kreisfreie Stadt,345
-12053,Frankfurt (Oder), Kreisfreie Stadt,346
-12054,Potsdam, Kreisfreie Stadt,347
-12060,Barnim, Landkreis,348
-12061,Dahme-Spreewald, Landkreis,349
-12062,Elbe-Elster, Landkreis,350
-12063,Havelland, Landkreis,351
-12064,Märkisch-Oderland, Landkreis,352
-12065,Oberhavel, Landkreis,353
-12066,Oberspreewald-Lausitz, Landkreis,354
-12067,Oder-Spree, Landkreis,355
-12068,Ostprignitz-Ruppin, Landkreis,356
-12069,Potsdam-Mittelmark, Landkreis,357
-12070,Prignitz, Landkreis,358
-12071,Spree-Neiße, Landkreis,359
-12072,Teltow-Fläming, Landkreis,360
-12073,Uckermark, Landkreis,361
-13001,Kreisfreie Stadt Greifswald, Hansestadt,362
-13002,Kreisfreie Stadt Neubrandenburg, Stadt,363
-13003,Kreisfreie Stadt Rostock, Hansestadt,364
-13004,Kreisfreie Stadt Schwerin, Landeshauptstadt,365
-13005,Kreisfreie Stadt Stralsund, Hansestadt,366
-13006,Kreisfreie Stadt Wismar, Hansestadt,367
-13051,Landkreis Bad Doberan,368
-13052,Landkreis Demmin,369
-13053,Landkreis Güstrow,370
-13054,Landkreis Ludwigslust,371
-13055,Landkreis Mecklenburg-Strelitz,372
-13056,Landkreis Müritz,373
-13057,Landkreis Nordvorpommern,374
-13058,Landkreis Nordwestmecklenburg,375
-13059,Landkreis Ostvorpommern,376
-13060,Landkreis Parchim,377
-13061,Landkreis Rügen,378
-13062,Landkreis Uecker-Randow,379
-13071,Landkreis Mecklenburgische Seenplatte,380
-13072,Landkreis Rostock,381
-13073,Landkreis Vorpommern-Rügen,382
-13074,Landkreis Nordwestmecklenburg,383
-13075,Landkreis Vorpommern-Greifswald,384
-13076,Landkreis Ludwigslust-Parchim,385
-14161,Chemnitz, Kreisfreie Stadt,386
-14166,Plauen, Kreisfreie Stadt,387
-14167,Zwickau, Kreisfreie Stadt,388
-14171,Annaberg, Landkreis,389
-14173,Chemnitzer Land, Landkreis,390
-14177,Freiberg, Landkreis,391
-14178,Vogtlandkreis,392
-14181,Mittlerer Erzgebirgskreis,393
-14182,Mittweida, Landkreis,394
-14188,Stollberg, Landkreis,395
-14191,Aue-Schwarzenberg, Landkreis,396
-14193,Zwickauer Land, Landkreis,397
-14262,Dresden, Kreisfreie Stadt,398
-14263,Görlitz, Kreisfreie Stadt,399
-14264,Hoyerswerda, Kreisfreie Stadt,400
-14272,Bautzen, Landkreis,401
-14280,Meißen, Landkreis,402
-14284,Niederschlesischer Oberlausitzkreis,403
-14285,Riesa-Großenhain, Landkreis,404
-14286,Löbau-Zittau, Landkreis,405
-14287,Sächsische Schweiz, Landkreis,406
-14290,Weißeritzkreis,407
-14292,Kamenz, Landkreis,408
-14365,Leipzig, Kreisfreie Stadt,409
-14374,Delitzsch, Landkreis,410
-14375,Döbeln, Landkreis,411
-14379,Leipziger Land, Landkreis,412
-14383,Muldentalkreis,413
-14389,Torgau-Oschatz, Landkreis,414
-14511,Chemnitz, Stadt,415
-14521,Erzgebirgskreis,416
-14522,Mittelsachsen, Landkreis,417
-14523,Vogtlandkreis,418
-14524,Zwickau, Landkreis,419
-14612,Dresden, Stadt,420
-14625,Bautzen, Landkreis,421
-14626,Görlitz, Landkreis,422
-14627,Meißen, Landkreis,423
-14628,Sächsische Schweiz-Osterzgebirge, Landkreis,424
-14713,Leipzig, Stadt,425
-14729,Leipzig, Landkreis,426
-14730,Nordsachsen, Landkreis,427
-15001,Dessau-Roßlau, Kreisfreie Stadt,428
-15002,Halle (Saale), Kreisfreie Stadt,429
-15003,Magdeburg, Kreisfreie Stadt,430
-15081,Altmarkkreis Salzwedel,431
-15082,Anhalt-Bitterfeld, Landkreis,432
-15083,Börde, Landkreis,433
-15084,Burgenlandkreis,434
-15085,Harz, Landkreis,435
-15086,Jerichower Land, Landkreis,436
-15087,Mansfeld-Südharz, Landkreis,437
-15088,Saalekreis,438
-15089,Salzlandkreis,439
-15090,Stendal, Landkreis,440
-15091,Wittenberg, Landkreis,441
-15101,Dessau, Kreisfreie Stadt,442
-15151,Anhalt-Zerbst, Kreis,443
-15153,Bernburg, Kreis,444
-15154,Bitterfeld, Kreis,445
-15159,Köthen, Kreis,446
-15171,Wittenberg, Kreis,447
-15202,Halle (Saale), Kreisfreie Stadt,448
-15256,Burgenlandkreis,449
-15260,Mansfelder Land, Kreis,450
-15261,Merseburg-Querfurt, Kreis,451
-15265,Saalkreis,452
-15266,Sangerhausen, Kreis,453
-15268,Weißenfels, Kreis,454
-15303,Magdeburg, Kreisfreie Stadt,455
-15352,Aschersleben-Staßfurt, Kreis,456
-15355,Bördekreis,457
-15357,Halberstadt, Kreis,458
-15358,Jerichower Land, Kreis,459
-15362,Ohrekreis,460
-15363,Stendal, Kreis,461
-15364,Quedlinburg, Kreis,462
-15367,Schönebeck, Kreis,463
-15369,Wernigerode, Kreis,464
-15370,Altmarkkreis Salzwedel, Kreis,465
-16051,Erfurt, krsfr. Stadt,466
-16052,Gera, krsfr. Stadt,467
-16053,Jena, krsfr. Stadt,468
-16054,Suhl, krsfr. Stadt,469
-16055,Weimar, krsfr. Stadt,470
-16056,Eisenach, krsfr. Stadt,471
-16061,Eichsfeld, Kreis,472
-16062,Nordhausen, Kreis,473
-16063,Wartburgkreis,474
-16064,Unstrut-Hainich-Kreis,475
-16065,Kyffhäuserkreis,476
-16066,Schmalkalden-Meiningen, Kreis,477
-16067,Gotha, Kreis,478
-16068,Sömmerda, Kreis,479
-16069,Hildburghausen, Kreis,480
-16070,Ilm-Kreis,481
-16071,Weimarer Land, Kreis,482
-16072,Sonneberg, Kreis,483
-16073,Saalfeld-Rudolstadt, Kreis,484
-16074,Saale-Holzland-Kreis,485
-16075,Saale-Orla-Kreis,486
-16076,Greiz, Kreis,487
-16077,Altenburger Land, Kreis,488
+ID,Name,Pos
+0,Deutschland,0
+1,Schleswig-Holstein,1
+2,Hamburg,2
+3,Niedersachsen,3
+4,Bremen,4
+5,Nordrhein-Westfalen,5
+6,Hessen,6
+7,Rheinland-Pfalz,7
+8,Baden-W�rttemberg,8
+9,Bayern,9
+10,Saarland,10
+11,Berlin,11
+12,Brandenburg,12
+13,Mecklenburg-Vorpommern,13
+14,Sachsen,14
+15,Sachsen-Anhalt,15
+16,Th�ringen,16
+1001,Flensburg,17
+1002,Kiel,18
+1003,L�beck,19
+1004,Neum�nster,20
+1051,Dithmarschen,21
+1053,Herzogtum Lauenburg,22
+1054,Nordfriesland,23
+1055,Ostholstein,24
+1056,Pinneberg,25
+1057,Pl�n,26
+1058,Rendsburg-Eckernf�rde,27
+1059,Schleswig-Flensburg,28
+1060,Segeberg,29
+1061,Steinburg,30
+1062,Stormarn,31
+2,Hamburg,32
+3101,Braunschweig,33
+3102,Salzgitter,34
+3103,Wolfsburg,35
+3151,Gifhorn,36
+3152,G�ttingen,37
+3153,Goslar,38
+3154,Helmstedt,39
+3155,Northeim,40
+3156,Osterode am Harz,41
+3157,Peine,42
+3158,Wolfenb�ttel,43
+3152,G�ttingen,44
+3241,Region Hannover,45
+3241001,Hannover,46
+3251,Diepholz,47
+3252,Hameln-Pyrmont,48
+3254,Hildesheim,49
+3255,Holzminden,50
+3256,Nienburg (Weser),51
+3257,Schaumburg,52
+3351,Celle,53
+3352,Cuxhaven,54
+3353,Harburg,55
+3354,L�chow-Dannenberg,56
+3355,L�neburg,57
+3356,Osterholz,58
+3357,Rotenburg (W�mme),59
+3358,Heidekreis,60
+3359,Stade,61
+3360,Uelzen,62
+3361,Verden,63
+3401,Delmenhorst,64
+3402,Emden,65
+3403,Oldenburg (Oldenburg),66
+3404,Osnabr�ck,67
+3405,Wilhelmshaven,68
+3451,Ammerland,69
+3452,Aurich,70
+3453,Cloppenburg,71
+3454,Emsland,72
+3455,Friesland,73
+3456,Grafschaft Bentheim,74
+3457,Leer,75
+3458,Oldenburg,76
+3459,Osnabr�ck,77
+3460,Vechta,78
+3461,Wesermarsch,79
+3462,Wittmund,80
+4011,Bremen,81
+4012,Bremerhaven,82
+5111,D�sseldorf,83
+5112,Duisburg,84
+5113,Essen,85
+5114,Krefeld,86
+5116,M�nchengladbach,87
+5117,M�lheim an der Ruhr,88
+5119,Oberhausen,89
+5120,Remscheid,90
+5122,Solingen,91
+5124,Wuppertal,92
+5154,Kleve,93
+5158,Mettmann,94
+5162,Rhein-Kreis Neuss,95
+5166,Viersen,96
+5170,Wesel,97
+5354,Aachen,98
+5314,Bonn,99
+5315,K�ln,100
+5316,Leverkusen,101
+5334,St�dteregion Aachen (einschl. Stadt Aachen),102
+5354,Aachen,103
+5354,Aachen,104
+5358,D�ren,105
+5362,Rhein-Erft-Kreis,106
+5366,Euskirchen,107
+5370,Heinsberg,108
+5374,Oberbergischer Kreis,109
+5378,Rheinisch-Bergischer Kreis,110
+5382,Rhein-Sieg-Kreis,111
+5512,Bottrop,112
+5513,Gelsenkirchen,113
+5515,M�nster,114
+5554,Borken,115
+5558,Coesfeld,116
+5562,Recklinghausen,117
+5566,Steinfurt,118
+5570,Warendorf,119
+5711,Bielefeld,120
+5754,G�tersloh,121
+5758,Herford,122
+5762,H�xter,123
+5766,Lippe,124
+5770,Minden-L�bbecke,125
+5774,Paderborn,126
+5911,Bochum,127
+5913,Dortmund,128
+5914,Hagen,129
+5915,Hamm,130
+5916,Herne,131
+5954,Ennepe-Ruhr-Kreis,132
+5958,Hochsauerlandkreis,133
+5962,M�rkischer Kreis,134
+5966,Olpe,135
+5970,Siegen-Wittgenstein,136
+5974,Soest,137
+5978,Unna,138
+6411,Darmstadt,139
+6412,Frankfurt am Main,140
+6413,Offenbach am Main,141
+6414,Wiesbaden,142
+6431,Bergstra�e,143
+6432,Darmstadt-Dieburg,144
+6433,Gro�-Gerau,145
+6434,Hochtaunuskreis,146
+6435,Main-Kinzig-Kreis,147
+6436,Main-Taunus-Kreis,148
+6437,Odenwaldkreis,149
+6438,Offenbach,150
+6439,Rheingau-Taunus-Kreis,151
+6440,Wetteraukreis,152
+6531,Gie�en,153
+6532,Lahn-Dill-Kreis,154
+6533,Limburg-Weilburg,155
+6534,Marburg-Biedenkopf,156
+6535,Vogelsbergkreis,157
+6611,Kassel,158
+6631,Fulda,159
+6632,Hersfeld-Rotenburg,160
+6633,Kassel,161
+6634,Schwalm-Eder-Kreis,162
+6635,Waldeck-Frankenberg,163
+6636,Werra-Mei�ner-Kreis,164
+7111,Koblenz,165
+7131,Ahrweiler,166
+7132,Altenkirchen (Westerwald),167
+7133,Bad Kreuznach,168
+7134,Birkenfeld,169
+7135,Cochem-Zell,170
+7137,Mayen-Koblenz,171
+7138,Neuwied,172
+7140,Rhein-Hunsr�ck-Kreis,173
+7141,Rhein-Lahn-Kreis,174
+7143,Westerwaldkreis,175
+7211,Trier,176
+7231,Bernkastel-Wittlich,177
+7232,Eifelkreis Bitburg-Pr�m,178
+7233,Vulkaneifel,179
+7235,Trier-Saarburg,180
+7311,Frankenthal (Pfalz),181
+7312,Kaiserslautern,182
+7313,Landau in der Pfalz,183
+7314,Ludwigshafen am Rhein,184
+7315,Mainz,185
+7316,Neustadt an der Weinstra�e,186
+7317,Pirmasens,187
+7318,Speyer,188
+7319,Worms,189
+7320,Zweibr�cken,190
+7331,Alzey-Worms,191
+7332,Bad D�rkheim,192
+7333,Donnersbergkreis,193
+7334,Germersheim,194
+7335,Kaiserslautern,195
+7336,Kusel,196
+7337,S�dliche Weinstra�e,197
+7338,Rhein-Pfalz-Kreis,198
+7339,Mainz-Bingen,199
+7340,S�dwestpfalz,200
+8111,Stuttgart,201
+8115,B�blingen,202
+8116,Esslingen,203
+8117,G�ppingen,204
+8118,Ludwigsburg,205
+8119,Rems-Murr-Kreis,206
+8121,Heilbronn,207
+8125,Heilbronn,208
+8126,Hohenlohekreis,209
+8127,Schw�bisch Hall,210
+8128,Main-Tauber-Kreis,211
+8135,Heidenheim,212
+8136,Ostalbkreis,213
+8211,Baden-Baden,214
+8212,Karlsruhe,215
+8215,Karlsruhe,216
+8216,Rastatt,217
+8221,Heidelberg,218
+8222,Mannheim,219
+8225,Neckar-Odenwald-Kreis,220
+8226,Rhein-Neckar-Kreis,221
+8231,Pforzheim,222
+8235,Calw,223
+8236,Enzkreis,224
+8237,Freudenstadt,225
+8311,Freiburg im Breisgau,226
+8315,Breisgau-Hochschwarzwald,227
+8316,Emmendingen,228
+8317,Ortenaukreis,229
+8325,Rottweil,230
+8326,Schwarzwald-Baar-Kreis,231
+8327,Tuttlingen,232
+8335,Konstanz,233
+8336,L�rrach,234
+8337,Waldshut,235
+8415,Reutlingen,236
+8416,T�bingen,237
+8417,Zollernalbkreis,238
+8421,Ulm,239
+8425,Alb-Donau-Kreis,240
+8426,Biberach,241
+8435,Bodenseekreis,242
+8436,Ravensburg,243
+8437,Sigmaringen,244
+9161,Ingolstadt,245
+9162,M�nchen,246
+9163,Rosenheim,247
+9171,Alt�tting,248
+9172,Berchtesgadener Land,249
+9173,Bad T�lz-Wolfratshausen,250
+9174,Dachau,251
+9175,Ebersberg,252
+9176,Eichst�tt,253
+9177,Erding,254
+9178,Freising,255
+9179,F�rstenfeldbruck,256
+9180,Garmisch-Partenkirchen,257
+9181,Landsberg am Lech,258
+9182,Miesbach,259
+9183,M�hldorf a.Inn,260
+9184,M�nchen,261
+9185,Neuburg-Schrobenhausen,262
+9186,Pfaffenhofen a.d.Ilm,263
+9187,Rosenheim,264
+9188,Starnberg,265
+9189,Traunstein,266
+9190,Weilheim-Schongau,267
+9261,Landshut,268
+9262,Passau,269
+9263,Straubing,270
+9271,Deggendorf,271
+9272,Freyung-Grafenau,272
+9273,Kelheim,273
+9274,Landshut,274
+9275,Passau,275
+9276,Regen,276
+9277,Rottal-Inn,277
+9278,Straubing-Bogen,278
+9279,Dingolfing-Landau,279
+9361,Amberg,280
+9362,Regensburg,281
+9363,Weiden i.d.OPf.,282
+9371,Amberg-Sulzbach,283
+9372,Cham,284
+9373,Neumarkt i.d.OPf.,285
+9374,Neustadt a.d.Waldnaab,286
+9375,Regensburg,287
+9376,Schwandorf,288
+9377,Tirschenreuth,289
+9461,Bamberg,290
+9462,Bayreuth,291
+9463,Coburg,292
+9464,Hof,293
+9471,Bamberg,294
+9472,Bayreuth,295
+9473,Coburg,296
+9474,Forchheim,297
+9475,Hof,298
+9476,Kronach,299
+9477,Kulmbach,300
+9478,Lichtenfels,301
+9479,Wunsiedel i.Fichtelgebirge,302
+9561,Ansbach,303
+9562,Erlangen,304
+9563,F�rth,305
+9564,N�rnberg,306
+9565,Schwabach,307
+9571,Ansbach,308
+9572,Erlangen-H�chstadt,309
+9573,F�rth,310
+9574,N�rnberger Land,311
+9575,Neustadt a.d.Aisch-Bad Windsheim,312
+9576,Roth,313
+9577,Wei�enburg-Gunzenhausen,314
+9661,Aschaffenburg,315
+9662,Schweinfurt,316
+9663,W�rzburg,317
+9671,Aschaffenburg,318
+9672,Bad Kissingen,319
+9673,Rh�n-Grabfeld,320
+9674,Ha�berge,321
+9675,Kitzingen,322
+9676,Miltenberg,323
+9677,Main-Spessart,324
+9678,Schweinfurt,325
+9679,W�rzburg,326
+9761,Augsburg,327
+9762,Kaufbeuren,328
+9763,Kempten (Allg�u),329
+9764,Memmingen,330
+9771,Aichach-Friedberg,331
+9772,Augsburg,332
+9773,Dillingen a.d.Donau,333
+9774,G�nzburg,334
+9775,Neu-Ulm,335
+9776,Lindau (Bodensee),336
+9777,Ostallg�u,337
+9778,Unterallg�u,338
+9779,Donau-Ries,339
+9780,Oberallg�u,340
+10041,Saarbr�cken,341
+10041100,Saarbr�cken,342
+10042,Merzig-Wadern,343
+10043,Neunkirchen,344
+10044,Saarlouis,345
+10045,Saarpfalz-Kreis,346
+10046,St. Wendel,347
+11,Berlin,348
+11001001,Berlin-Mitte,349
+11002002,Berlin-Friedrichshain-Kreuzberg,350
+11003003,Berlin-Pankow,351
+11004004,Berlin-Charlottenburg-Wilmersdorf,352
+11005005,Berlin-Spandau,353
+11006006,Berlin-Steglitz-Zehlendorf,354
+11007007,Berlin-Tempelhof-Sch�neberg,355
+11008008,Berlin-Neuk�lln,356
+11009009,Berlin-Treptow-K�penick,357
+11010010,Berlin-Marzahn-Hellersdorf,358
+11011011,Berlin-Lichtenberg,359
+11012012,Berlin-Reinickendorf,360
+12051,Brandenburg an der Havel,361
+12052,Cottbus,362
+12053,Frankfurt (Oder),363
+12054,Potsdam,364
+12060,Barnim,365
+12061,Dahme-Spreewald,366
+12062,Elbe-Elster,367
+12063,Havelland,368
+12064,M�rkisch-Oderland,369
+12065,Oberhavel,370
+12066,Oberspreewald-Lausitz,371
+12067,Oder-Spree,372
+12068,Ostprignitz-Ruppin,373
+12069,Potsdam-Mittelmark,374
+12070,Prignitz,375
+12071,Spree-Nei�e,376
+12072,Teltow-Fl�ming,377
+12073,Uckermark,378
+13001,Kreisfreie Stadt Greifswald,379
+13002,Kreisfreie Stadt Neubrandenburg,380
+13003,Kreisfreie Stadt Rostock,381
+13004,Kreisfreie Stadt Schwerin,382
+13005,Kreisfreie Stadt Stralsund,383
+13006,Kreisfreie Stadt Wismar,384
+13051,Landkreis Bad Doberan,385
+13052,Landkreis Demmin,386
+13053,Landkreis G�strow,387
+13054,Landkreis Ludwigslust,388
+13055,Landkreis Mecklenburg-Strelitz,389
+13056,Landkreis M�ritz,390
+13057,Landkreis Nordvorpommern,391
+13058,Landkreis Nordwestmecklenburg,392
+13059,Landkreis Ostvorpommern,393
+13060,Landkreis Parchim,394
+13061,Landkreis R�gen,395
+13062,Landkreis Uecker-Randow,396
+13071,Landkreis Mecklenburgische Seenplatte,397
+13072,Landkreis Rostock,398
+13073,Landkreis Vorpommern-R�gen,399
+13074,Landkreis Nordwestmecklenburg,400
+13075,Landkreis Vorpommern-Greifswald,401
+13076,Landkreis Ludwigslust-Parchim,402
+14161,Chemnitz,403
+14166,Plauen,404
+14167,Zwickau,405
+14171,Annaberg,406
+14173,Chemnitzer Land,407
+14177,Freiberg,408
+14178,Vogtlandkreis,409
+14181,Mittlerer Erzgebirgskreis,410
+14182,Mittweida,411
+14188,Stollberg,412
+14191,Aue-Schwarzenberg,413
+14193,Zwickauer Land,414
+14262,Dresden,415
+14263,G�rlitz,416
+14264,Hoyerswerda,417
+14272,Bautzen,418
+14280,Mei�en,419
+14284,Niederschlesischer Oberlausitzkreis,420
+14285,Riesa-Gro�enhain,421
+14286,L�bau-Zittau,422
+14287,S�chsische Schweiz,423
+14290,Wei�eritzkreis,424
+14292,Kamenz,425
+14365,Leipzig,426
+14374,Delitzsch,427
+14375,D�beln,428
+14379,Leipziger Land,429
+14383,Muldentalkreis,430
+14389,Torgau-Oschatz,431
+14511,Chemnitz,432
+14521,Erzgebirgskreis,433
+14522,Mittelsachsen,434
+14523,Vogtlandkreis,435
+14524,Zwickau,436
+14612,Dresden,437
+14625,Bautzen,438
+14626,G�rlitz,439
+14627,Mei�en,440
+14628,S�chsische Schweiz-Osterzgebirge,441
+14713,Leipzig,442
+14729,Leipzig,443
+14730,Nordsachsen,444
+15001,Dessau-Ro�lau,445
+15002,Halle (Saale),446
+15003,Magdeburg,447
+15081,Altmarkkreis Salzwedel,448
+15082,Anhalt-Bitterfeld,449
+15083,B�rde,450
+15084,Burgenlandkreis,451
+15085,Harz,452
+15086,Jerichower Land,453
+15087,Mansfeld-S�dharz,454
+15088,Saalekreis,455
+15089,Salzlandkreis,456
+15090,Stendal,457
+15091,Wittenberg,458
+15101,Dessau,459
+15151,Anhalt-Zerbst,460
+15153,Bernburg,461
+15154,Bitterfeld,462
+15159,K�then,463
+15171,Wittenberg,464
+15202,Halle (Saale),465
+15256,Burgenlandkreis,466
+15260,Mansfelder Land,467
+15261,Merseburg-Querfurt,468
+15265,Saalkreis,469
+15266,Sangerhausen,470
+15268,Wei�enfels,471
+15303,Magdeburg,472
+15352,Aschersleben-Sta�furt,473
+15355,B�rdekreis,474
+15357,Halberstadt,475
+15358,Jerichower Land,476
+15362,Ohrekreis,477
+15363,Stendal,478
+15364,Quedlinburg,479
+15367,Sch�nebeck,480
+15369,Wernigerode,481
+15370,Altmarkkreis Salzwedel,482
+16051,Erfurt,483
+16052,Gera,484
+16053,Jena,485
+16054,Suhl,486
+16055,Weimar,487
+16056,Eisenach,488
+16061,Eichsfeld,489
+16062,Nordhausen,490
+16063,Wartburgkreis,491
+16064,Unstrut-Hainich-Kreis,492
+16065,Kyffh�userkreis,493
+16066,Schmalkalden-Meiningen,494
+16067,Gotha,495
+16068,S�mmerda,496
+16069,Hildburghausen,497
+16070,Ilm-Kreis,498
+16071,Weimarer Land,499
+16072,Sonneberg,500
+16073,Saalfeld-Rudolstadt,501
+16074,Saale-Holzland-Kreis,502
+16075,Saale-Orla-Kreis,503
+16076,Greiz,504
+16077,Altenburger Land,505

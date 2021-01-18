@@ -30,38 +30,49 @@ function UpdateEbeneR(Ort_ID){
         else{
             ÜberID = Ort_ID.toString().substring(0,2);
         }
-        document.getElementById("BZR").innerHTML = "<span class=\"glyphicon glyphicon-share-alt\"></span>"+ÜberID;
+        document.getElementById("BZR").innerHTML = "<span class=\"glyphicon glyphicon-share-alt\"></span>"+IDtoName(ÜberID);
     }
 }
 
 function BZRPress(){
     goBack();
+    LKIdR = getRegionID();
+    console.log(LKIdR);
     if(LKIdR <100){
         RegionChange(0);
+        UpdateEbeneR(0);
     }
     else{
         if(LKIdR <10000){
             RegionChange(LKIdR.toString().substring(0,1));
+            UpdateEbeneR(LKIdR.toString().substring(0,1));
         }
         else{
             RegionChange(LKIdR.toString().substring(0,2));
+            UpdateEbeneR(LKIdR.toString().substring(0,2));
         }
     }
+
 }
 
 function BZLPress(){
     goBack();
+    LKIdL = getRegionID();
     if(LKIdL <100){
         RegionChange(0);
+        UpdateEbeneL(0);
     }
     else{
         if(LKIdL <10000){
             RegionChange(LKIdL.toString().substring(0,1));
+            UpdateEbeneL(LKIdL.toString().substring(0,1));
         }
         else{
             RegionChange(LKIdL.toString().substring(0,2));
+            UpdateEbeneL(LKIdL.toString().substring(0,2));
         }
     }
+
 }
 
 function UpdateEbeneL(Ort_ID){
@@ -80,7 +91,7 @@ function UpdateEbeneL(Ort_ID){
         else{
             ÜberID = Ort_ID.toString().substring(0,2);
         }
-        document.getElementById("BZL").innerHTML = "<span class=\"glyphicon glyphicon-share-alt\"></span>"+ÜberID;
+        document.getElementById("BZL").innerHTML = "<span class=\"glyphicon glyphicon-share-alt\"></span>"+IDtoName(ÜberID);
     }
 }
 
@@ -105,10 +116,10 @@ function createPieBar(pie_id){
     Inzidenz =pie_daten[3][0]
     var rows =[
         ["Age","Value","Corona"],
-        ["<15",Math.round(pie_daten[2][1]/pie_daten[2][0]*100),Math.round(pie_daten[3][1]/pie_daten[3][0]*100)],
-        ["15-35",Math.round(pie_daten[2][2]/pie_daten[2][0]*100),Math.round(pie_daten[3][2]/pie_daten[3][0]*100)],
-        ["35-60",Math.round(pie_daten[2][3]/pie_daten[2][0]*100),Math.round(pie_daten[3][3]/pie_daten[3][0]*100)],
-        [">60",Math.round(pie_daten[2][4]/pie_daten[2][0]*100),Math.round(pie_daten[3][4]/pie_daten[3][0]*100)]];
+        ["<15",Math.round(pie_daten[2][1]*100),Math.round(pie_daten[3][1]*100)],
+        ["15-35",Math.round(pie_daten[2][2]*100),Math.round(pie_daten[3][2]*100)],
+        ["35-60",Math.round(pie_daten[2][3]*100),Math.round(pie_daten[3][3]*100)],
+        [">60",Math.round(pie_daten[2][4]*100),Math.round(pie_daten[3][4]*100)]];
     let csvContent = "data:text/csv;charset=utf-8,"
         + rows.map(e => e.join(",")).join("\n");
     d3.csv(csvContent, (data) => {
@@ -262,7 +273,7 @@ function createPieBar(pie_id){
         svg.append("text")
             .attr("x",2)
             .attr("y",0)
-            .attr("font-size","18px")
+            .attr("font-size","20px")
             .attr("font-family","sans-serif")
             .attr("text-anchor","middle")
             .attr("fill","black")
@@ -300,7 +311,9 @@ function createPieBar(pie_id){
             .attr("stroke-width", 1)
             .attr("stroke", "#770000")
             .attr("marker-end", "url(#triangle)")
-            .attr("transform", "rotate(0,-32,100)")
+            .attr("transform", "rotate("+((Math.log10(Inzidenz+1)-0.7)*-20)+",-32,100)")
+
+
 
 //Text Inzidenz
         svg.append("text")
@@ -329,7 +342,9 @@ function PieBarTimeUpdate(){
     var LockIcon = document.getElementsByClassName("Abgeschlossen");
 
         pie_daten = getRelevantData();
-        //links
+
+
+    //links
         if(LockIcon[0].style.display == "none"){
             createPieBar("#pie_1");
             createPieBar("#pie_2");
@@ -353,12 +368,19 @@ function PieBarTimeUpdate(){
 
 function PieBarPlaceUpdate(){
 
+
+
     var LockIcon = document.getElementsByClassName("Abgeschlossen");
 ;
         pie_daten = getRelevantData();
 
+        UpdateEbeneR(pie_daten[0]);
+        UpdateEbeneL(pie_daten[0]);
 
         if(LockIcon[0].style.display == "none"){
+            if(pie_daten[0]>0){
+                document.getElementsByClassName("EbeneZurückL")[0].style.display = "inline";
+            }
             var angezeigt = document.getElementsByClassName("right_chart");
             //Rechts wird gerade  gelöscht löschen
             if(angezeigt[0].style.display == "inline"){
@@ -384,11 +406,12 @@ function PieBarPlaceUpdate(){
                 },500);
             }
 
-            UpdateEbeneL(10);
         }
         //rechts
         else{
-
+            if(pie_daten[0]>0){
+                document.getElementsByClassName("EbeneZurückR")[0].style.display = "inline";
+            }
             var angezeigt = document.getElementsByClassName("right_chart");
             //Rechts wird gerade ausgeklappt
             if(angezeigt[0].style.display == "none"){
@@ -411,7 +434,6 @@ function PieBarPlaceUpdate(){
                     d3.select("#pie_2").transition().duration(500).ease(d3.easeLinear).style("opacity", 1);
                 },500);
             }
-            UpdateEbeneR(10);
         }
 
 
