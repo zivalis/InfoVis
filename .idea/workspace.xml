@@ -20,17 +20,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3dc75f41-8483-444a-bca5-bf551a4cc7a3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Buttons.js" beforeDir="false" afterPath="$PROJECT_DIR$/Buttons.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controler.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controler.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PieBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/PieBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/Navigation.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/Navigation.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/inzidenzen.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/inzidenzen.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layout.css" beforeDir="false" afterPath="$PROJECT_DIR$/Layout.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -41,18 +47,21 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Schepi\Desktop\WS 20.21\IV\Gruppenprojekt\InfoVisProject" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Schepi\Desktop\WS 20.21\IV\Gruppenprojekt\InfoVisProject\data" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Schepi\Desktop\WS 20.21\IV\Gruppenprojekt\InfoVisProject" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -71,6 +80,10 @@
       <workItem from="1610961701108" duration="862000" />
       <workItem from="1610962689348" duration="4351000" />
       <workItem from="1610967349691" duration="262000" />
+      <workItem from="1610989114421" duration="308000" />
+      <workItem from="1610989529844" duration="195000" />
+      <workItem from="1611047951091" duration="289000" />
+      <workItem from="1611048281600" duration="1182000" />
     </task>
     <servers />
   </component>
@@ -98,17 +111,19 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="740" y="280" key="FileChooserDialogImpl/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1610566590951" />
-    <state x="777" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1610740932951">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="-1143" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1611049401232">
+      <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
+    <state x="-1143" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1050/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1611049401232" />
     <state x="777" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1610740932951" />
     <state x="667" y="258" width="585" height="534" key="find.popup" timestamp="1610962718567">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="667" y="258" width="585" height="534" key="find.popup/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1610962718567" />
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1610718835904">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="-1297" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1611048758519">
+      <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
+    <state x="-1297" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1611048758519" />
     <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1610718835904" />
   </component>
 </project>
