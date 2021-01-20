@@ -7,7 +7,7 @@ ID,Name,Pos
 5,Nordrhein-Westfalen,5
 6,Hessen,6
 7,Rheinland-Pfalz,7
-8,Baden-W�rttemberg,8
+8,Baden-Württemberg,8
 9,Bayern,9
 10,Saarland,10
 11,Berlin,11
@@ -15,18 +15,18 @@ ID,Name,Pos
 13,Mecklenburg-Vorpommern,13
 14,Sachsen,14
 15,Sachsen-Anhalt,15
-16,Th�ringen,16
+16,Thüringen,16
 1001,Flensburg,17
 1002,Kiel,18
-1003,L�beck,19
-1004,Neum�nster,20
+1003,Lübeck,19
+1004,Neumünster,20
 1051,Dithmarschen,21
 1053,Herzogtum Lauenburg,22
 1054,Nordfriesland,23
 1055,Ostholstein,24
 1056,Pinneberg,25
-1057,Pl�n,26
-1058,Rendsburg-Eckernf�rde,27
+1057,Plön,26
+1058,Rendsburg-Eckernförde,27
 1059,Schleswig-Flensburg,28
 1060,Segeberg,29
 1061,Steinburg,30
@@ -36,14 +36,14 @@ ID,Name,Pos
 3102,Salzgitter,34
 3103,Wolfsburg,35
 3151,Gifhorn,36
-3152,G�ttingen,37
+3152,Göttingen,37
 3153,Goslar,38
 3154,Helmstedt,39
 3155,Northeim,40
 3156,Osterode am Harz,41
 3157,Peine,42
-3158,Wolfenb�ttel,43
-3152,G�ttingen,44
+3158,Wolfenbüttel,43
+3152,Göttingen,44
 3241,Region Hannover,45
 3241001,Hannover,46
 3251,Diepholz,47
@@ -55,10 +55,10 @@ ID,Name,Pos
 3351,Celle,53
 3352,Cuxhaven,54
 3353,Harburg,55
-3354,L�chow-Dannenberg,56
-3355,L�neburg,57
+3354,Lüchow-Dannenberg,56
+3355,Lüneburg,57
 3356,Osterholz,58
-3357,Rotenburg (W�mme),59
+3357,Rotenburg (Wümme),59
 3358,Heidekreis,60
 3359,Stade,61
 3360,Uelzen,62
@@ -66,7 +66,7 @@ ID,Name,Pos
 3401,Delmenhorst,64
 3402,Emden,65
 3403,Oldenburg (Oldenburg),66
-3404,Osnabr�ck,67
+3404,Osnabrück,67
 3405,Wilhelmshaven,68
 3451,Ammerland,69
 3452,Aurich,70
@@ -76,18 +76,18 @@ ID,Name,Pos
 3456,Grafschaft Bentheim,74
 3457,Leer,75
 3458,Oldenburg,76
-3459,Osnabr�ck,77
+3459,Osnabrück,77
 3460,Vechta,78
 3461,Wesermarsch,79
 3462,Wittmund,80
 4011,Bremen,81
 4012,Bremerhaven,82
-5111,D�sseldorf,83
+5111,Düsseldorf,83
 5112,Duisburg,84
 5113,Essen,85
 5114,Krefeld,86
-5116,M�nchengladbach,87
-5117,M�lheim an der Ruhr,88
+5116,Mönchengladbach,87
+5117,Mülheim an der Ruhr,88
 5119,Oberhausen,89
 5120,Remscheid,90
 5122,Solingen,91
@@ -99,12 +99,12 @@ ID,Name,Pos
 5170,Wesel,97
 5354,Aachen,98
 5314,Bonn,99
-5315,K�ln,100
+5315,Köln,100
 5316,Leverkusen,101
-5334,St�dteregion Aachen (einschl. Stadt Aachen),102
+5334,Aachen,102
 5354,Aachen,103
 5354,Aachen,104
-5358,D�ren,105
+5358,Düren,105
 5362,Rhein-Erft-Kreis,106
 5366,Euskirchen,107
 5370,Heinsberg,108
@@ -113,18 +113,18 @@ ID,Name,Pos
 5382,Rhein-Sieg-Kreis,111
 5512,Bottrop,112
 5513,Gelsenkirchen,113
-5515,M�nster,114
+5515,Münster,114
 5554,Borken,115
 5558,Coesfeld,116
 5562,Recklinghausen,117
 5566,Steinfurt,118
 5570,Warendorf,119
 5711,Bielefeld,120
-5754,G�tersloh,121
+5754,Gütersloh,121
 5758,Herford,122
-5762,H�xter,123
+5762,Höxter,123
 5766,Lippe,124
-5770,Minden-L�bbecke,125
+5770,Minden-Lübbecke,125
 5774,Paderborn,126
 5911,Bochum,127
 5913,Dortmund,128
@@ -133,7 +133,7 @@ ID,Name,Pos
 5916,Herne,131
 5954,Ennepe-Ruhr-Kreis,132
 5958,Hochsauerlandkreis,133
-5962,M�rkischer Kreis,134
+5962,Märkischer Kreis,134
 5966,Olpe,135
 5970,Siegen-Wittgenstein,136
 5974,Soest,137
@@ -142,9 +142,9 @@ ID,Name,Pos
 6412,Frankfurt am Main,140
 6413,Offenbach am Main,141
 6414,Wiesbaden,142
-6431,Bergstra�e,143
+6431,Bergstraße,143
 6432,Darmstadt-Dieburg,144
-6433,Gro�-Gerau,145
+6433,Groß-Gerau,145
 6434,Hochtaunuskreis,146
 6435,Main-Kinzig-Kreis,147
 6436,Main-Taunus-Kreis,148
@@ -152,7 +152,7 @@ ID,Name,Pos
 6438,Offenbach,150
 6439,Rheingau-Taunus-Kreis,151
 6440,Wetteraukreis,152
-6531,Gie�en,153
+6531,Gießen,153
 6532,Lahn-Dill-Kreis,154
 6533,Limburg-Weilburg,155
 6534,Marburg-Biedenkopf,156
@@ -163,7 +163,7 @@ ID,Name,Pos
 6633,Kassel,161
 6634,Schwalm-Eder-Kreis,162
 6635,Waldeck-Frankenberg,163
-6636,Werra-Mei�ner-Kreis,164
+6636,Werra-Meißner-Kreis,164
 7111,Koblenz,165
 7131,Ahrweiler,166
 7132,Altenkirchen (Westerwald),167
@@ -172,12 +172,12 @@ ID,Name,Pos
 7135,Cochem-Zell,170
 7137,Mayen-Koblenz,171
 7138,Neuwied,172
-7140,Rhein-Hunsr�ck-Kreis,173
+7140,Rhein-Hunsrück-Kreis,173
 7141,Rhein-Lahn-Kreis,174
 7143,Westerwaldkreis,175
 7211,Trier,176
 7231,Bernkastel-Wittlich,177
-7232,Eifelkreis Bitburg-Pr�m,178
+7232,Eifelkreis Bitburg-Prüm,178
 7233,Vulkaneifel,179
 7235,Trier-Saarburg,180
 7311,Frankenthal (Pfalz),181
@@ -185,31 +185,31 @@ ID,Name,Pos
 7313,Landau in der Pfalz,183
 7314,Ludwigshafen am Rhein,184
 7315,Mainz,185
-7316,Neustadt an der Weinstra�e,186
+7316,Neustadt an der Weinstraße,186
 7317,Pirmasens,187
 7318,Speyer,188
 7319,Worms,189
-7320,Zweibr�cken,190
+7320,Zweibrücken,190
 7331,Alzey-Worms,191
-7332,Bad D�rkheim,192
+7332,Bad Dürkheim,192
 7333,Donnersbergkreis,193
 7334,Germersheim,194
 7335,Kaiserslautern,195
 7336,Kusel,196
-7337,S�dliche Weinstra�e,197
+7337,Südliche Weinstraße,197
 7338,Rhein-Pfalz-Kreis,198
 7339,Mainz-Bingen,199
-7340,S�dwestpfalz,200
+7340,Südwestpfalz,200
 8111,Stuttgart,201
-8115,B�blingen,202
+8115,Böblingen,202
 8116,Esslingen,203
-8117,G�ppingen,204
+8117,Göppingen,204
 8118,Ludwigsburg,205
 8119,Rems-Murr-Kreis,206
 8121,Heilbronn,207
 8125,Heilbronn,208
 8126,Hohenlohekreis,209
-8127,Schw�bisch Hall,210
+8127,Schwäbisch Hall,210
 8128,Main-Tauber-Kreis,211
 8135,Heidenheim,212
 8136,Ostalbkreis,213
@@ -233,10 +233,10 @@ ID,Name,Pos
 8326,Schwarzwald-Baar-Kreis,231
 8327,Tuttlingen,232
 8335,Konstanz,233
-8336,L�rrach,234
+8336,Lörrach,234
 8337,Waldshut,235
 8415,Reutlingen,236
-8416,T�bingen,237
+8416,Tübingen,237
 8417,Zollernalbkreis,238
 8421,Ulm,239
 8425,Alb-Donau-Kreis,240
@@ -245,22 +245,22 @@ ID,Name,Pos
 8436,Ravensburg,243
 8437,Sigmaringen,244
 9161,Ingolstadt,245
-9162,M�nchen,246
+9162,München,246
 9163,Rosenheim,247
-9171,Alt�tting,248
+9171,Altötting,248
 9172,Berchtesgadener Land,249
-9173,Bad T�lz-Wolfratshausen,250
+9173,Bad Tölz-Wolfratshausen,250
 9174,Dachau,251
 9175,Ebersberg,252
-9176,Eichst�tt,253
+9176,Eichstätt,253
 9177,Erding,254
 9178,Freising,255
-9179,F�rstenfeldbruck,256
+9179,Fürstenfeldbruck,256
 9180,Garmisch-Partenkirchen,257
 9181,Landsberg am Lech,258
 9182,Miesbach,259
-9183,M�hldorf a.Inn,260
-9184,M�nchen,261
+9183,Mühldorf a.Inn,260
+9184,München,261
 9185,Neuburg-Schrobenhausen,262
 9186,Pfaffenhofen a.d.Ilm,263
 9187,Rosenheim,264
@@ -304,44 +304,44 @@ ID,Name,Pos
 9479,Wunsiedel i.Fichtelgebirge,302
 9561,Ansbach,303
 9562,Erlangen,304
-9563,F�rth,305
-9564,N�rnberg,306
+9563,Fürth,305
+9564,Nürnberg,306
 9565,Schwabach,307
 9571,Ansbach,308
-9572,Erlangen-H�chstadt,309
-9573,F�rth,310
-9574,N�rnberger Land,311
+9572,Erlangen-Höchstadt,309
+9573,Fürth,310
+9574,Nürnberger Land,311
 9575,Neustadt a.d.Aisch-Bad Windsheim,312
 9576,Roth,313
-9577,Wei�enburg-Gunzenhausen,314
+9577,Weißenburg-Gunzenhausen,314
 9661,Aschaffenburg,315
 9662,Schweinfurt,316
-9663,W�rzburg,317
+9663,Würzburg,317
 9671,Aschaffenburg,318
 9672,Bad Kissingen,319
-9673,Rh�n-Grabfeld,320
-9674,Ha�berge,321
+9673,Rhön-Grabfeld,320
+9674,Haßberge,321
 9675,Kitzingen,322
 9676,Miltenberg,323
 9677,Main-Spessart,324
 9678,Schweinfurt,325
-9679,W�rzburg,326
+9679,Würzburg,326
 9761,Augsburg,327
 9762,Kaufbeuren,328
-9763,Kempten (Allg�u),329
+9763,Kempten (Allgäu),329
 9764,Memmingen,330
 9771,Aichach-Friedberg,331
 9772,Augsburg,332
 9773,Dillingen a.d.Donau,333
-9774,G�nzburg,334
+9774,Günzburg,334
 9775,Neu-Ulm,335
 9776,Lindau (Bodensee),336
-9777,Ostallg�u,337
-9778,Unterallg�u,338
+9777,Ostallgäu,337
+9778,Unterallgäu,338
 9779,Donau-Ries,339
-9780,Oberallg�u,340
-10041,Saarbr�cken,341
-10041100,Saarbr�cken,342
+9780,Oberallgäu,340
+10041,Saarbrücken,341
+10041100,Saarbrücken,342
 10042,Merzig-Wadern,343
 10043,Neunkirchen,344
 10044,Saarlouis,345
@@ -354,9 +354,9 @@ ID,Name,Pos
 11004004,Berlin-Charlottenburg-Wilmersdorf,352
 11005005,Berlin-Spandau,353
 11006006,Berlin-Steglitz-Zehlendorf,354
-11007007,Berlin-Tempelhof-Sch�neberg,355
-11008008,Berlin-Neuk�lln,356
-11009009,Berlin-Treptow-K�penick,357
+11007007,Berlin-Tempelhof-Schöneberg,355
+11008008,Berlin-Neukölln,356
+11009009,Berlin-Treptow-Köpenick,357
 11010010,Berlin-Marzahn-Hellersdorf,358
 11011011,Berlin-Lichtenberg,359
 11012012,Berlin-Reinickendorf,360
@@ -368,15 +368,15 @@ ID,Name,Pos
 12061,Dahme-Spreewald,366
 12062,Elbe-Elster,367
 12063,Havelland,368
-12064,M�rkisch-Oderland,369
+12064,Märkisch-Oderland,369
 12065,Oberhavel,370
 12066,Oberspreewald-Lausitz,371
 12067,Oder-Spree,372
 12068,Ostprignitz-Ruppin,373
 12069,Potsdam-Mittelmark,374
 12070,Prignitz,375
-12071,Spree-Nei�e,376
-12072,Teltow-Fl�ming,377
+12071,Spree-Neiße,376
+12072,Teltow-Fläming,377
 12073,Uckermark,378
 13001,Kreisfreie Stadt Greifswald,379
 13002,Kreisfreie Stadt Neubrandenburg,380
@@ -386,19 +386,19 @@ ID,Name,Pos
 13006,Kreisfreie Stadt Wismar,384
 13051,Landkreis Bad Doberan,385
 13052,Landkreis Demmin,386
-13053,Landkreis G�strow,387
+13053,Landkreis Güstrow,387
 13054,Landkreis Ludwigslust,388
 13055,Landkreis Mecklenburg-Strelitz,389
-13056,Landkreis M�ritz,390
+13056,Landkreis Müritz,390
 13057,Landkreis Nordvorpommern,391
 13058,Landkreis Nordwestmecklenburg,392
 13059,Landkreis Ostvorpommern,393
 13060,Landkreis Parchim,394
-13061,Landkreis R�gen,395
+13061,Landkreis Rügen,395
 13062,Landkreis Uecker-Randow,396
 13071,Landkreis Mecklenburgische Seenplatte,397
 13072,Landkreis Rostock,398
-13073,Landkreis Vorpommern-R�gen,399
+13073,Landkreis Vorpommern-Rügen,399
 13074,Landkreis Nordwestmecklenburg,400
 13075,Landkreis Vorpommern-Greifswald,401
 13076,Landkreis Ludwigslust-Parchim,402
@@ -415,19 +415,19 @@ ID,Name,Pos
 14191,Aue-Schwarzenberg,413
 14193,Zwickauer Land,414
 14262,Dresden,415
-14263,G�rlitz,416
+14263,Görlitz,416
 14264,Hoyerswerda,417
 14272,Bautzen,418
-14280,Mei�en,419
+14280,Meißen,419
 14284,Niederschlesischer Oberlausitzkreis,420
-14285,Riesa-Gro�enhain,421
-14286,L�bau-Zittau,422
-14287,S�chsische Schweiz,423
-14290,Wei�eritzkreis,424
+14285,Riesa-Großenhain,421
+14286,Löbau-Zittau,422
+14287,Sächsische Schweiz,423
+14290,Weißeritzkreis,424
 14292,Kamenz,425
 14365,Leipzig,426
 14374,Delitzsch,427
-14375,D�beln,428
+14375,Döbeln,428
 14379,Leipziger Land,429
 14383,Muldentalkreis,430
 14389,Torgau-Oschatz,431
@@ -438,22 +438,22 @@ ID,Name,Pos
 14524,Zwickau,436
 14612,Dresden,437
 14625,Bautzen,438
-14626,G�rlitz,439
-14627,Mei�en,440
-14628,S�chsische Schweiz-Osterzgebirge,441
+14626,Görlitz,439
+14627,Meißen,440
+14628,Sächsische Schweiz-Osterzgebirge,441
 14713,Leipzig,442
 14729,Leipzig,443
 14730,Nordsachsen,444
-15001,Dessau-Ro�lau,445
+15001,Dessau-Roßlau,445
 15002,Halle (Saale),446
 15003,Magdeburg,447
 15081,Altmarkkreis Salzwedel,448
 15082,Anhalt-Bitterfeld,449
-15083,B�rde,450
+15083,Börde,450
 15084,Burgenlandkreis,451
 15085,Harz,452
 15086,Jerichower Land,453
-15087,Mansfeld-S�dharz,454
+15087,Mansfeld-Südharz,454
 15088,Saalekreis,455
 15089,Salzlandkreis,456
 15090,Stendal,457
@@ -462,7 +462,7 @@ ID,Name,Pos
 15151,Anhalt-Zerbst,460
 15153,Bernburg,461
 15154,Bitterfeld,462
-15159,K�then,463
+15159,Köthen,463
 15171,Wittenberg,464
 15202,Halle (Saale),465
 15256,Burgenlandkreis,466
@@ -470,16 +470,16 @@ ID,Name,Pos
 15261,Merseburg-Querfurt,468
 15265,Saalkreis,469
 15266,Sangerhausen,470
-15268,Wei�enfels,471
+15268,Weißenfels,471
 15303,Magdeburg,472
-15352,Aschersleben-Sta�furt,473
-15355,B�rdekreis,474
+15352,Aschersleben-Staßfurt,473
+15355,Bördekreis,474
 15357,Halberstadt,475
 15358,Jerichower Land,476
 15362,Ohrekreis,477
 15363,Stendal,478
 15364,Quedlinburg,479
-15367,Sch�nebeck,480
+15367,Schönebeck,480
 15369,Wernigerode,481
 15370,Altmarkkreis Salzwedel,482
 16051,Erfurt,483
@@ -492,10 +492,10 @@ ID,Name,Pos
 16062,Nordhausen,490
 16063,Wartburgkreis,491
 16064,Unstrut-Hainich-Kreis,492
-16065,Kyffh�userkreis,493
+16065,Kyffhäuserkreis,493
 16066,Schmalkalden-Meiningen,494
 16067,Gotha,495
-16068,S�mmerda,496
+16068,Sömmerda,496
 16069,Hildburghausen,497
 16070,Ilm-Kreis,498
 16071,Weimarer Land,499
