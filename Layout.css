@@ -90,7 +90,7 @@ body {
     position: absolute;
     transform: scale(0.9);
     left: 50px;
-    top: 30px;
+    top: 15px;
     z-index: 1;
 }
 .Suchfeld{
@@ -181,4 +181,11 @@ body {
     top: 650px;
     left: 600px;
     z-index: 2;
+}
+
+.LegendePie{
+    position: absolute;
+    transform: scale(0.35);
+    left: 580px;
+    top: 560px;
 }
