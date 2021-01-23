@@ -264,7 +264,7 @@ function createPieBar(pie_id){
             .attr("transform", function(d) { return "rotate(" + ((x(d.Age) +x.bandwidth() /2-0.15) * 180 / Math.PI - 100) + ")"+"translate("+ (innerRadius*0.85) + "0)"; })
             .append("text")
             .text(function(d){return(d.Age)})
-            .attr("transform", function(d) { return (x(d.Age) + x.bandwidth() / 2 +(Math.PI /2) ) % (2 * Math.PI) > Math.PI ? "rotate(275)" : "rotate(95)"; })
+            .attr("transform", function(d) { return (x(d.Age) + x.bandwidth() / 2 +(Math.PI /2) ) % (2 * Math.PI) > Math.PI ? "rotate(265)" : "rotate(90)"; })
             .style("font-size", "13px")
             .attr("fill", "#333366")
             .attr("alignment-baseline", "middle")
