@@ -33,18 +33,6 @@ function SetNavigator(){
 
     })
 }
-//new stuff
-var min = `${selectBund.value}000`;
-var max = `${selectBund.value}999`;
-
-
-function UpdateLandBox(Ort_ID){
-    for(var i=0;i<Navigator.length;i++){
-        if(min <= Navigator[i].ID <=max){
-            document.getElementById("Regi").innerHTML += "<li><a href=\"Navigator[i].ID\">some</a></li>"
-        }
-    }
-}
 
 function UpdateRelevant(Ort,Datum){
 
