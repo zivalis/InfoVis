@@ -1,7 +1,88 @@
-var RegionID;
-var Datum;
-var Daten = "Data.csv";
-var RelevantData = Daten; //Hier nochFiltern nach 1. Januar und Deutschland zur Initialisierung
+var RegionID = 9182;
+var Datum = 0;
+var Daten;
+var Navigator;
+
+var RelevantData=[];
+
+
+
+async function getIncidenceData(){
+    await d3.json("./data/inzidenzen.json", (data) =>{
+        Daten = data;
+
+    });
+};
+
+
+firstIni()
+function firstIni(){
+    getIncidenceData();
+    SetNavigator();
+    setTimeout(()=>{
+        UpdateRelevant(RegionID,Datum);
+
+    },500)
+}
+
+
+
+function SetNavigator(){
+    d3.csv("./data/Navigation.csv", (data)=>{
+        Navigator =  data;
+
+    })
+}
+//new stuff
+var min = `${selectBund.value}000`;
+var max = `${selectBund.value}999`;
+
+
+function UpdateLandBox(Ort_ID){
+    for(var i=0;i<Navigator.length;i++){
+        if(min <= Navigator[i].ID <=max){
+            document.getElementById("Regi").innerHTML += "<li><a href=\"Navigator[i].ID\">some</a></li>"
+        }
+    }
+}
+
+function UpdateRelevant(Ort,Datum){
+
+    var formatDay = d3.timeFormat("%j");
+    Tag = Math.round(formatDay(Datum));
+    var tmp =[]
+     tmp= Daten[IDtoArrayPos(Ort)];
+    RelevantData =[];
+    RelevantData[0] = tmp[0];
+    RelevantData[1] = tmp[1];
+    RelevantData[2] = tmp[2];
+    RelevantData[3] = tmp[3][Tag];
+
+
+
+}
+
+function IDtoArrayPos(RegionID){
+    for(var i = 0; i < Navigator.length;i++){
+        if(Navigator[i].ID==RegionID){
+            return  Navigator[i].Pos;
+        }
+    }
+}
+function IDtoName(RegionID){
+    for(var i = 0; i < Navigator.length;i++){
+        if(Navigator[i].ID==RegionID){
+            return  Navigator[i].Name;
+        }
+    }
+}
+function NametoID(RegionName){
+    for(var i = 0; i < Navigator.length;i++){
+        if(Navigator[i].Name==RegionID){
+            return  Navigator[i].ID;
+        }
+    }
+}
 
 
 function getDate(){
@@ -13,19 +94,26 @@ function getRegionID(){
 }
 
 function DateChange(newDate){
-    //console.log("Changing to Date "+newDate);
+    updateTimeSlider(newDate);
+    $( "#input-datepicker" ).datepicker("setDate", newDate);
     Datum = newDate;
-    pushUpdateTime();
 
+    UpdateRelevant(RegionID, Datum);
+
+    pushUpdateTime();
 }
+
 //Stoppt die Automatische Wiedergabe der Zeitleiste
 function stopTimePlay(){
-
+    if (moving) {
+        d3.select("#play-button").on("click")();
+    }
 }
 
 function RegionChange(newRegionID){
     RegionID = newRegionID;
     stopTimePlay();
+    UpdateRelevant(RegionID, Datum);
     pushUpdateOrt();
 }
 
@@ -34,12 +122,13 @@ function getRelevantData(){
 }
 
 function pushUpdateTime(){
-     RelevantData = Daten; // Hier noch Filtern entsprechend den upgedateten Kathegorien;
-     //Mapcolour();
-     PieBarTimeUpdate();
+    
+    // Ludwig
+    updateCircles(4, getDate()); // 4 => 60+
+
+    PieBarTimeUpdate();
 }
 function pushUpdateOrt(){
-    RelevantData = Daten; // Hier noch Filtern entsprechend den upgedateten Kathegorien;
     //Mapzoom();
     PieBarPlaceUpdate();
 }

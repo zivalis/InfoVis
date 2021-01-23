@@ -21,7 +21,7 @@ var targetValue = width;
 
 var playButton = d3.select("#play-button")
     .on("click", function() {
-        var button = d3.select(this);
+        var button = d3.select("#play-button");
         if (button.text() == "Pause") {
             moving = false;
             clearInterval(timer);
@@ -32,7 +32,6 @@ var playButton = d3.select("#play-button")
             timer = setInterval(step, 20); //Moving Speed by play
             button.text("Pause");
         }
-        console.log("Slider moving: " + moving);
     });
 
 var x = d3.scaleTime()
@@ -56,7 +55,7 @@ slider.append("line")
         .on("start.interrupt", function() { slider.interrupt(); })
         .on("start drag", function() {
             currentValue = d3.event.x;
-            update(x.invert(currentValue));
+            DateChange(x.invert(d3.event.x));
         })
     );
 
@@ -83,21 +82,23 @@ var label = slider.append("text")
     .attr("transform", "translate(0," + (-25) + ")")
 
 function step() {
-    update(x.invert(currentValue));
+    DateChange(x.invert(currentValue));
     currentValue = currentValue + (targetValue/1501); // Granularity
     if (currentValue > targetValue) {
         moving = false;
         currentValue = 0;
         clearInterval(timer);
         playButton.text("Play");
-        console.log("Slider moving: " + moving);
     }
+    if(currentValue < 0)
+        currentValue = 0;
 }
 
-function update(h) {
-    // update position and text of label according to slider scale
+function updateTimeSlider(h) {
+    currentValue = x(h);
     handle.attr("cx", x(h));
     label
         .attr("x", x(h))
         .text(formatDateMonthDay(h));
+    //DateChange(h);
 }

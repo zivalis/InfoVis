@@ -1,15 +1,29 @@
 * {box-sizing:border-box}
 
+body {
+    background-image: url('https://static.vecteezy.com/system/resources/thumbnails/000/276/463/original/White_Background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
 .left_chart{
     position: absolute;
     left: 550px;
     top: 80px;
+    max-width:480px;
+    max-height:480px;
+    overflow: hidden;
 
 }
+
 .right_chart{
     position: absolute;
     left: 1000px;
     top: 80px;
+    max-width:480px;
+    max-height:480px;
+    overflow: hidden;
 
 }
 .D_Karte{
@@ -76,7 +90,7 @@
     position: absolute;
     transform: scale(0.9);
     left: 50px;
-    top: 30px;
+    top: 15px;
     z-index: 1;
 }
 .Suchfeld{
@@ -156,9 +170,22 @@
     left: 40px;
     text-align: center;
     font-size: 40px;
-    width: 400px;
+    width: 700px;
 }
 .label{
     font-size: 16px !important;
 }
 
+.Datepicker{
+    position: absolute;
+    top: 650px;
+    left: 600px;
+    z-index: 2;
+}
+
+.LegendePie{
+    position: absolute;
+    transform: scale(0.35);
+    left: 580px;
+    top: 560px;
+}

@@ -10,10 +10,17 @@
     <script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3-scale-radial.js"></script>
 
     <link rel="stylesheet" href="Layout.css">
+    <!-- jquery ui for calendar -->
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.min.css">
+
+
+    <!-- LTR: doppelganger! change this! PLZZ! :-( -->
+    <link rel="stylesheet" href="./map.css">
+
 
 </head>
 <body>
-    <!-- Create a div where the first graph will take place -->
+ <!-- Create a div where the first graph will take place -->
     <div class = "left_chart" id="pie_1"></div>
 
     <!-- Lock Button -->
@@ -41,18 +48,23 @@
 
     <!-- Zurück Links zur höhreren Ebene Button -->
     <div class = "EbeneZurückL">
-        <button type="button" class="btn btn-default btn-sm" id="BZL"  onclick="">
+        <button type="button" class="btn btn-default btn-sm" id="BZL" onclick="BZLPress()">
             <span class="glyphicon glyphicon-share-alt"></span>
         </button>
     </div>
 
     <!-- Zurück Rechts zur höhreren Ebene Button -->
     <div class = "EbeneZurückR">
-        <button type="button" class="btn btn-default btn-sm" id="BZR" onclick="">
+        <button type="button" class="btn btn-default btn-sm" id="BZR" onclick="BZRPress()">
             <span class="glyphicon glyphicon-share-alt"></span>
         </button>
     </div>
 
+
+    <!-- Legende PieBar Chart -->
+    <div class="LegendePie">
+        <img src="./Img/LegendePieBar.png">
+    </div>
     <!-- Create a div where the second graph will take place -->
     <div class = "right_chart" id="pie_2"></div>
 
@@ -63,62 +75,78 @@
 
     <!-- Suchleiste mit Dropdown -->
     <div class="Suchleiste">
-        <div class="Dropdown">
-            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" style="height:50px; width:100px">
-                <span id="search_concept">All</span> <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu scrollable-dropdown" role="menu">
-                <li><a href="#">Deutschland</a></li>
-                <li><a> </a></li>
-                <li><a href="#">Baden-Württemberg</a></li>
-                <li><a href="#">Bayern</a></li>
-                <li><a href="#">Berlin</a></li>
-                <li><a href="#">Brandenburg</a></li>
-                <li><a href="#">Bremen</a></li>
-                <li><a href="#">Hamburg</a></li>
-                <li><a href="#">Hessen</a></li>
-                <li><a href="#">Mecklenburg-Vorpommern</a></li>
-                <li><a href="#">Niedersachsen</a></li>
-                <li><a href="#">Nordrhein Westfalen</a></li>
-                <li><a href="#">Rheinland-Pfalz</a></li>
-                <li><a href="#">Saarland</a></li>
-                <li><a href="#">Sachsen</a></li>
-                <li><a href="#">Sachsen-Anhalt</a></li>
-                <li><a href="#">Schleswig-Holstein</a></li>
-                <li><a href="#">Thüringen</a></li>
-            </ul>
+        <div class="Dropdown" class="dropdown-menu scrollable-dropdown" role="menu" style="max-height:200px;">
+            <select class="form" id="selectBund" onclick="UpdateLandBox()"style="height:50px; width:250px; background-color:lightgrey;">
+                <option value="0">All</option>
+                <option value="1">Baden-Württemberg</option>
+                <option value="2">Bayern</option>
+                <option value="3">Berlin</option>
+                <option value="4">Brandenburg</option>
+                <option value="5">Bremen</option>
+                <option value="6">Hamburg</option>
+                <option value="7">Hessen</option>
+                <option value="8">Mecklenburg-Vorpommern</option>
+                <option value="9">Niedersachsen</option>
+                <option value="10">Nordrhein Westfalen</option>
+                <option value="11">Rheinland-Pfalz</option>
+                <option value="12">Saarland</option>
+                <option value="13">Sachsen</option>
+                <option value="14">Sachsen-Anhalt</option>
+                <option value="15">Schleswig-Holstein</option>
+                <option value="16">Thüringen</option>
+            </select> 
         </div>
         <div>
-            <input type="text" id="myInput" class="Suchfeld" data-toggle="dropdown" onkeyup="myFunction()" placeholder="Suche nach Regionen" title="Type in a name" style="height:50px">
-                <ul id="myUL" class="dropdown-menu scrollable-dropdown" role="menu" style="top: 80px; left: 130px">
+            <input type="text" id="myInput" class="Suchfeld" data-toggle="dropdown" onkeyup="myFunction()" placeholder="Suche nach Regionen" title="Type in a name" style="height:50px; width:250px; left:250px">
+                <ul id="Regi" class="dropdown-menu scrollable-dropdown" role="menu" style="top: 60px; left: 260px">
                     <li><a href="#">Berlin</a></li>
-                    <li><a href="#">München</a></li>
-                    <li><a href="#">Benediktbeuern</a></li>
-                    <li><a href="#">Homburg</a></li>
-                    <li><a href="#">Dachau</a></li>
-                    <li><a href="#">Nürnberg</a></li>
+                    <li><a href="#">Sparrow</a></li>
+                    <li><a href="#">Dalinar</a></li>
+                    <li><a href="#">Uffz</a></li>
+                    
                 </ul>
         </div>
     </div>
 
 
-
-
-
     <!-- Deutschlandkarte-->
-    <dic class = "D_Karte" id="map">
-        <div id="map"></div>
+    <div class = "D_Karte" id="map">
         <div id="region_name" class="RegionTitel">Deutschland</div>
-    </dic>
+        <div class="map" id="map-DE"></div>
+        <div class="map" id="map-DE-TH" style="display: none;"></div>
+        <div class="map" id="map-DE-SH" style="display: none;"></div>
+        <div class="map" id="map-DE-ST" style="display: none;"></div>
+        <div class="map" id="map-DE-SN" style="display: none;"></div>
+        <div class="map" id="map-DE-SL" style="display: none;"></div>
+        <div class="map" id="map-DE-RP" style="display: none;"></div>
+        <div class="map" id="map-DE-NW" style="display: none;"></div>
+        <div class="map" id="map-DE-NI" style="display: none;"></div>
+        <div class="map" id="map-DE-MV" style="display: none;"></div>
+        <div class="map" id="map-DE-HE" style="display: none;"></div>
+        <div class="map" id="map-DE-HB" style="display: none;"></div>     
+        <div class="map" id="map-DE-HH" style="display: none;"></div>
+        <div class="map" id="map-DE-BE" style="display: none;"></div>
+        <div class="map" id="map-DE-BR" style="display: none;"></div>
+        <div class="map" id="map-DE-BY" style="display: none;"></div>
+        <div class="map" id="map-DE-BW" style="display: none;"></div>
+    </div>
 
 
 
 
     <!-- Timeslider -->
-
-
     <div id="timeslider" class="Timeslider">
         <button id="play-button">Play</button>
+    </div>
+
+
+
+    <!-- Datepicker -->
+    <div id="datepicker" class="Datepicker">
+        <input type="hidden" id="input-datepicker">
+        <button type="button" class="btn btn-default btn-sm" id="calendar_button">
+            <span class="glyphicon glyphicon-calendar"></span>
+        </button>
     </div>
 
 
@@ -133,9 +161,10 @@
     <script src="jquery-2.1.4.min.js"></script>
     <script src="bootstrap.min.js" ></script>
     <script src="search1.js"></script>
-    <script src="./raphael.min.js"></script>
-    <script src="./jquery-3.5.1.js"></script>
-    <script src="DMap1.js"></script>
+    <script src="jquery-ui/jquery-ui.min.js"></script>
+    <script src="datepicker.js"></script>
+     <script src="./raphael.min.js"></script>
+ <script src="./map.js"></script>
 
 </body>
 </html>

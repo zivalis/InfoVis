@@ -42,6 +42,7 @@ function padlock (){
     LockButton[0].style.display = "none";
 
     LockIcon[0].style.display = "inline";
+    LockIcon[0].style.display = "inline";
 
     TrashButton[0].style.display = "inline";
 
