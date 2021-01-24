@@ -114,6 +114,7 @@ function createPieBar(pie_id){
     LKName=pie_daten[1];
     Einwohner =pie_daten[2][0];
     Inzidenz =pie_daten[3][0]
+    var LKID = pie_daten[0];
     var rows =[
         ["Age","Value","Corona"],
         ["<15",Math.round(pie_daten[2][1]*100),Math.round(pie_daten[3][1]*100)],
@@ -264,7 +265,7 @@ function createPieBar(pie_id){
             .attr("transform", function(d) { return "rotate(" + ((x(d.Age) +x.bandwidth() /2-0.15) * 180 / Math.PI - 100) + ")"+"translate("+ (innerRadius*0.85) + "0)"; })
             .append("text")
             .text(function(d){return(d.Age)})
-            .attr("transform", function(d) { return (x(d.Age) + x.bandwidth() / 2 + Math.PI) % (2 * Math.PI) < Math.PI ? "rotate(280)" : "rotate(100)"; })
+            .attr("transform", function(d) { return (x(d.Age) + x.bandwidth() / 2 + Math.PI) % (2 * Math.PI) < Math.PI ? "rotate(85)" : "rotate(100)"; })
             .style("font-size", "13px")
             .attr("fill", "#333366")
             .attr("alignment-baseline", "middle")
@@ -273,11 +274,11 @@ function createPieBar(pie_id){
         svg.append("text")
             .attr("x",2)
             .attr("y",0)
-            .attr("font-size","20px")
+            .attr("textLength", 150)
             .attr("font-family","sans-serif")
             .attr("text-anchor","middle")
             .attr("fill","black")
-            .text(LKName)
+            .text(IDtoName(LKID))
 
         //Text Altersdruchschnitt
         svg.append("text")
