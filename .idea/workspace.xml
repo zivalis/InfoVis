@@ -20,9 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3dc75f41-8483-444a-bca5-bf551a4cc7a3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controler.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controler.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/inzidenzen.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/inzidenzen.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Basic_Layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/Basic_Layout.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +47,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
