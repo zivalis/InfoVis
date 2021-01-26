@@ -1033,14 +1033,16 @@ function drawCircles(paper, regions, circles, ids, group, day, transform, transl
         var remapped_group_percent = remap(group_percent, 0.16, 255); // estimate max percent (0.41) - new floor (0.25) = new max (0.16) | max found = Suhl (0.4071)
 
         // incidence caps at (500) for circle size purposes
-        if(incidence > 500){
-            incidence = 500
+        var remapped_incidence = 0;
+        if(incidence > 308){
+            remapped_incidence = (incidence/15)+120;
         }
-        // maps incidence data on a percentage value
-        var remapped_incidence = remap(incidence, 500, 1);
+        else{
+            remapped_incidence = 8*Math.sqrt(incidence);
+        }
 
         // initiate circle
-        let circle = paper.circle(centerx, centery, 50 * remapped_incidence); // 50 => max circle size
+        let circle = paper.circle(centerx, centery, 23 * (remapped_incidence/140)); // 50 => max circle size
         // translate style
         let circle_style = {
             "stroke": "#ff0000", // red
