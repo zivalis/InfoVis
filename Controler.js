@@ -85,7 +85,6 @@ function DateChange(newDate){
     updateTimeSlider(newDate);
     $( "#input-datepicker" ).datepicker("setDate", newDate);
     Datum = newDate;
-
     UpdateRelevant(RegionID, Datum);
 
     pushUpdateTime();
