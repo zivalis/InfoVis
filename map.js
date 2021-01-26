@@ -1009,25 +1009,13 @@ function drawCircles(paper, regions, circles, ids, group, day, transform, transl
         let centery = gety + geth / 2;
 
         // get incedence data
-        let max_value = 0;
         let group_percent = 0;
         let incidence = 0;
         for(var entry in incidence_data){
 
             if(incidence_data[entry][0] === ids[i].toString()){
-
-                // max_value = incidence_data[entry][2][0]; // max people in region // TODO needed?
-
                 group_percent = incidence_data[entry][2][group]; // people in "group" in % ("0" would be people in total)
-
                 incidence = incidence_data[entry][3][day][0]; // "day" total incidence in %
-
-                // DEBUG
-                // console.log("id: " + incidence_data[entry][0]);
-                // console.log("name: " + incidence_data[entry][1]);
-                // console.log("percent: " + group_percent);
-                // console.log("incidence: " + incidence);
-
                 break;
             }
         }
@@ -1074,12 +1062,10 @@ function updateCircles(group, date){
     // match date to day 1-366
     var formatDay = d3.timeFormat("%-j");
     day = formatDay(date);
-    console.log(day);
 
     // Deutschland
     if($("#map-DE").css("display") === "block"){
         drawCircles(map, regions, de_circles, ids_de, group, day, 1, [1, 1]);
-        console.log("called!"); // DEBUG
     }
     // Thüringen
     if($("#map-16").css("display") === "block"){
@@ -1150,22 +1136,6 @@ function updateCircles(group, date){
 
 
 // D3 Data Load
-
-// let incidence_data = {};
-// async function getIncidenceData(){
-//     await d3.json("./data/inzidenzen.json", (data) =>{
-//         incidence_data = data;
-//         //initMap();
-//     });
-// };
-
-// async function getData(){ // TODO: erst löschen wenn code drunter funktioniert!!!!
-//     // start main init process
-//     getIncidenceData();
-//     setTimeout(()=>{
-//         initMap();
-//     },2000);
-// };
 
 let incidence_data = {};
 async function getIncidenceData(){
