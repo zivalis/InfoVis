@@ -35,8 +35,10 @@ function UpdateEbeneR(Ort_ID){
 }
 
 function BZRPress(){
-    goBack();
     LKIdR = getRegionID();
+    if(LKIdR < 100){
+        goBackOnMap(); // zoome raus wenn es eine Bundesland ID ist
+    }
     console.log(LKIdR);
     if(LKIdR <100){
         RegionChange(0);
@@ -56,8 +58,10 @@ function BZRPress(){
 }
 
 function BZLPress(){
-    goBack();
     LKIdL = getRegionID();
+    if(LKIdL < 100){
+        goBackOnMap(); // zoome raus wenn es eine Bundesland ID ist
+    }
     if(LKIdL <100){
         RegionChange(0);
         UpdateEbeneL(0);
