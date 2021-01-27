@@ -53,6 +53,19 @@ function padlock (){
     savedRegionIDLeft = getRegionID();
 
     RegionChange(0);
+    if(savedRegionIDLeft <100){
+        RegionChange(savedRegionIDLeft);
+    }
+    else{
+        var ÜberID=0;
+        if(savedRegionIDLeft <10000){
+            ÜberID = savedRegionIDLeft.toString().substring(0,1);
+        }
+        else{
+            ÜberID = savedRegionIDLeft.toString().substring(0,2);
+        }
+        RegionChange(ÜberID);
+    }
 }
 
 
