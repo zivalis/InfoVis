@@ -974,8 +974,6 @@ function setUpDistricts(region, ids)
 ///@param: <regionID> <the region or district ID from which to display the data>
 //#endregion
 function triggerMapDisplayChange(elem, regionID){
-    console.log(elem.name);
-
     let found = false;
     for(entry in incidence_data){
         if(incidence_data[entry][0] === elem.name){
