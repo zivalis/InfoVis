@@ -22,3 +22,7 @@ Unsere Features:
 Das haben wir noch vor:
 - Kleinere Anpassungen am Dropdown-Such-Menü
 - Verbesserte Readability
+
+
+Wichtige Bedienhinweise:
+- Für die Ausführung empfehlen wir ausdrücklich Google Chrome, da nur unter Verwendung dieses Browsers alle Funktionen zugänglich sind.
