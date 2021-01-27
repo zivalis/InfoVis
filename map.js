@@ -969,6 +969,41 @@ function setUpDistricts(region, ids)
     }
 }
 
+// access point for map changes from not "map" related scripts
+//#region @params
+///@param: <elem> <target element, that fired the event. The elem.name atrribute will be used to define the main region (1-16).>
+///@param: <regionID> <the region or district ID from which to display the data>
+//#endregion
+function triggerMapDisplayChange(elem, regionID){
+    console.log(elem.name);
+
+    let found = false;
+    for(entry in incidence_data){
+        if(incidence_data[entry][0] === elem.name){
+
+            // update data graph
+            RegionChange(regionID);
+
+            // Wechsel auf richtiges Raphael-Paper
+            $(".map").hide();
+            $("#map-" + elem.name).show();
+
+            // update map circles
+            updateCircles(group, getDate());
+
+            found = true;
+            break;
+        }
+    }
+    if(!found){
+        console.log("ERROR: Clicked on " + elem.name + " but ID was not found!");
+
+        // Wechsel auf richtiges Raphael-Paper
+        $(".map").hide();
+        $("#map-" + elem.name).show();
+    }
+}
+
 // function deletes all currently drawn incidence circles
 function deleteCircles(circles){
     for(var i = 0; i < circles.length; i++){
