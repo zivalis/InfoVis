@@ -5,7 +5,6 @@ function goBackOnMap(){
     updateCircles(group, getDate());
 }
 
-
 function initMap(){
 
     const MAP_WIDTH  = 1000;
@@ -124,7 +123,7 @@ function initMap(){
     }
 
     // draw de circles as they are always seen first
-    drawCircles(map, regions, de_circles, ids_de, group, getDate(), 1, [1, 1]);
+    drawCircles(map, regions, de_circles, ids_de, group, getDay(), 1, [1, 1]);
 
     //#endregion
 
@@ -955,7 +954,7 @@ function setUpDistricts(region, ids)
 
                     // update data graph
                     RegionChange(event.target.id);
-                    // upsate map circles
+                    // update map circles
                     updateCircles(group, getDate());
 
                     found = true;
@@ -1060,10 +1059,8 @@ function drawCircles(paper, regions, circles, ids, group, day, transform, transl
 }
 
 function updateCircles(group, date){
-
     // match date to day 1-366
-    var formatDay = d3.timeFormat("%-j");
-    day = formatDay(date);
+    day = getDay();
 
     // Deutschland
     if($("#map-DE").css("display") === "block"){
