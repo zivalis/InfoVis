@@ -35,8 +35,10 @@ function UpdateEbeneR(Ort_ID){
 }
 
 function BZRPress(){
-    goBack();
     LKIdR = getRegionID();
+    if(LKIdR < 100){
+        goBackOnMap(); // zoome raus wenn es eine Bundesland ID ist
+    }
     console.log(LKIdR);
     if(LKIdR <100){
         RegionChange(0);
@@ -56,8 +58,10 @@ function BZRPress(){
 }
 
 function BZLPress(){
-    goBack();
     LKIdL = getRegionID();
+    if(LKIdL < 100){
+        goBackOnMap(); // zoome raus wenn es eine Bundesland ID ist
+    }
     if(LKIdL <100){
         RegionChange(0);
         UpdateEbeneL(0);
@@ -114,6 +118,7 @@ function createPieBar(pie_id){
     LKName=pie_daten[1];
     Einwohner =pie_daten[2][0];
     Inzidenz =pie_daten[3][0]
+    var LKID = pie_daten[0];
     var rows =[
         ["Age","Value","Corona"],
         ["<15",Math.round(pie_daten[2][1]*100),Math.round(pie_daten[3][1]*100)],
@@ -260,11 +265,11 @@ function createPieBar(pie_id){
             .data(data)
             .enter()
             .append("g")
-            .attr("text-anchor", function(d) { return (x(d.Age) + x.bandwidth()/2 + Math.PI) % (2 * Math.PI) < Math.PI ? "end" : "start"; })
-            .attr("transform", function(d) { return "rotate(" + ((x(d.Age) +x.bandwidth() /2-0.15) * 180 / Math.PI - 100) + ")"+"translate("+ (innerRadius*0.85) + "0)"; })
+            .attr("text-anchor", function(d) { return (x(d.Age) + x.bandwidth()/2 + Math.PI /2) % (2 * Math.PI) < Math.PI ? "end" : "start"; })
+            .attr("transform", function(d) { return "rotate(" + ((x(d.Age) +x.bandwidth() /1.8) * 180 / Math.PI - 100) + ")"+"translate("+ (innerRadius*0.83) + ")"; })
             .append("text")
             .text(function(d){return(d.Age)})
-            .attr("transform", function(d) { return (x(d.Age) + x.bandwidth() / 2 +(Math.PI /2) ) % (2 * Math.PI) > Math.PI ? "rotate(265)" : "rotate(90)"; })
+            .attr("transform", function(d) { return (x(d.Age) + x.bandwidth() / 2 +(Math.PI /2) ) % (2 * Math.PI) > Math.PI ? "rotate(265)" : "rotate(80)"; })
             .style("font-size", "13px")
             .attr("fill", "#333366")
             .attr("alignment-baseline", "middle")
@@ -273,11 +278,11 @@ function createPieBar(pie_id){
         svg.append("text")
             .attr("x",2)
             .attr("y",0)
-            .attr("font-size","20px")
+            .attr("textLength", 150)
             .attr("font-family","sans-serif")
             .attr("text-anchor","middle")
             .attr("fill","black")
-            .text(LKName)
+            .text(IDtoName(LKID))
 
         //Text Altersdruchschnitt
         svg.append("text")
