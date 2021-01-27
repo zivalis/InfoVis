@@ -1074,7 +1074,7 @@ function drawCircles(paper, regions, circles, ids, group, day, transform, transl
         }
 
         // initiate circle
-        let circle = paper.circle(centerx, centery, 23 * (remapped_incidence/140)); // 50 => max circle size
+        let circle = paper.circle(centerx, centery, 23 * (remapped_incidence/140)); // bei inzidenz 308 => remapped inzidenz = 140
         // translate style
         let circle_style = {
             "stroke": "#ff0000", // red
