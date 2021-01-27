@@ -83,8 +83,9 @@ var label = slider.append("text")
 
 function step() {
     DateChange(x.invert(currentValue));
-    currentValue = currentValue + (targetValue/1501); // Granularity
-    if (currentValue > targetValue) {
+    granularitiy = (targetValue/1501)
+    currentValue = currentValue + granularitiy; // Granularity
+    if (currentValue >=  targetValue + granularitiy) {
         moving = false;
         currentValue = 0;
         clearInterval(timer);
@@ -100,5 +101,4 @@ function updateTimeSlider(h) {
     label
         .attr("x", x(h))
         .text(formatDateMonthDay(h));
-    //DateChange(h);
 }

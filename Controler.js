@@ -1,11 +1,14 @@
 var RegionID = 0;
-var Datum = 0;
+var Datum = new Date("2020-01-01");
 var Daten;
 var Navigator;
 
 var RelevantData=[];
 
-
+function getDay(){
+    var formatDay = d3.timeFormat("%j");
+    return formatDay(getDate()) - 1
+}
 
 async function getIncidenceData(){
     await d3.json("./data/inzidenzen.json", (data) =>{
@@ -36,8 +39,8 @@ function SetNavigator(){
 
 function UpdateRelevant(Ort,Datum){
 
-    var formatDay = d3.timeFormat("%j");
-    Tag = Math.round(formatDay(Datum));
+    //var formatDay = d3.timeFormat("%j");
+    Tag = Math.round(getDay());
     var tmp =[]
      tmp= Daten[IDtoArrayPos(Ort)];
     RelevantData =[];
@@ -85,7 +88,6 @@ function DateChange(newDate){
     updateTimeSlider(newDate);
     $( "#input-datepicker" ).datepicker("setDate", newDate);
     Datum = newDate;
-
     UpdateRelevant(RegionID, Datum);
 
     pushUpdateTime();
@@ -110,7 +112,6 @@ function getRelevantData(){
 }
 
 function pushUpdateTime(){
-    
     // Ludwig
     updateCircles(4, getDate()); // 4 => 60+
 
