@@ -7,7 +7,7 @@ var RelevantData=[];
 
 function getDay(){
     var formatDay = d3.timeFormat("%j");
-    return formatDay(getDate()) - 1
+    return formatDay(getDate()) - 1;
 }
 
 async function getIncidenceData(){
