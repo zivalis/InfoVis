@@ -75,6 +75,8 @@
 
     <!-- Suchleiste mit Dropdown -->
     <div class="Suchleiste">
+
+        <!-- Bundesländer -->
         <div class="Dropdown" class="dropdown-menu scrollable-dropdown" role="menu" style="max-height:200px;">
             <select class="form" id="selectBund" onchange="change()" style="height:50px; width:250px; background-color:lightgrey;">
                 <option value="0">Bundesländer</option>
@@ -97,6 +99,7 @@
             </select> 
         </div>
         <div>
+            <!-- Landkreise -->
             <input type="text" id="myInput" class="Suchfeld" data-toggle="dropdown" onkeyup="myFunction()" placeholder="Suche nach Regionen" title="Type in a name" style="height:50px; width:250px; left:250px">
                 <ul id="Regi" class="dropdown-menu scrollable-dropdown" role="menu" style="top: 60px; left: 260px; max-height:400px ; overflow:auto;">
                     <li><a name="5" onclick="triggerMapDisplayChange(this, 5354)">Aachen</a></li>

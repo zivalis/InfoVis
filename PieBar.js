@@ -5,6 +5,8 @@ var LKName = "TestLand";
 var Einwohner = "0";
 var Inzidenz ="0";
 
+
+//Erste Inizialisierung
 setTimeout(()=>{
     pie_daten = getRelevantData();
     createPieBar("#pie_1");
@@ -14,8 +16,11 @@ setTimeout(()=>{
 },600);
 
 
-
+//Navigantionsbuttens anzeigen und mit Übergeordnetem Regionsnamen versehen (z.B. Miesbach -> Bayern)
+//Rechter Button
 function UpdateEbeneR(Ort_ID){
+
+    //Herausfinden auf welcher Ebene man sich befindet (DE, Budnesland, Landkreis)
     if(Ort_ID == 0){
         document.getElementsByClassName("EbeneZurückR")[0].style.display = "none";
     }
@@ -34,52 +39,10 @@ function UpdateEbeneR(Ort_ID){
     }
 }
 
-function BZRPress(){
-    LKIdR = getRegionID();
-    if(LKIdR < 100){
-        goBackOnMap(); // zoome raus wenn es eine Bundesland ID ist
-    }
-    console.log(LKIdR);
-    if(LKIdR <100){
-        RegionChange(0);
-        UpdateEbeneR(0);
-    }
-    else{
-        if(LKIdR <10000){
-            RegionChange(LKIdR.toString().substring(0,1));
-            UpdateEbeneR(LKIdR.toString().substring(0,1));
-        }
-        else{
-            RegionChange(LKIdR.toString().substring(0,2));
-            UpdateEbeneR(LKIdR.toString().substring(0,2));
-        }
-    }
-
-}
-
-function BZLPress(){
-    LKIdL = getRegionID();
-    if(LKIdL < 100){
-        goBackOnMap(); // zoome raus wenn es eine Bundesland ID ist
-    }
-    if(LKIdL <100){
-        RegionChange(0);
-        UpdateEbeneL(0);
-    }
-    else{
-        if(LKIdL <10000){
-            RegionChange(LKIdL.toString().substring(0,1));
-            UpdateEbeneL(LKIdL.toString().substring(0,1));
-        }
-        else{
-            RegionChange(LKIdL.toString().substring(0,2));
-            UpdateEbeneL(LKIdL.toString().substring(0,2));
-        }
-    }
-
-}
-
+//Linker Button
 function UpdateEbeneL(Ort_ID){
+
+    //Herausfinden auf welcher Ebene man sich befindet (DE, Budnesland, Landkreis)
     if(Ort_ID == 0){
         document.getElementsByClassName("EbeneZurückL")[0].style.display = "none";
     }
@@ -99,6 +62,59 @@ function UpdateEbeneL(Ort_ID){
     }
 }
 
+//Rechter Button wird gedrückt
+function BZRPress(){
+    LKIdR = getRegionID();
+    if(LKIdR < 100){
+        goBackOnMap(); // zoome raus wenn es eine Bundesland ID ist
+    }
+    console.log(LKIdR);
+
+    //Herausfinden auf welcher Ebene man sich befindet (DE, Budnesland, Landkreis)
+    if(LKIdR <100){
+        RegionChange(0);
+        UpdateEbeneR(0);
+    }
+    else{
+        if(LKIdR <10000){
+            RegionChange(LKIdR.toString().substring(0,1));
+            UpdateEbeneR(LKIdR.toString().substring(0,1));
+        }
+        else{
+            RegionChange(LKIdR.toString().substring(0,2));
+            UpdateEbeneR(LKIdR.toString().substring(0,2));
+        }
+    }
+
+}
+
+//Linker Button wird gedrückt
+function BZLPress(){
+    LKIdL = getRegionID();
+    if(LKIdL < 100){
+        goBackOnMap(); // zoome raus wenn es eine Bundesland ID ist
+    }
+
+    //Herausfinden auf welcher Ebene man sich befindet (DE, Budnesland, Landkreis)
+    if(LKIdL <100){
+        RegionChange(0);
+        UpdateEbeneL(0);
+    }
+    else{
+        if(LKIdL <10000){
+            RegionChange(LKIdL.toString().substring(0,1));
+            UpdateEbeneL(LKIdL.toString().substring(0,1));
+        }
+        else{
+            RegionChange(LKIdL.toString().substring(0,2));
+            UpdateEbeneL(LKIdL.toString().substring(0,2));
+        }
+    }
+
+}
+
+
+//Erstellt Pie-Bar Diagramm an bestimter HTML ID stelle pie_id
 function createPieBar(pie_id){
 
 
@@ -119,6 +135,7 @@ function createPieBar(pie_id){
     Einwohner =pie_daten[2][0];
     Inzidenz =pie_daten[3][0]
     var LKID = pie_daten[0];
+    //Relevante Daten einlesen und in das richtige Format für die Verarbeitung bringen
     var rows =[
         ["Age","Value","Corona"],
         ["<15",Math.round(pie_daten[2][1]*100),Math.round(pie_daten[3][1]*100)],
@@ -343,13 +360,16 @@ function createPieBar(pie_id){
     });
 }
 
+//Update mit neuem Datum wird anders gehandhabt als mit neuem Ort, da es sehr schnell gehen muss
+
+//Neues Datum -> Neuer Graph
 function PieBarTimeUpdate(){
     var LockIcon = document.getElementsByClassName("Abgeschlossen");
 
         pie_daten = getRelevantData();
 
-
-    //links
+        //Unterscheidung welcher Graph geupdated werden soll, dann neuzeichnen und löschen des alten Graphs
+        //links
         if(LockIcon[0].style.display == "none"){
             createPieBar("#pie_1");
             createPieBar("#pie_2");
@@ -371,10 +391,8 @@ function PieBarTimeUpdate(){
 
 }
 
+//Neuer Ort -> Neuer Graph
 function PieBarPlaceUpdate(){
-
-
-
     var LockIcon = document.getElementsByClassName("Abgeschlossen");
 ;
         pie_daten = getRelevantData();
@@ -382,7 +400,11 @@ function PieBarPlaceUpdate(){
         UpdateEbeneR(pie_daten[0]);
         UpdateEbeneL(pie_daten[0]);
 
+        //Unterscheidung welcher Graph geupdated werden soll, dann neuzeichnen und löschen des alten Graphs
+
         if(LockIcon[0].style.display == "none"){
+
+            //links
             if(pie_daten[0]>0){
                 document.getElementsByClassName("EbeneZurückL")[0].style.display = "inline";
             }
@@ -412,6 +434,7 @@ function PieBarPlaceUpdate(){
             }
 
         }
+
         //rechts
         else{
             if(pie_daten[0]>0){
