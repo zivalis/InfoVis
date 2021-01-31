@@ -976,14 +976,19 @@ function setUpDistricts(region, ids)
 function triggerMapDisplayChange(elem, regionID){
     let found = false;
     for(entry in incidence_data){
-        if(incidence_data[entry][0] === elem.name){
+        if(elem.value != null){
+            var x= elem.value;
+        }else{
+            var x= elem.name;
+        }
+        if(incidence_data[entry][0] === x){
 
             // update data graph
             RegionChange(regionID);
 
             // Wechsel auf richtiges Raphael-Paper
             $(".map").hide();
-            $("#map-" + elem.name).show();
+            $("#map-" + x).show();
 
             // update map circles
             updateCircles(group, getDate());
@@ -993,11 +998,11 @@ function triggerMapDisplayChange(elem, regionID){
         }
     }
     if(!found){
-        console.log("ERROR: Clicked on " + elem.name + " but ID was not found!");
+        console.log("ERROR: Clicked on " + x + " but ID was not found!");
 
         // Wechsel auf richtiges Raphael-Paper
         $(".map").hide();
-        $("#map-" + elem.name).show();
+        $("#map-" + x).show();
     }
 }
 

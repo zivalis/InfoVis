@@ -15,7 +15,8 @@ function myFunction(){
     }
 }
 
-function change(){
-    var x = document.getElementById("selectBund").value;
+function change(selectObject){
+    var x = selectObject.value;
     RegionChange(x);
+    triggerMapDisplayChange(selectObject,x);
 }
