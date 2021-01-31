@@ -1,7 +1,7 @@
 
 function goBackOnMap(){
     $(".map").hide();
-    $("#map-DE").show();
+    $("#map-0").show();
     updateCircles(group, getDate());
 }
 
@@ -49,7 +49,7 @@ function initMap(){
 
     //#region Deutschland
 
-    mapContainer = document.getElementById("map-DE");
+    mapContainer = document.getElementById("map-0");
     map = new Raphael(mapContainer, MAP_WIDTH, MAP_HEIGHT);
 
     regions = {};
@@ -989,7 +989,7 @@ function triggerMapDisplayChange(elem, regionID){
             // Wechsel auf richtiges Raphael-Paper
             $(".map").hide();
             $("#map-" + x).show();
-
+            console.log(x);
             // update map circles
             updateCircles(group, getDate());
 
@@ -1101,7 +1101,7 @@ function updateCircles(group, date){
     day = getDay();
 
     // Deutschland
-    if($("#map-DE").css("display") === "block"){
+    if($("#map-0").css("display") === "block"){
         drawCircles(map, regions, de_circles, ids_de, group, day, 1, [1, 1]);
     }
     // Thüringen
