@@ -17,6 +17,7 @@ p{
     text-shadow: 3pt black;
     max-width: 800px;
     font-family:"Roboto";
+    font-weight: bold;
 }
 
 .info{
