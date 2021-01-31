@@ -1198,8 +1198,8 @@ function updateCircleLegend(transform, translate){
     deleteCircles(legendCircles);
 
     let legendCircle1 = circleLegendPaper.circle(25, 25, 23); // incedence ~ 308
-    let legendCircle2 = circleLegendPaper.circle(125, 25, 23 * (2/3));
-    let legendCircle3 = circleLegendPaper.circle(225, 25, 23 * (1/3));
+    let legendCircle2 = circleLegendPaper.circle(125, 25, 23 * (8*Math.sqrt(150)/140));
+    let legendCircle3 = circleLegendPaper.circle(225, 25, 23 * (8*Math.sqrt(50)/140));
     legendCircle1.transform(transform);
     legendCircle2.transform(transform);
     legendCircle3.transform(transform);
