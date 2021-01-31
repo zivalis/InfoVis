@@ -2,6 +2,6 @@ p{
     text-align:center;
     text-shadow: 3pt black;
     max-width: 800px;
-    font-family:"Roboto";
+    font-family:"Roboto", sans-serif;
     text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white
 }
