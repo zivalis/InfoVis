@@ -1,10 +1,9 @@
 
 function goBackOnMap(){
     $(".map").hide();
-    $("#map-DE").show();
+    $("#map-0").show();
     updateCircles(group, getDate());
 }
-
 
 function initMap(){
 
@@ -25,6 +24,10 @@ function initMap(){
         //"fill": "#A8BED5" // greyish blue
         "fill": "#cc2f2f" // redish
     };
+
+    circleLegend = document.getElementById("circle-legend");
+    circleLegendPaper = new Raphael(circleLegend, MAP_WIDTH, 200);
+    legendCircles = [];
 
     // set standard init values
     group = 4; // pepole 60+
@@ -50,7 +53,7 @@ function initMap(){
 
     //#region Deutschland
 
-    mapContainer = document.getElementById("map-DE");
+    mapContainer = document.getElementById("map-0");
     map = new Raphael(mapContainer, MAP_WIDTH, MAP_HEIGHT);
 
     regions = {};
@@ -124,7 +127,8 @@ function initMap(){
     }
 
     // draw de circles as they are always seen first
-    drawCircles(map, regions, de_circles, ids_de, group, getDate(), 1, [1, 1]);
+    drawCircles(map, regions, de_circles, ids_de, group, getDay(), 1, [1, 1]);
+    updateCircleLegend(1, [1, 1]);
 
     //#endregion
 
@@ -955,7 +959,7 @@ function setUpDistricts(region, ids)
 
                     // update data graph
                     RegionChange(event.target.id);
-                    // upsate map circles
+                    // update map circles
                     updateCircles(group, getDate());
 
                     found = true;
@@ -966,6 +970,44 @@ function setUpDistricts(region, ids)
                 console.log("ERROR: Clicked on " + event.target.id + " but ID was not found!");
             }
         };
+    }
+}
+
+// access point for map changes from not "map" related scripts
+//#region @params
+///@param: <elem> <target element, that fired the event. The elem.name atrribute will be used to define the main region (1-16).>
+///@param: <regionID> <the region or district ID from which to display the data>
+//#endregion
+function triggerMapDisplayChange(elem, regionID){
+    let found = false;
+    for(entry in incidence_data){
+        if(elem.value != null){
+            var x= elem.value;
+        }else{
+            var x= elem.name;
+        }
+        if(incidence_data[entry][0] === x){
+
+            // update data graph
+            RegionChange(regionID);
+
+            // Wechsel auf richtiges Raphael-Paper
+            $(".map").hide();
+            $("#map-" + x).show();
+            console.log(x);
+            // update map circles
+            updateCircles(group, getDate());
+
+            found = true;
+            break;
+        }
+    }
+    if(!found){
+        console.log("ERROR: Clicked on " + x + " but ID was not found!");
+
+        // Wechsel auf richtiges Raphael-Paper
+        $(".map").hide();
+        $("#map-" + x).show();
     }
 }
 
@@ -1042,7 +1084,7 @@ function drawCircles(paper, regions, circles, ids, group, day, transform, transl
         }
 
         // initiate circle
-        let circle = paper.circle(centerx, centery, 23 * (remapped_incidence/140)); // 50 => max circle size
+        let circle = paper.circle(centerx, centery, 23 * (remapped_incidence/140)); // bei inzidenz 308 => remapped inzidenz = 140
         // translate style
         let circle_style = {
             "stroke": "#ff0000", // red
@@ -1060,81 +1102,135 @@ function drawCircles(paper, regions, circles, ids, group, day, transform, transl
 }
 
 function updateCircles(group, date){
-
     // match date to day 1-366
-    var formatDay = d3.timeFormat("%-j");
-    day = formatDay(date);
+    day = getDay();
 
     // Deutschland
-    if($("#map-DE").css("display") === "block"){
+    if($("#map-0").css("display") === "block"){
         drawCircles(map, regions, de_circles, ids_de, group, day, 1, [1, 1]);
+        updateCircleLegend(1, [1, 1]);
     }
     // Thüringen
     if($("#map-16").css("display") === "block"){
     drawCircles(map_th, th, th_circles, ids_th, group, day, th_tranform, th_translate);
+    updateCircleLegend(th_tranform, th_translate);
     }
     // Schleswig-Holstein
     if($("#map-1").css("display") === "block"){
     drawCircles(map_sh, sh, sh_circles, ids_sh, group, day, sh_tranform, sh_translate);
+    updateCircleLegend(sh_tranform, sh_translate);
     }
     // Sachsen-Anhalt
     if($("#map-15").css("display") === "block"){
     drawCircles(map_st, st, st_circles, ids_st, group, day, st_tranform, st_translate);
+    updateCircleLegend(st_tranform, st_translate);
     }
     // Sachsen
     if($("#map-14").css("display") === "block"){
     drawCircles(map_sn, sn, sn_circles, ids_sn, group, day, sn_tranform, sn_translate);
+    updateCircleLegend(sn_tranform, sn_translate);
     }
     // Saarland
     if($("#map-10").css("display") === "block"){
     drawCircles(map_sl, sl, sl_circles, ids_sl, group, day, sl_tranform, sl_translate);
+    updateCircleLegend(sl_tranform, sl_translate);
     }
     // Rheinland-Pfalz
     if($("#map-7").css("display") === "block"){
     drawCircles(map_rp, rp, rp_circles, ids_rp, group, day, rp_tranform, rp_translate);
+    updateCircleLegend(rp_tranform, rp_translate);
     }
     // Nordrhein-Westfalen
     if($("#map-5").css("display") === "block"){
     drawCircles(map_nw, nw, nw_circles, ids_nw, group, day, nw_tranform, nw_translate);
+    updateCircleLegend(nw_tranform, nw_translate);
     }
     // Niedersachsen
     if($("#map-3").css("display") === "block"){
     drawCircles(map_ni, ni, ni_circles, ids_ni, group, day, ni_tranform, ni_translate);
+    updateCircleLegend(ni_tranform, ni_translate);
     }
     // Mecklenburg-Vorpommern
     if($("#map-13").css("display") === "block"){
     drawCircles(map_mv, mv, mv_circles, ids_mv, group, day, mv_tranform, mv_translate);
+    updateCircleLegend(mv_tranform, mv_translate);
     }
     // Hessen
     if($("#map-6").css("display") === "block"){
     drawCircles(map_he, he, he_circles, ids_he, group, day, he_tranform, he_translate);
+    updateCircleLegend(he_tranform, he_translate);
     }
     // Bremen
     if($("#map-4").css("display") === "block"){
     drawCircles(map_hb, hb, hb_circles, ids_hb, group, day, hb_tranform, hb_translate);
+    updateCircleLegend(hb_tranform, hb_translate);
     }
     // Hamburg
     if($("#map-2").css("display") === "block"){
     drawCircles(map_hh, hh, hh_circles, ids_hh, group, day, hh_tranform, hh_translate);
+    updateCircleLegend(hh_tranform, hh_translate);
     }
     // Berlin
     if($("#map-11").css("display") === "block"){
     drawCircles(map_be, be, be_circles, ids_be, group, day, be_tranform, be_translate);
+    updateCircleLegend(be_tranform, be_translate);
     }
     // Brandenburg
     if($("#map-12").css("display") === "block"){
     drawCircles(map_br, br, br_circles, ids_br, group, day, br_tranform, br_translate); 
+    updateCircleLegend(br_tranform, br_translate);
     }
     // Bayern
     if($("#map-9").css("display") === "block"){
     drawCircles(map_by, by, by_circles, ids_by, group, day, by_tranform, by_translate);
+    updateCircleLegend(by_tranform, by_translate);
     }
     // Baden-Württemberg
     if($("#map-8").css("display") === "block"){
     drawCircles(map_bw, bw, bw_circles, ids_bw, group, day, bw_tranform, bw_translate);
+    updateCircleLegend(bw_tranform, bw_translate);
     }
 }
 
+function updateCircleLegend(transform, translate){
+    // update legend
+    // make sure all old circles are deleted to avoid double drawing
+    deleteCircles(legendCircles);
+
+    let legendCircle1 = circleLegendPaper.circle(25, 25, 23); // incedence ~ 308
+    let legendCircle2 = circleLegendPaper.circle(125, 25, 23 * (8*Math.sqrt(150)/140));
+    let legendCircle3 = circleLegendPaper.circle(225, 25, 23 * (8*Math.sqrt(50)/140));
+    legendCircle1.transform(transform);
+    legendCircle2.transform(transform);
+    legendCircle3.transform(transform);
+
+    console.log(transform);
+    console.log(getValues(transform.toString()));
+
+    legendCircle1.attr('cx', 25);
+    legendCircle2.attr('cx', 325 / getValues(transform.toString()));
+    legendCircle3.attr('cx', 625 / getValues(transform.toString()));
+
+    let legendCircleStyle = {
+        "stroke-width": "2",
+        "stroke": "#ff0000", // red
+        "fill": "#ffffff" // 
+    };
+    legendCircle1.attr(legendCircleStyle);
+    legendCircle2.attr(legendCircleStyle);
+    legendCircle3.attr(legendCircleStyle);
+
+    legendCircles.push(legendCircle1);
+    legendCircles.push(legendCircle2);
+    legendCircles.push(legendCircle3);
+}
+
+function getValues(transform){
+    var matrix = transform.replace(/[^0-9\-.,]/g, '').split(',');
+    console.log(matrix);
+    var x = matrix[0];
+    return x;
+  };
 
 
 // D3 Data Load
