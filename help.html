@@ -22,15 +22,36 @@
     <br/>
 
     <details> 
-        <summary>Auswahl von Bundesländern</summary>
-        <p id="helptext">Um ein Bundesland auszuwählen, kannst du entweder das Dropwown Meünu benutzen, oder über die Karte eines auswählen.</p>
+        <summary>Wieso ändert sich die Größe der Legende je nach Bundesland?</summary>
+        <p id="helptext">Um Inzidenzen ideal vergleichen zu können, orientiert sich die Größe der Inzidenzkreise immer am zu Verfügung 
+            stehenden Platz.
+            Der Maßstab der Bundesländer ist jedoch nicht immer gleich groß, um den Platz maximal auszunutzen.
+            Damit die Daten nicht verfälscht werden, ändert sich damit auch die Größe der Legende.
+        </p>
+        <img class = "help" src = "Img/Inzidenzen.gif"> </img>
+    </details>
+
+    <details> 
+        <summary>Wie kann ich ein Bundesland auswählen?</summary>
+        <p id="helptext">Um ein Bundesland auszuwählen, kannst du entweder das Dropwown-Menü benutzen, oder über die Karte eines auswählen.</p>
         <img class = "help" src = "Img/Dropdown.gif"> </img>
     </details>
 
     <details>
-        <summary>Auswahl von Landkreisen</summary>
+        <summary>Wie kann ich einen Landkreis auswählen?</summary>
         <p id="helptext">Landkreise kannst du nach Auswahl eines Bundeslands anklicken. Alternativ kannst du sie auch über die Suche auswählen.</p>
         <img class = "help" src = "Img/Suche.gif"> </img>
+    </details>
+
+    <details>
+        <summary>Wie kann ich das Datum ändern?</summary>
+        <p id="helptext">Das Datum kann auf zwei Arten geändert werden:
+            <br>1.) Timeslider: Über den Timeslider kann ein Datum durch Klicken, oder durch Ziehen des Sliders ausgewählt werden.
+            <br>2.) Kalender: Durch Klick auf das Kalender-Item öffnet sich ein Kalenderblatt des aktuellen Monats. Hier kann ein Tag ausgewählt werden. 
+            Um einen Tag eines anderen Monats auszuwählen, muss dieser zunächst mithilfe der Pfeiltasten ausgewählt werden.
+            <br><br>Hinweis: Unser Tool beschränkt sich auf Werte des Kalenderjahres 2020, daher ist eine Auswahl nur von 01.01.2020 bis 31.12.2020 möglich.
+        </p>
+        <img class = "help" src = "Img/Datum.gif"> </img>
     </details>
 
     <details>
@@ -44,21 +65,22 @@
     </details>
 
     <details>
-        <summary>Datum ändern</summary>
-        <p id="helptext">Das Datum kann auf zwei Arten geändert werden:
-            <br>1.) Timeslider: Über den Timeslider kann ein Datum durch Klicken, oder durch ziehen des Sliders ausgewählt werden.
-            <br>2.) Kalender: Durch Klick auf das Kalenderitem öffnet sich ein Kalenderblatt des aktuellen Monats. Hier kann ein Tag ausgewählt werden.
-            <br><br>Hinweis: Unser Tool beschränkt sich aktuell auf Werte des Kalenderjahres 2020, daher ist eine Auswahl nur von 01.01.2020 bis 31.12.2020 möglich.
-        </p>
-        <img class = "help" src = "Img/Datum.gif"> </img>
-    </details>
-
-    <details>
         <summary>Autoplay</summary>
-        <p id="helptext">Das Datum kann auch als "Video-Komponente"verwendet werden. Beim Drücken auf "Play" spielt läuft die Zeit.
-            Abhängig von Betrachtungsebene und ausgewählten Elementen werden alle sichtbaren Komponenten (Mit Ausnahm einer  gepinnten Grafik) auf den jeweiligen Tag aktualisiert.
+        <p id="helptext">Das Datum kann auch als "Video-Komponente" verwendet werden. Beim Drücken auf "Play" spielt läuft die Zeit.
+            Abhängig von der Betrachtungsebene und ausgewählten Elementen werden alle sichtbaren Komponenten (Mit Ausnahm einer  gepinnten Grafik) auf den jeweiligen Tag aktualisiert.
         </p>
         <img class = "help" src = "Img/Autoplay.gif"> </img>
+    </details>
+
+    <details> 
+        <summary>Wieso ändert sich die Größe der Kreise nicht linear?</summary>
+        <p id="helptext">Um Unterschiede bei niedrigen Inzidenzzahlen besser darstellen zu können, wächst der 
+            Kreis-Radius für niedrige Inzidenzen nicht-linear. Für Inzidenzen 
+            unter 300 wird der Radius mittels einer Wurzelfunktion über die Inzidenz berechnet. 
+            Für Werte über 300 wächst der Radius linear. 
+            <br>So soll vermieden werden, dass die Kreise nicht zu groß werden, und trotzdem der Lie Factor 
+            (also eine Verfälschung der Darstellung) minimal bleibt. </p>
+        <img class = "help" src = "Img/Inzidenzen.gif"> </img>
     </details>
 
 
