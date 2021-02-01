@@ -4,7 +4,7 @@ function datepickerOnChange(dateStr) {
     var parseTimeFromDatePicker = d3.timeParse("%m/%d/%Y");
     DateChange(parseTimeFromDatePicker(dateStr));
 }
-// Init Datepicker 
+// Init Datepicker
 $( function() {
     $( "#input-datepicker" ).datepicker( {
         onSelect: function(dateStr) {
