@@ -998,6 +998,9 @@ function triggerMapDisplayChange(elem, regionID){
             // update map circles
             updateCircles(group, getDate());
 
+            //Update displayed Bundesland
+            changeDisplay('selectBund', x);
+
             found = true;
             break;
         }
