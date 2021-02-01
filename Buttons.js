@@ -13,7 +13,7 @@ function test(){
 initialize();
 function initialize(){
     RightPie[0].style.display = "none";
-
+    document.getElementById("TagInfo").innerText="";
     LockIcon[0].style.display = "none";
 
     TrashButton[0].style.display = "none";
@@ -22,6 +22,8 @@ function initialize(){
 }
 
 function trashcan(){
+
+    document.getElementById("TagInfo").innerText="";
 
     LockButton[0].style.display = "inline";
 
@@ -38,6 +40,7 @@ function trashcan(){
 }
 
 function padlock (){
+    document.getElementById("TagInfo").innerText=getDate().getUTCDate()+". "+ (parseInt(getDate().getUTCMonth())+1)+" 2020";
 
     LockButton[0].style.display = "none";
 

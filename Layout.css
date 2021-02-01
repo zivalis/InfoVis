@@ -24,6 +24,13 @@ body {
 
 }
 
+.TagInfo{
+    color: black;
+    position: absolute;
+    left:730px;
+    top: 500px;
+}
+
 .left_chart{
     position: absolute;
     left: 550px;
