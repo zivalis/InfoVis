@@ -1197,7 +1197,7 @@ function updateCircleLegend(transform, translate){
     // make sure all old circles are deleted to avoid double drawing
     deleteCircles(legendCircles);
 
-    let legendCircle1 = circleLegendPaper.circle(25, 25, 23); // incedence ~ 308
+    let legendCircle1 = circleLegendPaper.circle(25,25,23)// incedence ~ 308
     let legendCircle2 = circleLegendPaper.circle(125, 25, 23 * (8*Math.sqrt(150)/140));
     let legendCircle3 = circleLegendPaper.circle(225, 25, 23 * (8*Math.sqrt(50)/140));
     legendCircle1.transform(transform);
