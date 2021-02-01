@@ -1,3 +1,4 @@
+//Displays and filters options in the secons Dropdown-Box depending on input
 function myFunction(){
     var input, filter, ul, li, a, i, txtValue;
     input= document.getElementById("myInput");
@@ -15,12 +16,13 @@ function myFunction(){
     }
 }
 
+//Changes the displayed map depending on chosen option in the first Dropdown-Box
 function change(selectObject){
     var x = selectObject.value;
     RegionChange(x);
     triggerMapDisplayChange(selectObject,x);
 }
-
+//Udates selected Option in the first Dropdown-Box
 function changeDisplay(id, valueToSelect){
     let element = document.getElementById(id);
     element.value = valueToSelect;

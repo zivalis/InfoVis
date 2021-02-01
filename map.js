@@ -88,13 +88,26 @@ function initMap(){
 
             region.attr(style);
             region.node.id = regionID;
+            // create a tooltip
+            var tooltip = d3.select("#map")
+                .append("div")
+                .style("opacity", 0)
+                .attr("class", "tooltip")
 
             region[0].addEventListener("mouseover", function() {
-                region.animate(hoverStyle, animationSpeed);
+                region.animate(hoverStyle, animationSpeed); 
+                tooltip.style("opacity", 1)
+                tooltip
+                .html(IDtoName(region.node.id))
+                .style("top", "750px")
+                .style("font-size","22px")
+                .style("width","500px")
+                .style("text-align","center")
             }, true);
 
             region[0].addEventListener("mouseout", function() {
                 region.animate(style, animationSpeed);
+                tooltip.style("opacity", 0)
             }, true);
 
             region[0].onclick = function(event) {
@@ -111,6 +124,12 @@ function initMap(){
 
                         // update map circles
                         updateCircles(group, getDate());
+
+                        //Update displayed Bundesland
+                        if(event.target.id <17){
+                            changeDisplay('selectBund', event.target.id);
+                        }
+                        
 
                         found = true;
                         break;
@@ -944,12 +963,26 @@ function setUpDistricts(region, ids)
         district.node.id = ids[i];
         i++;
 
+        // create a tooltip
+        var tooltip = d3.select("#map")
+        .append("div")
+        .style("opacity", 0)
+        .attr("class", "tooltip")
+
         district[0].addEventListener("mouseover", function() {
             district.animate(hoverStyle, animationSpeed);
+            tooltip.style("opacity", 1)
+            tooltip
+                .html(IDtoName(district.node.id))
+                .style("top", "750px")
+                .style("font-size","22px")
+                .style("width","500px")
+                .style("text-align","center")
         }, true);
 
         district[0].addEventListener("mouseout", function() {
             district.animate(style, animationSpeed);
+            tooltip.style("opacity", 0)
         }, true);
 
         district[0].onclick = function(event) {
@@ -961,6 +994,11 @@ function setUpDistricts(region, ids)
                     RegionChange(event.target.id);
                     // update map circles
                     updateCircles(group, getDate());
+
+                    //Update displayed Bundesland
+                    if(event.target.id <17){
+                        changeDisplay('selectBund', event.target.id);
+                    }
 
                     found = true;
                     break;
