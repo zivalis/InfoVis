@@ -20,3 +20,8 @@ function change(selectObject){
     RegionChange(x);
     triggerMapDisplayChange(selectObject,x);
 }
+
+function changeDisplay(id, valueToSelect){
+    let element = document.getElementById(id);
+    element.value = valueToSelect;
+}
