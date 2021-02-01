@@ -1,9 +1,10 @@
+// If date picker is selected the function sends new date to controller
 function datepickerOnChange(dateStr) {
     console.log("datepickerOnChange called");
     var parseTimeFromDatePicker = d3.timeParse("%m/%d/%Y");
     DateChange(parseTimeFromDatePicker(dateStr));
 }
-/* Init Datepicker */
+// Init Datepicker 
 $( function() {
     $( "#input-datepicker" ).datepicker( {
         onSelect: function(dateStr) {
