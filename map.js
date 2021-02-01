@@ -26,7 +26,7 @@ function initMap(){
     };
 
     circleLegend = document.getElementById("circle-legend");
-    circleLegendPaper = new Raphael(circleLegend, MAP_WIDTH, 200);
+    circleLegendPaper = new Raphael(circleLegend, 200, MAP_HEIGHT);
     legendCircles = [];
 
     // set standard init values
@@ -127,8 +127,8 @@ function initMap(){
     }
 
     // draw de circles as they are always seen first
-    drawCircles(map, regions, de_circles, ids_de, group, getDay(), 1, [1, 1]);
-    updateCircleLegend(1, [1, 1]);
+    drawCircles(map, regions, de_circles, ids_de, group, getDay(), 'S1,1,0,0', [1, 1]);
+    updateCircleLegend('S1,1,0,0', [1, 1]);
 
     //#endregion
 
@@ -1108,7 +1108,7 @@ function updateCircles(group, date){
     // Deutschland
     if($("#map-0").css("display") === "block"){
         drawCircles(map, regions, de_circles, ids_de, group, day, 1, [1, 1]);
-        updateCircleLegend(1, [1, 1]);
+        updateCircleLegend('S1,1,0,0', [1, 1]);
     }
     // Thüringen
     if($("#map-16").css("display") === "block"){
@@ -1197,19 +1197,16 @@ function updateCircleLegend(transform, translate){
     // make sure all old circles are deleted to avoid double drawing
     deleteCircles(legendCircles);
 
-    let legendCircle1 = circleLegendPaper.circle(25,25,23)// incedence ~ 308
-    let legendCircle2 = circleLegendPaper.circle(125, 25, 23 * (8*Math.sqrt(150)/140));
-    let legendCircle3 = circleLegendPaper.circle(225, 25, 23 * (8*Math.sqrt(50)/140));
+    let legendCircle1 = circleLegendPaper.circle(25, 150, 23)// incedence ~ 308
+    let legendCircle2 = circleLegendPaper.circle(25, 425, 23 * (8*Math.sqrt(150)/140));
+    let legendCircle3 = circleLegendPaper.circle(25, 675, 23 * (8*Math.sqrt(50)/140));
     legendCircle1.transform(transform);
     legendCircle2.transform(transform);
     legendCircle3.transform(transform);
 
-    console.log(transform);
-    console.log(getValues(transform.toString()));
-
-    legendCircle1.attr('cx', 25);
-    legendCircle2.attr('cx', 325 / getValues(transform.toString()));
-    legendCircle3.attr('cx', 625 / getValues(transform.toString()));
+    legendCircle1.attr('cy', 175 / getValues(transform.toString())[1]);
+    legendCircle2.attr('cy', 415 / getValues(transform.toString())[1]);
+    legendCircle3.attr('cy', 635 / getValues(transform.toString())[1]);
 
     let legendCircleStyle = {
         "stroke-width": "2",
@@ -1227,9 +1224,8 @@ function updateCircleLegend(transform, translate){
 
 function getValues(transform){
     var matrix = transform.replace(/[^0-9\-.,]/g, '').split(',');
-    console.log(matrix);
-    var x = matrix[0];
-    return x;
+    console.log(matrix[1]);
+    return matrix;
   };
 
 
