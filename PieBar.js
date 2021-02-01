@@ -285,7 +285,7 @@ function createPieBar(pie_id){
             .enter()
             .append("g")
             .attr("text-anchor", function(d) { return (x(d.Age) + x.bandwidth()/2 + Math.PI /2) % (2 * Math.PI) < Math.PI ? "end" : "start"; })
-            .attr("transform", function(d) { return "rotate(" + ((x(d.Age) +x.bandwidth() /1.8) * 180 / Math.PI - 100) + ")"+"translate("+ (innerRadius*0.83) + ")"; })
+            .attr("transform", function(d) { return "rotate(" + ((x(d.Age) +x.bandwidth() /1.8) * 180 / Math.PI - 100) + ")"+"translate("+ (innerRadius*0.87) + ")"; })
             .append("text")
             .text(function(d){return(d.Age)})
             .attr("transform", function(d) { return (x(d.Age) + x.bandwidth() / 2 +(Math.PI /2) ) % (2 * Math.PI) > Math.PI ? "rotate(265)" : "rotate(80)"; })
@@ -311,7 +311,7 @@ function createPieBar(pie_id){
             .attr("font-family","sans-serif")
             .attr("text-anchor","middle")
             .attr("fill","darkblue")
-            .text(Einwohner+" Einwohner")
+            .text(Einwohner.toLocaleString()+" Einwohner")
 
         //arrow-head
         svg.append("svg:defs")
