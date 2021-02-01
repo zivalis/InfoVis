@@ -13,23 +13,13 @@
 <div class="info" style= "text-align:left">
     <br/>
     <h1>Hilfe</h1>
-    <h3> Hier erfährst du, wie du unser Tool benutzen kannst.</h3>
+    <h3>Hier erfährst du, wie du unser Tool benutzen kannst.</h3>
     <p>Klicke ein Thema an, um das Thema auszuklappen und weitere Informationen darüber zu erhalten.</p>
 
 
     <br/>
 
     <br/>
-
-    <details> 
-        <summary>Wieso ändert sich die Größe der Legende je nach Bundesland?</summary>
-        <p id="helptext">Um Inzidenzen ideal vergleichen zu können, orientiert sich die Größe der Inzidenzkreise immer am zu Verfügung 
-            stehenden Platz.
-            Der Maßstab der Bundesländer ist jedoch nicht immer gleich groß, um den Platz maximal auszunutzen.
-            Damit die Daten nicht verfälscht werden, ändert sich damit auch die Größe der Legende.
-        </p>
-        <img class = "help" src = "Img/Inzidenzen.gif"> </img>
-    </details>
 
     <details> 
         <summary>Wie kann ich ein Bundesland auswählen?</summary>
@@ -78,8 +68,13 @@
             Kreis-Radius für niedrige Inzidenzen nicht-linear. Für Inzidenzen 
             unter 300 wird der Radius mittels einer Wurzelfunktion über die Inzidenz berechnet. 
             Für Werte über 300 wächst der Radius linear. 
-            <br>So soll vermieden werden, dass die Kreise nicht zu groß werden, und trotzdem der Lie Factor 
+            So soll vermieden werden, dass die Kreise nicht zu groß werden, und trotzdem der Lie Factor 
             (also eine Verfälschung der Darstellung) minimal bleibt. </p>
+
+            <p id="helptext">Um Inzidenzen ideal vergleichen zu können, orientiert sich die Größe der Inzidenzkreise zudem immer am zu Verfügung 
+            stehenden Platz.
+            Der Maßstab der Bundesländer ist jedoch nicht immer gleich groß, um den Platz maximal auszunutzen.
+            Damit die Daten nicht verfälscht werden, ändert sich damit auch die Größe der Legende.</p>
         <img class = "help" src = "Img/Inzidenzen.gif"> </img>
     </details>
 
