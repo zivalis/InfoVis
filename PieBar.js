@@ -67,6 +67,7 @@ function BZRPress(){
     LKIdR = getRegionID();
     if(LKIdR < 100){
         goBackOnMap(); // zoome raus wenn es eine Bundesland ID ist
+        changeDisplay('selectBund', 0)
     }
     console.log(LKIdR);
 
@@ -93,9 +94,10 @@ function BZLPress(){
     LKIdL = getRegionID();
     if(LKIdL < 100){
         goBackOnMap(); // zoome raus wenn es eine Bundesland ID ist
+        changeDisplay('selectBund', 0)
     }
 
-    //Herausfinden auf welcher Ebene man sich befindet (DE, Budnesland, Landkreis)
+    //Herausfinden auf welcher Ebene man sich befindet (DE, Bundesland, Landkreis)
     if(LKIdL <100){
         RegionChange(0);
         UpdateEbeneL(0);
